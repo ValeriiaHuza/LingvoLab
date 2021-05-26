@@ -3,7 +3,7 @@
     -webkit-column-count: 2; /* Для Safari и Chrome */
     column-count: 2;
 }
-
+/*logo*/
 #logo {
     margin-top: 10px;
     margin-left: 30px;
