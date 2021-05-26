@@ -22,7 +22,6 @@ body {
 }
 
 #middle {
-  border: 1px solid white;
   height: 450px;
   width: 1200px;
 }
@@ -171,7 +170,7 @@ input:focus ~ #highlight {
 }
 
 #bottom {
-  border
+  margin-top: -50px;
   height: 70px;
   width: 1200px;
   -moz-column-count: 2; /* Для Firefox */
