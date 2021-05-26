@@ -1,180 +1,188 @@
-#upperColumns {
+body {
+  font-family: 'Unica One', cursive;
+  font-size: 30px;
+}
+
+#top {
+  height: 70px;
+  width: 1200px;
   -moz-column-count: 2; /* Для Firefox */
   -webkit-column-count: 2; /* Для Safari и Chrome */
   column-count: 2;
 }
 
 #logo {
-  margin-top: 10px;
-  margin-left: 30px;
-  font-family: 'Unica One', cursive;
-  font-size: 30px;
   float: left;
+  margin: 10px;
 }
 
 #page {
-  margin: 10px 0px 20px 1075px;
-  font-family: 'Unica One', cursive;
-  font-size: 30px;
+  float: right;
+  margin: 10px 10px 10px 950px;
 }
 
-#greenCircle {
-  height: 440px;
-  width: 800px;
-  max-height: 500px;
+#middle {
+  height: 450px;
+  width: 1200px;
+}
+
+#greenRectangle {
+  margin: 0 auto;
+  max-height: 440px;
   max-width: 800px;
-  min-height: 100px;
-  min-width: 200px;
-  margin: 0px 200px 0px 200px;
+  min-height: 440px;
+  min-width: 800px;
   background-color: #DEEFED;
   border-radius: 50px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-#appleImage {
-  height: 300px;
-  width: 300px;
-  max-height: 500px;
-  max-width: 500px;
-  min-height: 100px;
-  min-width: 100px;
-  margin: -50px 240px 0px 240px;
-}
-
 #audioImage {
-  height: 30px;
-  width: 30px;
-  max-height: 50px;
-  max-width: 50px;
-  min-height: 50px;
-  min-width: 50px;
-  margin: 20px 20px 0px 720px;
+  margin: 20px 0px 0px 740px;
+  max-height: 30px;
+  max-width: 30px;
+  min-height: 30px;
+  min-width: 30px;
 }
 
-#lowerColumns {
--moz-column-count: 2; /* Для Firefox */
--webkit-column-count: 2; /* Для Safari и Chrome */
-column-count: 2;
+#appleImage {
+  display: block; 
+  margin: 0 auto;
+  max-height: 300px;
+  max-width: 300px;
+  min-height: 300px;
+  min-width: 300px;
 }
 
-#backImage {
-  height: 60px;
-  width: 60px;
-  max-height: 100px;
-  max-width: 100px;
-  min-height: 50px;
-  min-width: 50px;
-  margin-top: 8px;
-  margin-left: 60px;
-}
-
-#nextImage {
-  height: 80px;
-  width: 80px;
-  max-height: 100px;
-  max-width: 100px;
-  min-height: 50px;
-  min-width: 50px;
-  margin-left: 460px;
-}
-
-.group { 
-  position:relative; 
-  margin-bottom:45px; 
+#group { 
+  position: relative; 
+  margin-bottom: 45px; 
 }
 
 input {
+  position: relative;
+  left: 230px;
   font-family: 'Fira Code', monospace;
-  font-size:18px;
-  padding:10px 10px 10px 20px;
-  display:block;
-  width:310px;
-  border:none;
+  font-size: 18px;
+  padding: 10px 10px 10px 20px;
+  display: block;
+  width: 310px;
+  border: none;
   border-radius: 50px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 input:focus { 
-  outline:none; 
+  outline: none; 
 }
 
 label {
-  color:#999; 
+  color: #999; 
   font-family: 'Fira Code', monospace;
-  font-size:25px;
-  font-weight:500;
-  position:absolute;
-  pointer-events:none;
-  left:250px;
-  top:5px;
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
+  font-size: 25px;
+  font-weight: 500;
+  position: absolute;
+  pointer-events: none;
+  left: 250px;
+  top: 5px;
+  transition: 0.2s ease all; 
+  -moz-transition: 0.2s ease all; 
+  -webkit-transition: 0.2s ease all;
 }
 
 input:focus ~ label, input:valid ~ label {
-  top:-20px;
-  font-size:14px;
-  color:#93A7A6;
+  top: -20px;
+  font-size: 14px;
+  color: #93A7A6;
 }
 
-.bar { 
-  position:relative; 
+#bar { 
+  position:relative;
+  left: 250px;
   display:block; 
   width:300px; 
 }
 
-.bar:before, .bar:after {
-  content:'';
-  height:2px; 
-  width:0;
-  bottom:1px; 
-  position:absolute;
-  background:#93A7A6; 
-  transition:0.2s ease all; 
-  -moz-transition:0.2s ease all; 
-  -webkit-transition:0.2s ease all;
+#bar:before, #bar:after {
+  content: '';
+  height: 2px; 
+  width: 0;
+  bottom: 1px; 
+  position: absolute;
+  background: #93A7A6; 
+  transition: 0.2s ease all; 
+  -moz-transition: 0.2s ease all; 
+  -webkit-transition: 0.2s ease all;
 }
 
-.bar:before {
-  left:50%;
+#bar:before {
+  left: 50%;
 }
 
-.bar:after {
-  right:50%; 
+#bar:after {
+  right: 50%; 
 }
 
-input:focus ~ .bar:before, input:focus ~ .bar:after {
-  width:50%;
+input:focus ~ #bar:before, input:focus ~ #bar:after {
+  width: 50%;
 }
 
-.highlight {
-  position:absolute;
-  height:60%; 
-  width:100px; 
-  top:25%; 
-  left:0;
-  pointer-events:none;
-  opacity:0.5;
+#highlight {
+  position: absolute;
+  height: 40px; 
+  width: 350px;
+  top: 25%; 
+  left: 250px;
+  margin: -10px -10px -10px -20px;
+  border: none;
+  border-radius: 50px;
+  pointer-events: none;
+  opacity: 0.5;
 }
 
-input:focus ~ .highlight {
-  -webkit-animation:inputHighlighter 0.3s ease;
-  -moz-animation:inputHighlighter 0.3s ease;
-  animation:inputHighlighter 0.3s ease;
+input:focus ~ #highlight {
+  -webkit-animation: inputHighlighter 1s ease;
+  -moz-animation: inputHighlighter 1s ease;
+  animation: inputHighlighter 1s ease;
 }
 
 @-webkit-keyframes inputHighlighter {
-  from { background:#93A7A6; }
-  to  { width:0; background:transparent; }
+  from { background: #DEEFED; }
+  to  { width:0; background: transparent; }
 }
 
 @-moz-keyframes inputHighlighter {
-  from { background:#93A7A6; }
-  to  { width:0; background:transparent; }
+  from { background: #DEEFED; }
+  to  { width:0; background: transparent; }
 }
 
 @keyframes inputHighlighter {
-  from { background:#93A7A6; }
-  to  { width:0; background:transparent; }
+  from { background: #DEEFED; }
+  to  { width:0; background: transparent; }
+}
+
+#bottom {
+  height: 70px;
+  width: 1200px;
+  -moz-column-count: 2; /* Для Firefox */
+  -webkit-column-count: 2; /* Для Safari и Chrome */
+  column-count: 2;
+}
+
+#backImage {
+  float: left;
+  margin: 7.5px 10px 7.5px 20px;
+  max-height: 55px;
+  max-width: 55px;
+  min-height: 55px;
+  min-width: 55px;
+}
+
+#nextImage {
+  float: right;
+  margin: 0px 10px 0px 950px;
+  max-height: 70px;
+  max-width: 70px;
+  min-height: 70px;
+  min-width: 70px;
 }
