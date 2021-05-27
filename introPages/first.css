@@ -1,0 +1,79 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+body {
+  font-family: 'Unica One', cursive;
+  font-size: 50px;
+  position: relative;
+  min-width: 800px;
+  width: 100%;
+  height: 100%;
+}
+
+#top {
+  height: 50vh;
+  width: 100%;
+  -moz-column-count: 2; /* Для Firefox */
+  -webkit-column-count: 2; /* Для Safari и Chrome */
+  column-count: 2;
+}
+
+#logo {
+  float: left;
+  margin: 30px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#description {
+  font-family: 'Fira Code', monospace;
+  font-size: 15px;
+  font-weight: 400;
+  position: absolute;
+  top: 80px;
+  left: 600px;
+  right: 100px;
+}
+
+#middle {
+  height: 150px;
+  width: 700px;
+  -moz-column-count: 2; /* Для Firefox */
+  -webkit-column-count: 2; /* Для Safari и Chrome */
+  column-count: 2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#slogan, #button {
+  font-family: 'Fira Code', monospace;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+#button {
+  position: relative;
+  top: 30px;
+  background-color: #93A7A6;
+  border-radius: 20px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: center;
+}
+
+#button:hover {
+  -moz-transform: scale(0.8); /* Для Firefox */
+  -ms-transform: scale(0.8); /* Для IE */
+  -webkit-transform: scale(0.8); /* Для Safari, Chrome, iOS */
+  -o-transform: scale(0.8); /* Для Opera */
+  transform: scale(0.8);
+  transition: 1s;
+}
+
+#bottom {
+  background-color: #DEEFED;
+  height: 50vh;
+  width: 100%;
+}

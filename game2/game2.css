@@ -33,7 +33,6 @@ body {
   background-color: #DEEFED;
   border-radius: 100px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-  transition: 1s;
 }
 
 #greenCircle:hover {
@@ -45,6 +44,7 @@ body {
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #f2a579);
   background-size: 300% 300%;
   animation: gradient 5s ease infinite;
+  transition: 1s;
 }
 
 @keyframes gradient {
@@ -70,129 +70,48 @@ body {
   width: 1200px;
 }
 
-#greenRectangle {
-  margin: 70px 0px 45px 200px;
-  padding: 10px 10px 10px 20px;
-  max-height: 40px;
-  max-width: 800px;
-  min-height: 40px;
-  min-width: 800px;
+#middle2 {
+  height: 175px;
+  width: 1200px;
+}
+
+#buttonsRow1, #buttonsRow2 {
+  display: block;
+  margin: 0 auto;
+  width: 650px;
+  position: relative; 
+  top: 10px;
+  -moz-column-count: 2; /* Для Firefox */
+  -webkit-column-count: 2; /* Для Safari и Chrome */
+  column-count: 2;
+}
+
+#button1, #button2, #button3, #button4 {
+  height: 40px;
+  width: 300px;
+  text-align: center;
   background-color: #DEEFED;
   border-radius: 50px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-}
-
-#sentence {
   font-family: 'Fira Code', monospace;
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 400;
-  position: relative; 
-  top: 5px;
 }
 
-#group { 
-  position: relative; 
-  bottom: 32.5px;
+#button1:hover, #button2:hover, #button3:hover, #button4:hover {
+  background-color: #93A7A6;
+  transform: scale(0.9);
+  transition: 1s;
 }
 
-input {
-  position: relative;
-  left: 500px;
-  font-family: 'Fira Code', monospace;
-  font-size: 18px;
-  padding: 10px 10px 10px 20px;
-  display: block;
-  height: 20px;
-  width: 100px;
-  border: none;
-  border-radius: 50px;
+#button1, #button2 {
+  float: left;
+  margin: 10px;
 }
 
-input:focus { 
-  outline: none; 
-}
-
-label {
-  color:#999; 
-  font-family: 'Fira Code', monospace;
-  font-size: 25px;
-  font-weight: 500;
-  position: absolute;
-  pointer-events: none;
-  left: 520px;
-  top: 5px;
-  transition: 0.2s ease all; 
-  -moz-transition: 0.2s ease all; 
-  -webkit-transition: 0.2s ease all;
-}
-
-input:focus ~ label, input:valid ~ label {
-  opacity: 0;
-}
-
-#bar { 
-  position: relative;
-  left: 520px;
-  display: block; 
-  width: 90px; 
-}
-
-#bar:before, #bar:after {
-  content: '';
-  height: 2px; 
-  width: 0;
-  bottom: 1px; 
-  position: absolute;
-  background: #93A7A6; 
-  transition: 0.2s ease all; 
-  -moz-transition: 0.2s ease all; 
-  -webkit-transition: 0.2s ease all;
-}
-
-#bar:before {
-  left: 50%;
-}
-
-#bar:after {
-  right: 50%; 
-}
-
-input:focus ~ #bar:before, input:focus ~ #bar:after {
-  width: 50%;
-}
-
-#highlight {
-  position: absolute;
-  height: 40px;
-  width: 140px;
-  border: none;
-  border-radius: 50px;
-  top: 25%; 
-  left: 520px;
-  margin: -10px -10px -10px -20px;
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-input:focus ~ #highlight {
-  -webkit-animation: inputHighlighter 1s ease;
-  -moz-animation: inputHighlighter 1s ease;
-  animation: inputHighlighter 1s ease;
-}
-
-@-webkit-keyframes inputHighlighter {
-  from { background: #DEEFED; }
-  to  { width:0; background: transparent; }
-}
-
-@-moz-keyframes inputHighlighter {
-  from { background: #DEEFED; }
-  to  { width:0; background: transparent; }
-}
-
-@keyframes inputHighlighter {
-  from { background: #DEEFED; }
-  to  { width:0; background: transparent; }
+#button3, #button4 {
+  float: right;
+  margin: 10px 10px 10px 50px;
 }
 
 #bottom {
