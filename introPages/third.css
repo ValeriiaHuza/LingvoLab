@@ -1,0 +1,77 @@
+*{
+  padding:0;
+  margin:0;
+}
+
+body {
+  font-family: 'Unica One', cursive;
+  font-size: 30px;
+  position: relative;
+  min-width: 800px;
+  width: 100%;
+  height: 100%;
+}
+
+#greenRectangle {
+  float: left;
+  height: 100vh;
+  width: 50%;
+  background-color: #DEEFED;
+}
+
+#whiteRectangle {
+  float: right;
+  height: 100vh;
+  width: 50%;
+}
+
+#top {
+  height: 50%;
+  width: 100%;
+}
+
+#bottom {
+  height: 50%;
+  width: 100%;
+}
+
+#logo {
+  float: left;
+  margin: 18px 0px 0px 18px;
+}
+
+#button1, #button2 {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Fira Code', monospace;
+  font-size: 20px;
+  font-weight: 500;
+  background-color: #93A7A6;
+  border-radius: 15px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#button1 {
+  height: 20%;
+  position: relative;
+  top: -10%;
+}
+
+#button2 {
+  height: 10%;
+  position: relative;
+  top: 45%;
+}
+
+#button1:hover, #button2:hover {
+  -moz-transform: scale(0.8); /* Для Firefox */
+  -ms-transform: scale(0.8); /* Для IE */
+  -webkit-transform: scale(0.8); /* Для Safari, Chrome, iOS */
+  -o-transform: scale(0.8); /* Для Opera */
+  transform: scale(0.8);
+  transition: 1s;
+}
