@@ -1,6 +1,6 @@
 body {
   font-family: 'Unica One', cursive;
-  font-size: 2.463vw;
+  font-size: 30px;
 }
 
 #top {
@@ -95,7 +95,7 @@ body {
   width: 53.366vw;
   min-width: 650px;
   position: relative; 
-  top: 10px;
+  top: 1.62vh;
   -moz-column-count: 2; /* Для Firefox */
   -webkit-column-count: 2; /* Для Safari и Chrome */
   column-count: 2;
@@ -111,7 +111,7 @@ body {
   border-radius: 4.1vw;
   box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
   font-family: 'Fira Code', monospace;
-  font-size: 2.29885vw;
+  font-size: 28px;
   font-weight: 400;
 }
 

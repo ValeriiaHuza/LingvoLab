@@ -5,7 +5,7 @@
 
 body {
   font-family: 'Unica One', cursive;
-  font-size: 4.1vw;
+  font-size: 50px;
   position: relative;
   min-width: 800px;
   width: 100%;
@@ -21,13 +21,13 @@ body {
 
 #text1 {
   font-family: 'Fira Code', monospace;
-  font-size: 2vw;
+  font-size: 25px;
   font-weight: 500;
 }
 
 #text2 {
   font-family: 'Fira Code', monospace;
-  font-size: 1.642vw;
+  font-size: 15px;
   font-weight: 400;
 }
 
@@ -42,7 +42,7 @@ input {
   position: relative;
   left: 36vw;
   font-family: 'Fira Code', monospace;
-  font-size: 1.148vw;
+  font-size: 15px;
   padding: 1.62vh 0.821vw 1.62vh 1.642vw;
   display: block;
   width: 25.45vw;
@@ -79,8 +79,7 @@ input:focus ~ label, input:valid ~ label {
   position: relative;
   left: 37.76vw;
   display: block; 
-  width: 24.63vw; 
-  min-width: 300px; 
+  width: 24.63vw;
 }
 
 #bar:before, #bar:after {
@@ -111,8 +110,6 @@ input:focus ~ #bar:before, input:focus ~ #bar:after {
   position: absolute;
   height: 6.48vh; 
   width: 27.9vw;
-  min-height: 40px; 
-  min-width: 340px;
   top: 25%; 
   left: 37.767vw;
   margin: -1.62vh -0.821vw -1.62vh -1.642vw;

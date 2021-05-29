@@ -11,12 +11,11 @@ body{
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  filter: blur(30px);
-
+  filter: blur(2.463vw);
 }
 
 .loading-text{
-  font-size: 50px;
+  font-size: 4.1vw;
   color: black;
   align-items: center;
   justify-content: center;
@@ -53,13 +52,15 @@ body{
   font-family: 'Unica One', cursive;
   font-style: normal;
   font-weight: normal;
-  font-size: 5.5vw;
+  font-size: 5.3366vw;
   align-items: center;
   color: rgba(0, 0, 0, 0.7);
 }
 
 #description{
   margin-left: 38vw;
+  margin-top: -1.62vh;
+  margin-right: 2.463vw;
   position: absolute;
   z-index: 2;
   /*position: absolute;*/
@@ -70,7 +71,7 @@ body{
   font-family: 'Fira Code', cursive;
   font-style: normal;
   font-weight: normal;
-  font-size: 1.9vw;
+  font-size: 1.23vw;
   line-height: 3.7vh;
   align-items: center;
   color: #000000;
@@ -80,7 +81,7 @@ body{
   position: absolute;
   z-index: 3;
   width: 24.023vw;
-  margin-left: 13.411vw;
+  margin-left: 11.494vw;
   margin-top: 18vh;
   /*position: relative;*/
   /*width: 369px;*/
@@ -90,7 +91,7 @@ body{
   font-family: 'Fira Code', cursive;
   font-style: normal;
   font-weight: normal;
-  font-size: 5.5vw;
+  font-size: 5.3366vw;
   line-height: 10vh;
   /* or 102% */
   /*display: flex;*/
@@ -103,8 +104,8 @@ body{
   z-index: 4;
   width: 35.766vw;
   height: 19vh;
-  margin-left: 42.9vw;
-  margin-top: 30.8vh;
+  margin-left: 46.798vw;
+  margin-top: 24.311vh;
   /*width: 548px;*/
   /*height: 143px;*/
   /*left: 659px;*/
@@ -112,14 +113,16 @@ body{
   border: #93A7A6;
   background: #93A7A6;
   box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
-  border-radius: 30px;
+  border-radius: 2.463vw;
   font-family: 'Fira Code', cursive;
   font-style: normal;
   font-weight: normal;
-  font-size: 4.16vw;
+  font-size: 4.1vw;
   line-height: 10vh;
+  text-align: center;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #next:hover {
