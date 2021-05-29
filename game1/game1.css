@@ -1,11 +1,11 @@
 body {
   font-family: 'Unica One', cursive;
-  font-size: 30px;
+  font-size: 2.463vw;
 }
 
 #top {
-  height: 70px;
-  width: 1200px;
+  height: 11.3452vh;
+  width: 98.522vw;
   -moz-column-count: 2; /* Для Firefox */
   -webkit-column-count: 2; /* Для Safari и Chrome */
   column-count: 2;
@@ -13,46 +13,43 @@ body {
 
 #logo {
   float: left;
-  margin: 10px;
+  margin: 0.821vw;
+  color: #000000B2;
 }
 
 #page {
   float: right;
-  margin: 10px 10px 10px 950px;
+  margin: 1.62vh 0.821vw 1.62vh 77.9967vw;
 }
 
 #middle {
-  height: 450px;
-  width: 1200px;
+  height: 72.93vh;
+  width: 98.522vw;
 }
 
 #greenRectangle {
   margin: 0 auto;
-  max-height: 440px;
-  max-width: 800px;
-  min-height: 440px;
-  min-width: 800px;
+  height: 71.3vh;
+  width: 65.681vw;
   background-color: #DEEFED;
-  border-radius: 50px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4.1vw;
+  box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
   text-align: center;
 }
 /*
 #greenRectangle:hover {
-  -moz-transform: rotate(180deg); 
-  -ms-transform: rotate(180deg); 
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
-  -o-transform: rotate(180deg); 
+  -o-transform: rotate(180deg);
   transform: rotateY(180deg);
   transition: 1s;
 }
 */
 #audioImage {
-  margin: 20px 0px 0px 710px;
-  max-height: 30px;
-  max-width: 30px;
-  min-height: 30px;
-  min-width: 30px;
+  margin: 3.24vh 0vw 0vh 58.29vw;
+  height: 4.862vh;
+  width: 2.463vw;
 }
 
 #audioImage:hover {
@@ -65,35 +62,35 @@ body {
 }
 
 #word {
-  display: block; 
-  margin: 100px 0px 0px 0px;
+  display: block;
+  margin: 16.2vh 0vw 0vh 0vw;
   font-family: 'Fira Code', monospace;
-  font-size: 40px;
+  font-size: 3.284vw;
   font-weight: 500;
 }
 
 #buttons {
-  margin: 150px 20px 0px 20px;
+  margin: 24.31vh 1.642vw 0vh 1.642vw;
   -moz-column-count: 2; /* Для Firefox */
   -webkit-column-count: 2; /* Для Safari и Chrome */
   column-count: 2;
 }
 
 #button1, #button2 {
-  width: 180px;
-  border-radius: 50px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  width: 14.778vw;
+  border-radius: 4.1vw;
+  box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
 }
 
 #button1 {
   float: left;
-  margin: 10px;
+  margin: 0.821vw;
   background-color: #93A7A6;
 }
 
 #button2 {
   float: right;
-  margin: 10px 10px 10px 950px;
+  margin: 1.62vh 0.821vw 1.62vh 77.9967vw;
   background-color: #FF8080;
 }
 
@@ -103,8 +100,8 @@ body {
 }
 
 #bottom {
-  height: 70px;
-  width: 1200px;
+  height: 11.3452vh;
+  width: 98.522vw;
   -moz-column-count: 2; /* Для Firefox */
   -webkit-column-count: 2; /* Для Safari и Chrome */
   column-count: 2;
@@ -112,11 +109,9 @@ body {
 
 #backImage {
   float: left;
-  margin: 7.5px 10px 7.5px 20px;
-  max-height: 55px;
-  max-width: 55px;
-  min-height: 55px;
-  min-width: 55px;
+  margin: 1.2vh 0.821vw 1.2vh 1.642vw;
+  height: 8.9vh;
+  width: 4.5vw;
 }
 
 #backImage:hover {
@@ -126,17 +121,15 @@ body {
   -o-transform: scale(1.2); /* Для Opera */
   transform: scale(1.2);
   background: #93A7A6;
-  border-radius: 100px;
+  border-radius: 8.21vw;
   transition: 1s;
 }
 
 #nextImage {
   float: right;
-  margin: 7.5px 20px 7.5px 950px;
-  max-height: 55px;
-  max-width: 55px;
-  min-height: 55px;
-  min-width: 55px;
+  margin: 1.2vh 1.642vw 1.2vh 77.9967vw;
+  height: 8.9vh;
+  width: 4.5vw;
 }
 
 #nextImage:hover {
@@ -146,6 +139,6 @@ body {
   -o-transform: scale(1.2); /* Для Opera */
   transform: scale(1.2);
   background: #93A7A6;
-  border-radius: 100px;
+  border-radius: 8.21vw;
   transition: 1s;
 }
