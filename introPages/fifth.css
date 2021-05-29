@@ -44,7 +44,6 @@ body {
   margin-left: 42.69vw;
   width: 12.3vw;
   min-width: 150px;
-  max-width: 150px;
   background-color: #DEEFED;
   border-radius: 1.23vw;
   box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
@@ -71,8 +70,6 @@ body {
   margin: 8.995vh 0.821vw 1.2vh 2.29885vw;
   height: 8.9vh;
   width: 4.5vw;
-  max-height: 55px;
-  max-width: 55px;
   min-height: 55px;
   min-width: 55px;
 }

@@ -8,8 +8,6 @@ body {
   width: 98.522vw;
   min-height: 70px;
   min-width: 1200px;
-  max-height: 70px;
-  max-width: 1200px;
   -moz-column-count: 2; /* Для Firefox */
   -webkit-column-count: 2; /* Для Safari и Chrome */
   column-count: 2;
@@ -34,16 +32,12 @@ body {
   width: 98.522vw;
   min-height: 450px;
   min-width: 1200px;
-  max-height: 450px;
-  max-width: 1200px;
 }
 
 #greenRectangle {
   margin: 0 auto;
   height: 71.3vh;
   width: 65.681vw;
-  max-height: 440px;
-  max-width: 800px;
   min-height: 440px;
   min-width: 800px;
   background-color: #DEEFED;
@@ -68,8 +62,6 @@ body {
   margin-left: max(58.29vw, 58.29vw);
   height: 4.862vh;
   width: 2.463vw;
-  max-height: 30px;
-  max-width: 30px;
   min-height: 30px;
   min-width: 30px;
 }
@@ -86,8 +78,8 @@ body {
 #appleImage {
   display: block; 
   margin: 0 auto;
-  max-height: 48.62vh;
-  max-width: 24.63vw;
+  height: 300px;
+  width: 300px;
   min-height: 48.62vh;
   min-width: 24.63vw;
 }
@@ -140,7 +132,6 @@ input:focus ~ label, input:valid ~ label {
   display: block; 
   width: 24.63vw; 
   min-width: 300px;
-  max-width: 300px;
 }
 
 #bar:before, #bar:after {
@@ -149,8 +140,6 @@ input:focus ~ label, input:valid ~ label {
   width: 0;
   min-height: 2px;
   min-width: 0;
-  max-height: 2px;
-  max-width: 0;
   bottom: 0.162vh; 
   position: absolute;
   background: #93A7A6; 
@@ -210,8 +199,6 @@ input:focus ~ #highlight {
   width: 98.522vw;
   min-height: 70px;
   min-width: 1200px;
-  max-height: 70px;
-  max-width: 1200px;
   -moz-column-count: 2; /* Для Firefox */
   -webkit-column-count: 2; /* Для Safari и Chrome */
   column-count: 2;
@@ -222,8 +209,6 @@ input:focus ~ #highlight {
   margin: 1.2vh 0.821vw 1.2vh 1.642vw;
   height: 8.9vh;
   width: 4.5vw;
-  max-height: 55px;
-  max-width: 55px;
   min-height: 55px;
   min-width: 55px;
 }
@@ -244,8 +229,6 @@ input:focus ~ #highlight {
   margin: 1.2vh 1.642vw 1.2vh 77.9967vw;
   height: 8.9vh;
   width: 4.5vw;
-  max-height: 55px;
-  max-width: 55px;
   min-height: 55px;
   min-width: 55px;
 }

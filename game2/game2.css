@@ -28,8 +28,6 @@ body {
 #middle1 {
   height: 36.4667747vh;
   width: 98.522vw;
-  max-height: 225px;
-  max-width: 1200px;
   min-height: 225px;
   min-width: 1200px;
 }
@@ -38,8 +36,6 @@ body {
   margin: 50px 0px 0px 500px;
   height: 32.4vh;
   width: 16.42px;
-  max-height: 200px;
-  max-width: 200px;
   min-height: 200px;
   min-width: 200px;
   background-color: #DEEFED;
@@ -75,8 +71,6 @@ body {
   margin: 50px 0px 0px 50px;
   height: 16.2vh;
   width: 8.21vw;
-  max-height: 100px;
-  max-width: 100px;
   min-height: 100px;
   min-width: 100px;
 }
@@ -84,8 +78,6 @@ body {
 #middle1 {
   height: 36.4667747vh;
   width: 98.522vw;
-  max-height: 225px;
-  max-width: 1200px;
   min-height: 225px;
   min-width: 1200px;
 }
@@ -93,8 +85,6 @@ body {
 #middle2 {
   height: 28.363vh;
   width: 98.522vw;
-  max-height: 175px;
-  max-width: 1200px;
   min-height: 175px;
   min-width: 1200px;
 }
@@ -103,7 +93,6 @@ body {
   display: block;
   margin: 0 auto;
   width: 53.366vw;
-  max-width: 650px;
   min-width: 650px;
   position: relative; 
   top: 10px;
@@ -115,8 +104,6 @@ body {
 #button1, #button2, #button3, #button4 {
   height: 6.482982vh;
   width: 24.63vw;
-  max-height: 40px;
-  max-width: 300px;
   min-height: 40px;
   min-width: 300px;
   text-align: center;
@@ -147,8 +134,6 @@ body {
 #bottom {
   height: 11.3452vh;
   width: 98.522vw;
-  max-height: 70px;
-  max-width: 1200px;
   min-height: 70px;
   min-width: 1200px;
   -moz-column-count: 2; /* Для Firefox */
@@ -159,10 +144,10 @@ body {
 #backImage {
   float: left;
   margin: 1.2vh 0.821vw 1.2vh 1.642vw;
-  max-height: 8.9vh;
-  max-width: 4.5vw;
-  min-height: 8.9vh;
-  min-width: 4.5vw;
+  height: 8.9vh;
+  width: 4.5vw;
+  min-height: 55px;
+  min-width: 55px;
 }
 
 #backImage:hover {
@@ -179,10 +164,10 @@ body {
 #nextImage {
   float: right;
   margin: 7.5px 20px 7.5px 950px;
-  max-height: 8.9vh;
-  max-width: 4.5vw;
-  min-height: 8.9vh;
-  min-width: 4.5vw;
+  height: 8.9vh;
+  width: 4.5vw;
+  min-height: 55px;
+  min-width: 55px;
 }
 
 #nextImage:hover {

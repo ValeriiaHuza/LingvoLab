@@ -81,7 +81,6 @@ input:focus ~ label, input:valid ~ label {
   display: block; 
   width: 24.63vw; 
   min-width: 300px; 
-  max-width: 300px; 
 }
 
 #bar:before, #bar:after {
@@ -114,8 +113,6 @@ input:focus ~ #bar:before, input:focus ~ #bar:after {
   width: 27.9vw;
   min-height: 40px; 
   min-width: 340px;
-  max-height: 40px; 
-  max-width: 340px;
   top: 25%; 
   left: 37.767vw;
   margin: -1.62vh -0.821vw -1.62vh -1.642vw;
@@ -154,7 +151,6 @@ input:focus ~ #highlight {
   margin-left: 42.69vw;
   width: 12.3vw;
   min-width: 150px;
-  max-width: 150px;
   background-color: #93A7A6;
   border-radius: 1.23vw;
   box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
