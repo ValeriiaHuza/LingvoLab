@@ -1,11 +1,9 @@
-
 body{
   align-items: center;
   justify-content: center;
 }
 
 .bg{
-
   /*background: url("https://www.seekpng.com/png/detail/206-2061724_white-square-border-png.png");*/
   position: absolute;
   top: 0;
@@ -27,11 +25,11 @@ body{
   font-family: 'Unica One', cursive;
 }
 
-
 #main{
   margin: 1%;
   width: 100%;
 }
+
 #rectangle {
   position: fixed;
   z-index: 1;
@@ -41,7 +39,6 @@ body{
   height: 50vh;
   background-color: #DEEFED;
 }
-
 
 #logo{
   position: relative;
@@ -53,47 +50,35 @@ body{
   /*height: 136px;*/
   /*left: 50px;*/
   /*top: 24px;*/
-
   font-family: 'Unica One', cursive;
   font-style: normal;
   font-weight: normal;
   font-size: 5.5vw;
-
   align-items: center;
-
   color: rgba(0, 0, 0, 0.7);
-
 }
 
 #description{
   margin-left: 38vw;
   position: absolute;
-
   z-index: 2;
-
   /*position: absolute;*/
   /*width: 741px;*/
   /*height: 135px;*/
   /*left: 584px;*/
   /*top: 139px;*/
-
   font-family: 'Fira Code', cursive;
   font-style: normal;
   font-weight: normal;
   font-size: 1.9vw;
   line-height: 3.7vh;
   align-items: center;
-
   color: #000000;
-
 }
 
 #text{
-
   position: absolute;
-
   z-index: 3;
-
   width: 24.023vw;
   margin-left: 13.411vw;
   margin-top: 18vh;
@@ -102,25 +87,20 @@ body{
   /*height: 284px;*/
   /*left: 206px;*/
   /*top: 370px;*/
-
   font-family: 'Fira Code', cursive;
   font-style: normal;
   font-weight: normal;
   font-size: 5.5vw;
   line-height: 10vh;
   /* or 102% */
-
   /*display: flex;*/
   align-items: center;
-
   color: #000000;
-
 }
 
 #next{
   position: fixed;
   z-index: 4;
-
   width: 35.766vw;
   height: 19vh;
   margin-left: 42.9vw;
@@ -129,12 +109,10 @@ body{
   /*height: 143px;*/
   /*left: 659px;*/
   /*top: 441px;*/
-
   border: #93A7A6;
   background: #93A7A6;
   box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
   border-radius: 30px;
-
   font-family: 'Fira Code', cursive;
   font-style: normal;
   font-weight: normal;
@@ -172,6 +150,7 @@ body{
   border-radius: 50%;
   animation: float-up var(--bubble-float-duration) var(--bubble-float-delay) ease-in infinite;
 }
+
 .bubble::before {
   position: absolute;
   content: "";
@@ -185,6 +164,7 @@ body{
   border-radius: inherit;
   animation: var(--bubble-sway-type) var(--bubble-sway-duration) var(--bubble-sway-delay) ease-in-out alternate infinite;
 }
+
 .bubble:nth-child(0) {
   --bubble-left-offset: 31vw;
   --bubble-radius: 10vw;
