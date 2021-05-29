@@ -5,7 +5,7 @@
 
 body {
   font-family: 'Unica One', cursive;
-  font-size: 50px;
+  font-size: 4.1vw;
   position: relative;
   min-width: 800px;
   width: 100%;
@@ -15,40 +15,40 @@ body {
 }
 
 #logo {
-  margin-top: 100px;
+  margin-top: 16.2vh;
   color: rgba(0, 0, 0, 0.7);
 }
 
 #text1 {
   font-family: 'Fira Code', monospace;
-  font-size: 25px;
+  font-size: 2vw;
   font-weight: 500;
 }
 
 #text2 {
   font-family: 'Fira Code', monospace;
-  font-size: 20px;
+  font-size: 1.642vw;
   font-weight: 400;
 }
 
 #group { 
   position: relative; 
-  margin-top: 20px; 
-  margin-bottom: 25px; 
+  margin-top: 3.24vh; 
+  margin-bottom: 4vh; 
 }
 
 input {
   background-color: #DEEFED;
   position: relative;
-  left: 440px;
+  left: 36vw;
   font-family: 'Fira Code', monospace;
-  font-size: 18px;
-  padding: 10px 10px 10px 20px;
+  font-size: 1.148vw;
+  padding: 1.62vh 0.821vw 1.62vh 1.642vw;
   display: block;
-  width: 310px;
+  width: 25.45vw;
   border: none;
-  border-radius: 20px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  border-radius: 1vw;
+  box-shadow: 0.1642vw 0.1642vw 0.1642vw rgba(0, 0, 0, 0.25);
 }
 
 input:focus { 
@@ -58,35 +58,37 @@ input:focus {
 label {
   color: #999; 
   font-family: 'Fira Code', monospace;
-  font-size: 25px;
+  font-size: 2vw;
   font-weight: 500;
   position: absolute;
   pointer-events: none;
-  left: 460px;
-  top: 5px;
+  left: 37.767vw;
+  top: 0.81vh;
   transition: 0.2s ease all; 
   -moz-transition: 0.2s ease all; 
   -webkit-transition: 0.2s ease all;
 }
 
 input:focus ~ label, input:valid ~ label {
-  top: -20px;
-  font-size: 14px;
+  top: -3.24vh;
+  font-size: 1.15vw;
   color: #93A7A6;
 }
 
 #bar { 
-  position:relative;
-  left: 460px;
-  display:block; 
-  width:300px; 
+  position: relative;
+  left: 37.76vw;
+  display: block; 
+  width: 24.63vw; 
+  min-width: 300px; 
+  max-width: 300px; 
 }
 
 #bar:before, #bar:after {
   content: '';
-  height: 2px; 
+  height: 0.324vh; 
   width: 0;
-  bottom: 1px; 
+  bottom: 0.162vh; 
   position: absolute;
   background: #93A7A6; 
   transition: 0.2s ease all; 
@@ -108,13 +110,17 @@ input:focus ~ #bar:before, input:focus ~ #bar:after {
 
 #highlight {
   position: absolute;
-  height: 40px; 
-  width: 340px;
+  height: 6.48vh; 
+  width: 27.9vw;
+  min-height: 40px; 
+  min-width: 340px;
+  max-height: 40px; 
+  max-width: 340px;
   top: 25%; 
-  left: 460px;
-  margin: -10px -10px -10px -20px;
+  left: 37.767vw;
+  margin: -1.62vh -0.821vw -1.62vh -1.642vw;
   border: none;
-  border-radius: 50px;
+  border-radius: 4.1vw;
   pointer-events: none;
   opacity: 0.5;
 }
@@ -142,14 +148,16 @@ input:focus ~ #highlight {
 
 #button {
   font-family: 'Fira Code', monospace;
-  font-size: 25px;
+  font-size: 2vw;
   font-weight: 500;
   padding: 10px;
-  margin-left: 520px;
-  width: 150px;
+  margin-left: 42.69vw;
+  width: 12.3vw;
+  min-width: 150px;
+  max-width: 150px;
   background-color: #93A7A6;
-  border-radius: 15px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 1.23vw;
+  box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
   text-align: center;
 }
 

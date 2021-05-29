@@ -1,11 +1,11 @@
 body {
   font-family: 'Unica One', cursive;
-  font-size: 30px;
+  font-size: 2.463vw;
 }
 
 #top {
-  height: 70px;
-  width: 1200px;
+  height: 11.3452vh;
+  width: 98.522vw;
   -moz-column-count: 2; /* Для Firefox */
   -webkit-column-count: 2; /* Для Safari и Chrome */
   column-count: 2;
@@ -13,23 +13,35 @@ body {
 
 #logo {
   float: left;
-  margin: 10px;
+  margin: max(0.821vw, 0.821vw);
+  color: #000000B2;
 }
 
 #page {
   float: right;
-  margin: 10px 10px 10px 950px;
+  margin-top: max(1.62vh, 1.62vh);
+  margin-right: max(0.821vw, 0.821vw);
+  margin-bottom: max(1.62vh, 1.62vh);
+  margin-left: max(77.9967vw, 77.9967vw);
 }
 
 #middle1 {
-  height: 225px;
-  width: 1200px;
+  height: 36.4667747vh;
+  width: 98.522vw;
+  max-height: 225px;
+  max-width: 1200px;
+  min-height: 225px;
+  min-width: 1200px;
 }
 
 #greenCircle {
   margin: 50px 0px 0px 500px;
-  height: 200px;
-  width: 200px;
+  height: 32.4vh;
+  width: 16.42px;
+  max-height: 200px;
+  max-width: 200px;
+  min-height: 200px;
+  min-width: 200px;
   background-color: #DEEFED;
   border-radius: 100px;
   box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
@@ -61,24 +73,38 @@ body {
 
 #audioImage {
   margin: 50px 0px 0px 50px;
-  height: 100px;
-  width: 100px;
+  height: 16.2vh;
+  width: 8.21vw;
+  max-height: 100px;
+  max-width: 100px;
+  min-height: 100px;
+  min-width: 100px;
 }
 
 #middle1 {
-  height: 225px;
-  width: 1200px;
+  height: 36.4667747vh;
+  width: 98.522vw;
+  max-height: 225px;
+  max-width: 1200px;
+  min-height: 225px;
+  min-width: 1200px;
 }
 
 #middle2 {
-  height: 175px;
-  width: 1200px;
+  height: 28.363vh;
+  width: 98.522vw;
+  max-height: 175px;
+  max-width: 1200px;
+  min-height: 175px;
+  min-width: 1200px;
 }
 
 #buttonsRow1, #buttonsRow2 {
   display: block;
   margin: 0 auto;
-  width: 650px;
+  width: 53.366vw;
+  max-width: 650px;
+  min-width: 650px;
   position: relative; 
   top: 10px;
   -moz-column-count: 2; /* Для Firefox */
@@ -87,14 +113,18 @@ body {
 }
 
 #button1, #button2, #button3, #button4 {
-  height: 40px;
-  width: 300px;
+  height: 6.482982vh;
+  width: 24.63vw;
+  max-height: 40px;
+  max-width: 300px;
+  min-height: 40px;
+  min-width: 300px;
   text-align: center;
   background-color: #DEEFED;
-  border-radius: 50px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4.1vw;
+  box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
   font-family: 'Fira Code', monospace;
-  font-size: 28px;
+  font-size: 2.29885vw;
   font-weight: 400;
 }
 
@@ -115,8 +145,12 @@ body {
 }
 
 #bottom {
-  height: 70px;
-  width: 1200px;
+  height: 11.3452vh;
+  width: 98.522vw;
+  max-height: 70px;
+  max-width: 1200px;
+  min-height: 70px;
+  min-width: 1200px;
   -moz-column-count: 2; /* Для Firefox */
   -webkit-column-count: 2; /* Для Safari и Chrome */
   column-count: 2;
@@ -125,10 +159,10 @@ body {
 #backImage {
   float: left;
   margin: 7.5px 10px 7.5px 20px;
-  max-height: 55px;
-  max-width: 55px;
-  min-height: 55px;
-  min-width: 55px;
+  max-height: 8.9vh;
+  max-width: 4.5vw;
+  min-height: 8.9vh;
+  min-width: 4.5vw;
 }
 
 #backImage:hover {
@@ -138,17 +172,17 @@ body {
   -o-transform: scale(1.2); /* Для Opera */
   transform: scale(1.2);
   background: #93A7A6;
-  border-radius: 100px;
+  border-radius: 8.21vw;
   transition: 1s;
 }
 
 #nextImage {
   float: right;
   margin: 7.5px 20px 7.5px 950px;
-  max-height: 55px;
-  max-width: 55px;
-  min-height: 55px;
-  min-width: 55px;
+  max-height: 8.9vh;
+  max-width: 4.5vw;
+  min-height: 8.9vh;
+  min-width: 4.5vw;
 }
 
 #nextImage:hover {
@@ -158,6 +192,6 @@ body {
   -o-transform: scale(1.2); /* Для Opera */
   transform: scale(1.2);
   background: #93A7A6;
-  border-radius: 100px;
+  border-radius: 8.21vw;
   transition: 1s;
 }

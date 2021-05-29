@@ -5,7 +5,7 @@
 
 body {
   font-family: 'Fira Code', monospace;
-  font-size: 25px;
+  font-size: 2vw;
   font-weight: 500;
   position: relative;
   min-width: 800px;
@@ -21,13 +21,13 @@ body {
 
 #logo {
   font-family: 'Unica One', cursive;
-  font-size: 30px;
+  font-size: 2.463vw;
   float: left;
-  margin: 18px 0px 0px 18px;
+  margin: 2.9vh 0px 0px 1.478vw;
 }
 
 #name{
-  margin-top: 30px;
+  margin-top: 4.862vh;
   text-align: center;
   display: flex;
   align-items: center;
@@ -35,17 +35,19 @@ body {
 }
 
 #sentence {
-  margin-bottom: 20px;
+  margin-bottom: 3.24vh;
 }
 
 #button1, #button2, #button3, #button4{
   margin: 15px;
   padding: 10px;
-  margin-left: 520px;
-  width: 150px;
+  margin-left: 42.69vw;
+  width: 12.3vw;
+  min-width: 150px;
+  max-width: 150px;
   background-color: #DEEFED;
-  border-radius: 15px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 1.23vw;
+  box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
   text-align: center;
 }
 
@@ -66,7 +68,9 @@ body {
 
 #backImage {
   float: left;
-  margin: 55.5px 10px 7.5px 28px;
+  margin: 8.995vh 0.821vw 1.2vh 2.29885vw;
+  height: 8.9vh;
+  width: 4.5vw;
   max-height: 55px;
   max-width: 55px;
   min-height: 55px;

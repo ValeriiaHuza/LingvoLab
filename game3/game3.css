@@ -1,11 +1,15 @@
 body {
   font-family: 'Unica One', cursive;
-  font-size: 30px;
+  font-size: 2.463vw;
 }
 
 #top {
-  height: 70px;
-  width: 1200px;
+  height: 11.3452vh;
+  width: 98.522vw;
+  min-height: 70px;
+  min-width: 1200px;
+  max-height: 70px;
+  max-width: 1200px;
   -moz-column-count: 2; /* Для Firefox */
   -webkit-column-count: 2; /* Для Safari и Chrome */
   column-count: 2;
@@ -13,41 +17,57 @@ body {
 
 #logo {
   float: left;
-  margin: 10px;
+  margin: max(0.821vw, 0.821vw);
+  color: #000000B2;
 }
 
 #page {
   float: right;
-  margin: 10px 10px 10px 950px;
+  margin-top: max(1.62vh, 1.62vh);
+  margin-right: max(0.821vw, 0.821vw);
+  margin-bottom: max(1.62vh, 1.62vh);
+  margin-left: max(77.9967vw, 77.9967vw);
 }
 
 #middle {
-  height: 450px;
-  width: 1200px;
+  height: 72.93vh;
+  width: 98.522vw;
+  min-height: 450px;
+  min-width: 1200px;
+  max-height: 450px;
+  max-width: 1200px;
 }
 
 #greenRectangle {
   margin: 0 auto;
+  height: 71.3vh;
+  width: 65.681vw;
   max-height: 440px;
   max-width: 800px;
   min-height: 440px;
   min-width: 800px;
   background-color: #DEEFED;
-  border-radius: 50px;
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4.1vw;
+  box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
+  text-align: center;
 }
-
+/*
 #greenRectangle:hover {
-  -moz-transform: rotate(180deg); /* Для Firefox */
-  -ms-transform: rotate(180deg); /* Для IE */
-  -webkit-transform: rotate(180deg); /* Для Safari, Chrome, iOS */
-  -o-transform: rotate(180deg); /* Для Opera */
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg); 
+  -webkit-transform: rotate(180deg); 
+  -o-transform: rotate(180deg);
   transform: rotateY(180deg);
   transition: 1s;
 }
-
+*/
 #audioImage {
-  margin: 20px 0px 0px 740px;
+  margin-top: max(3.24vh, 3.24vh);
+  margin-right: max(0vw, 0vw);
+  margin-bottom: max(0vh, 0vh);
+  margin-left: max(58.29vw, 58.29vw);
+  height: 4.862vh;
+  width: 2.463vw;
   max-height: 30px;
   max-width: 30px;
   min-height: 30px;
@@ -66,28 +86,28 @@ body {
 #appleImage {
   display: block; 
   margin: 0 auto;
-  max-height: 300px;
-  max-width: 300px;
-  min-height: 300px;
-  min-width: 300px;
+  max-height: 48.62vh;
+  max-width: 24.63vw;
+  min-height: 48.62vh;
+  min-width: 24.63vw;
 }
 
 #group { 
   position: relative; 
-  margin-bottom: 45px; 
+  margin-bottom: 7.293vh; 
 }
 
 input {
   position: relative;
-  left: 230px;
+  left: 18.8834vw;
   font-family: 'Fira Code', monospace;
-  font-size: 18px;
-  padding: 10px 10px 10px 20px;
+  font-size: 1.47783vw;
+  padding: 1.62vh 0.821vw 1.62vh 1.642vw;
   display: block;
-  width: 310px;
+  width: 25.45vw;
   border: none;
   border-radius: 50px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+  box-shadow: 0.1642vw 0.1642vw 0.1642vw rgba(0, 0, 0, 0.25);
 }
 
 input:focus { 
@@ -97,35 +117,41 @@ input:focus {
 label {
   color: #999; 
   font-family: 'Fira Code', monospace;
-  font-size: 25px;
+  font-size: 2vw;
   font-weight: 500;
   position: absolute;
   pointer-events: none;
-  left: 250px;
-  top: 5px;
+  left: 20.52545vw;
+  top: 0.81vh;
   transition: 0.2s ease all; 
   -moz-transition: 0.2s ease all; 
   -webkit-transition: 0.2s ease all;
 }
 
 input:focus ~ label, input:valid ~ label {
-  top: -20px;
-  font-size: 14px;
+  top: -3.24vh;
+  font-size: 1vw;
   color: #93A7A6;
 }
 
 #bar { 
-  position:relative;
-  left: 250px;
-  display:block; 
-  width:300px; 
+  position: relative;
+  left: 20.52545vw;
+  display: block; 
+  width: 24.63vw; 
+  min-width: 300px;
+  max-width: 300px;
 }
 
 #bar:before, #bar:after {
   content: '';
-  height: 2px; 
+  height: 0.324vh; 
   width: 0;
-  bottom: 1px; 
+  min-height: 2px;
+  min-width: 0;
+  max-height: 2px;
+  max-width: 0;
+  bottom: 0.162vh; 
   position: absolute;
   background: #93A7A6; 
   transition: 0.2s ease all; 
@@ -147,13 +173,13 @@ input:focus ~ #bar:before, input:focus ~ #bar:after {
 
 #highlight {
   position: absolute;
-  height: 40px; 
-  width: 350px;
+  height: 6.482982vh; 
+  width: 28.735632vw;
   top: 25%; 
-  left: 250px;
-  margin: -10px -10px -10px -20px;
+  left: 20.52545vw;
+  margin: -1.62vh -0.821vw -1.62vh -1.642vw;
   border: none;
-  border-radius: 50px;
+  border-radius: 4.1vw;
   pointer-events: none;
   opacity: 0.5;
 }
@@ -180,8 +206,12 @@ input:focus ~ #highlight {
 }
 
 #bottom {
-  height: 70px;
-  width: 1200px;
+  height: 11.3452vh;
+  width: 98.522vw;
+  min-height: 70px;
+  min-width: 1200px;
+  max-height: 70px;
+  max-width: 1200px;
   -moz-column-count: 2; /* Для Firefox */
   -webkit-column-count: 2; /* Для Safari и Chrome */
   column-count: 2;
@@ -189,7 +219,9 @@ input:focus ~ #highlight {
 
 #backImage {
   float: left;
-  margin: 7.5px 10px 7.5px 20px;
+  margin: 1.2vh 0.821vw 1.2vh 1.642vw;
+  height: 8.9vh;
+  width: 4.5vw;
   max-height: 55px;
   max-width: 55px;
   min-height: 55px;
@@ -203,13 +235,15 @@ input:focus ~ #highlight {
   -o-transform: scale(1.2); /* Для Opera */
   transform: scale(1.2);
   background: #93A7A6;
-  border-radius: 100px;
+  border-radius: 8.21vw;
   transition: 1s;
 }
 
 #nextImage {
   float: right;
-  margin: 7.5px 20px 7.5px 950px;
+  margin: 1.2vh 1.642vw 1.2vh 77.9967vw;
+  height: 8.9vh;
+  width: 4.5vw;
   max-height: 55px;
   max-width: 55px;
   min-height: 55px;
@@ -223,6 +257,6 @@ input:focus ~ #highlight {
   -o-transform: scale(1.2); /* Для Opera */
   transform: scale(1.2);
   background: #93A7A6;
-  border-radius: 100px;
+  border-radius: 8.21vw;
   transition: 1s;
 }

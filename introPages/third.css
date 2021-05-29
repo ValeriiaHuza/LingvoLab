@@ -5,7 +5,7 @@
 
 body {
   font-family: 'Unica One', cursive;
-  font-size: 30px;
+  font-size: 2.463vw;
   position: relative;
   min-width: 800px;
   width: 100%;
@@ -37,7 +37,7 @@ body {
 
 #logo {
   float: left;
-  margin: 18px 0px 0px 18px;
+  margin: 2.9vh 0px 0px 1.478vw;
 }
 
 #button1, #button2 {
