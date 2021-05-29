@@ -8,8 +8,6 @@ body {
   width: 98.522vw;
   min-height: 70px;
   min-width: 1200px;
-  max-height: 70px;
-  max-width: 1200px;
   -moz-column-count: 2; /* Для Firefox */
   -webkit-column-count: 2; /* Для Safari и Chrome */
   column-count: 2;
@@ -34,16 +32,12 @@ body {
   width: 98.522vw;
   min-height: 450px;
   min-width: 1200px;
-  max-height: 450px;
-  max-width: 1200px;
 }
 
 #greenRectangle {
   margin: 0 auto;
   height: 71.3vh;
   width: 65.681vw;
-  max-height: 440px;
-  max-width: 800px;
   min-height: 440px;
   min-width: 800px;
   background-color: #DEEFED;
@@ -68,8 +62,6 @@ body {
   margin-left: max(58.29vw, 58.29vw);
   height: 4.862vh;
   width: 2.463vw;
-  max-height: 30px;
-  max-width: 30px;
   min-height: 30px;
   min-width: 30px;
 }
@@ -102,9 +94,7 @@ body {
   height: 5.6726vh;
   width: 14.778vw;
   min-height: 35px;
-  max-height: 35px;
   min-width: 180px;
-  max-width: 180px;
   border-radius: 4.1vw;
   box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
 }
@@ -131,8 +121,6 @@ body {
   width: 98.522vw;
   min-height: 70px;
   min-width: 1200px;
-  max-height: 70px;
-  max-width: 1200px;
   -moz-column-count: 2; /* Для Firefox */
   -webkit-column-count: 2; /* Для Safari и Chrome */
   column-count: 2;
@@ -143,8 +131,6 @@ body {
   margin: 1.2vh 0.821vw 1.2vh 1.642vw;
   height: 8.9vh;
   width: 4.5vw;
-  max-height: 55px;
-  max-width: 55px;
   min-height: 55px;
   min-width: 55px;
 }
@@ -165,8 +151,6 @@ body {
   margin: 1.2vh 1.642vw 1.2vh 77.9967vw;
   height: 8.9vh;
   width: 4.5vw;
-  max-height: 55px;
-  max-width: 55px;
   min-height: 55px;
   min-width: 55px;
 }
