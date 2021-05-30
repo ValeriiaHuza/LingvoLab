@@ -11,33 +11,90 @@
  
  <body>
 
-  <div id="top">
+ <div id="top">
     <div id="logo">LingvoLab</div>
-    <div id="page">1/67</div>
+    <div id="page">1/49</div>
   </div>
 
   <div id="middle">
     <div id="greenRectangle">
 
       <div id="front">
-        <img id="audioImage" src="../Images/tools/audio.png"/>
-        <div id="word">learn</div>
+        <img id="audioImage" src="../Images/tools/audio.png" onclick="sound('../Music/game1/A1/Adult.mp3')"/>
+        <!--<div id="word">learn</div>-->
+        <ul class="news">
+          <li>Adult</li>
+          <li>Answer</li>
+          <li>Ball</li>
+          <li>Bathroom</li>  
+          <li>Camera</li>
+          <li>Chair</li>
+          <li>Dance</li>
+          <li>Eat</li>
+          <li>Enjoy</li>
+          <li>Face</li>  
+
+          <li>Fat</li>
+          <li>Glass</li>
+          <li>Grass</li>
+          <li>Home</li>  
+          <li>Horse</li>
+          <li>Interesting</li>
+          <li>Juice</li>
+          <li>Kitchen</li>
+          <li>Know</li>
+          <li>Language</li>  
+
+          <li>Listen</li>
+          <li>Meet</li>
+          <li>Museum</li>
+          <li>Near</li>  
+          <li>Newspaper</li>
+          <li>Often</li>
+          <li>Orange</li>
+          <li>Page</li>
+          <li>Pen</li>
+          <li>Quarter</li>  
+
+          <li>Question</li>
+          <li>Radio</li>
+          <li>Remember</li>
+          <li>Sad</li>  
+          <li>Short</li>
+          <li>Talk</li>
+          <li>Tennis</li>
+          <li>University</li>
+          <li>Until</li>
+          <li>Visit</li>  
+
+          <li>Village</li>
+          <li>Waitress</li>
+          <li>Want</li>
+          <li>Watch</li>  
+          <li>Weather</li>
+          <li>Year</li>
+          <li>You</li>
+          <li>Young</li>
+          <li>Zoo</li> 
+        </ul>
         <div id="buttons">
-          <div id="button1">got it</div>
-          <div id="button2">study again</div>
+          <div class="next1" id="button1">got it</div>
+          <div class="next2" id="button2">study again</div>
         </div>
       </div>
-
+<!--
       <div id="back">
         <div id="translation">bla-bla</div>
       </div>
-      
+ -->     
     </div>
   </div>
 
-	<div id="bottom">
-    <div><img id="backImage" src="../Images/tools/back.png"/></div>
+  <div id="bottom">
+    <div><img id="backImage" onclick="document.location='../introPages/main.html'" src="../Images/tools/back.png"/></div>
   </div>
+
+<script src ="game1.js"></script>
 
  </body>
 
