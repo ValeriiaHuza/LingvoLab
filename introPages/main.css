@@ -85,6 +85,9 @@ body {
 }
 
 #game1, #game2, #game3, #game4 {
+  font-family: 'Fira Code', monospace;
+  font-size: 30px;
+  font-weight: 500;
   height: 24.31vh;
   width: 24.63vw;
   min-height: 150px;
@@ -94,6 +97,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: #93A7A6;
+  border: none;
   border-radius: 1.23vw;
   box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
 }
