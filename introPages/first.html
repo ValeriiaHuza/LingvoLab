@@ -2,7 +2,7 @@
 <html lang="uk">
 
  <head>
-  <title>LingvoLab</title>
+  <title>first</title>
   <meta charset="utf-8" />
   <link rel="stylesheet" href="first.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -11,21 +11,151 @@
  
  <body>
 
-  <div id="top">
+ <div id="top">
     <div id="logo">LingvoLab</div>
-  </div>
-
-  <div id="description">
-    Веб застосунок для вивчення англійської мови. Користувач обирає навчання з нуля або з певного рівня, який визначається після проходження тесту. У застосунку доступні різні ігри та тренувальні вправи, які з новим рівнем будуть ускладнюватися.
+    <div id="page">1/67</div>
   </div>
 
   <div id="middle">
-    <div id="slogan">learn<br>text<br>listen</div>
-    <div id="button">begin<br>learning now</div>
+    <div id="greenRectangle">
+
+      <div id="front">
+        <img id="audioImage" src="../Images/tools/audio.png"/>
+        <!--<div id="word">learn</div>-->
+        <ul class="news">
+          <li>Adult</li>
+          <li>Answer</li>
+          <li>Ball</li>
+          <li>Bathroom</li>  
+          <li>Camera</li>
+          <li>Chair</li>
+          <li>Dance</li>
+          <li>Eat</li>
+          <li>Enjoy</li>
+          <li>Face</li>  
+
+          <li>Fat</li>
+          <li>Glass</li>
+          <li>Grass</li>
+          <li>Home</li>  
+          <li>Horse</li>
+          <li>Interesting</li>
+          <li>Juice</li>
+          <li>Kitchen</li>
+          <li>Know</li>
+          <li>Language</li>  
+
+          <li>Listen</li>
+          <li>Meet</li>
+          <li>Museum</li>
+          <li>Near</li>  
+          <li>Newspaper</li>
+          <li>Often</li>
+          <li>Orange</li>
+          <li>Page</li>
+          <li>Pen</li>
+          <li>Quarter</li>  
+
+          <li>Question</li>
+          <li>Radio</li>
+          <li>Remember</li>
+          <li>Sad</li>  
+          <li>Short</li>
+          <li>Talk</li>
+          <li>Tennis</li>
+          <li>University</li>
+          <li>Until</li>
+          <li>Visit</li>  
+
+          <li>Village</li>
+          <li>Waitress</li>
+          <li>Want</li>
+          <li>Watch</li>  
+          <li>Weather</li>
+          <li>Year</li>
+          <li>You</li>
+          <li>Young</li>
+          <li>Zoo</li> 
+        </ul>
+        <div id="buttons">
+          <div class="next1" id="button1">got it</div>
+          <div class="next2" id="button2">study again</div>
+        </div>
+      </div>
+<!--
+      <div id="back">
+        <div id="translation">bla-bla</div>
+      </div>
+ -->     
+    </div>
   </div>
 
-	<div id="bottom">
+  <div id="bottom">
+    <div><img id="backImage" src="../Images/tools/back.png"/></div>
   </div>
+
+<script type="text/javascript">
+function asArr(arrayLike) {
+  return [].slice.call(arrayLike, 0)
+}
+
+function setActiveArticle(articlesNodes, activeArticleNode) {
+  articlesNodes.forEach(function(articleNode) {
+    if (articleNode === activeArticleNode) {
+      articleNode.classList.add('current')
+    } else {
+      articleNode.classList.remove('current')
+    }
+  })
+}
+
+function getNextArticle(articlesNodes, articleNode) {
+  var articleIndex = articlesNodes.indexOf(articleNode)
+  var totalArticlesIndexes = articlesNodes.length - 1
+  if (articleIndex === totalArticlesIndexes) {
+    return articlesNodes[0]
+  } else {
+    return articlesNodes[articleIndex + 1] 
+  }
+}
+
+function getPrevArticle(articlesNodes, articleNode) {
+  var articleIndex = articlesNodes.indexOf(articleNode)
+  var totalArticlesIndexes = articlesNodes.length - 1
+  if (articleIndex === 0) {
+    return articlesNodes[totalArticlesIndexes]
+  } else {
+    return articlesNodes[articleIndex - 1] 
+  }
+}
+
+var ACTIVE_ARTICLE_DEFAULT_INDEX = 0
+function main() {
+  var articlesNodes = asArr(document.querySelectorAll('.news li'))
+  var nextNode1 = document.querySelector('.next1')
+  var nextNode2 = document.querySelector('.next2')
+
+  console.log('got', articlesNodes)
+  var currentlyActiveArticle = articlesNodes[ACTIVE_ARTICLE_DEFAULT_INDEX]
+
+  setActiveArticle(articlesNodes, currentlyActiveArticle)
+
+  nextNode1.addEventListener('click', function () {
+    var nextArticle1 = getNextArticle(articlesNodes, currentlyActiveArticle)
+    setActiveArticle(articlesNodes, nextArticle1)
+    currentlyActiveArticle = nextArticle1
+  })
+
+  nextNode2.addEventListener('click', function () {
+    var nextArticle2 = getNextArticle(articlesNodes, currentlyActiveArticle)
+    setActiveArticle(articlesNodes, nextArticle2)
+    currentlyActiveArticle = nextArticle2
+  })
+}
+
+main()
+</script>
+
 
  </body>
 
