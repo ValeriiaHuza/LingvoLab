@@ -78,10 +78,11 @@ body {
 #appleImage {
   display: block; 
   margin: 0 auto;
-  height: 300px;
-  width: 300px;
-  min-height: 48.62vh;
-  min-width: 24.63vw;
+  margin-bottom: 50px;
+  height: 40.5vh;
+  width: 20.52545vw;
+  min-height: 250px;
+  min-width: 250px;
 }
 
 #group { 
