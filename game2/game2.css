@@ -106,10 +106,13 @@ body {
   min-height: 40px;
   min-width: 300px;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #DEEFED;
   border-radius: 4.1vw;
   box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
-  font-family: 'Fira Code', monospace;
+  font-family: 'Play', sans-serif;
   font-size: 28px;
   font-weight: 400;
 }
