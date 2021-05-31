@@ -3,6 +3,17 @@
   margin:0;
 }
 
+#circle{
+  background-color: #93A7A6;
+  position: absolute;
+  width: 18em;
+  margin-left: 55vw;
+  height: 18em;
+  margin-top: -60vh;
+  border-radius: 50%;
+  z-index: -1;
+}
+
 body {
   font-family: 'Unica One', cursive;
   font-size: 50px;
@@ -11,7 +22,7 @@ body {
   width: 100%;
   height: 100%;
   text-align: center;
-  background-image: url(../Images/introPages/second.png);
+  overflow: hidden;
 }
 
 #logo {
@@ -138,6 +149,37 @@ input:focus ~ #highlight {
 @keyframes inputHighlighter {
   from { background: #93A7A6; }
   to  { width:0; background: transparent; }
+}
+
+
+.floating-button {
+  z-index: 4;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2vw;
+  font-weight: 500;
+  padding: 10px;
+  /*margin-left: 42.69vw;*/
+  width: 12.3vw;
+  border-radius: 2.463vw;
+  font-family: 'Fira Code', cursive;
+  font-style: normal;
+  line-height: 10vh;
+
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  color: black;
+  background: #bec9ca;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+  transition: .3s;
+}
+.floating-button:hover {
+  background: #93A7A6;
+  box-shadow: 0 15px 20px rgba(147, 167, 166, 0.4);
+  color: white;
+  transform: translateY(-5px);
 }
 
 #button {

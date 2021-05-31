@@ -5,7 +5,7 @@ console.log(bd);
 
 let load = 0;
 
-let int = setInterval(blurring,40);
+let int = setInterval(blurring,20);
 
 function blurring(){
 

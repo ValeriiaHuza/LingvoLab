@@ -99,36 +99,67 @@ body{
   color: #000000;
 }
 
-#next{
+.floating-button {
   position: fixed;
   z-index: 4;
+  text-decoration: none;
+  display: inline-block;
   width: 35.766vw;
   height: 19vh;
-  margin-left: 46.798vw;
-  margin-top: 24.311vh;
-  /*width: 548px;*/
-  /*height: 143px;*/
-  /*left: 659px;*/
-  /*top: 441px;*/
-  border: #93A7A6;
-  background: #93A7A6;
-  box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
+  margin: 25.311vh 2vw 2vh 46.798vw;
   border-radius: 2.463vw;
   font-family: 'Fira Code', cursive;
   font-style: normal;
   font-weight: normal;
   font-size: 4.1vw;
   line-height: 10vh;
+
   text-align: center;
-  display: flex;
   align-items: center;
   justify-content: center;
+
+  color: black;
+  background: #bec9ca;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
+  transition: .3s;
+}
+.floating-button:hover {
+  background: #93A7A6;
+  box-shadow: 0 15px 20px rgba(147, 167, 166, 0.4);
+  color: white;
+  transform: translateY(-5px);
 }
 
-#next:hover {
-  transform: scale(1.1);
-  transition: 1s;
-}
+/*#next{*/
+/*  position: fixed;*/
+/*  z-index: 4;*/
+/*  width: 35.766vw;*/
+/*  height: 19vh;*/
+/*  margin-left: 46.798vw;*/
+/*  margin-top: 24.311vh;*/
+/*  !*width: 548px;*!*/
+/*  !*height: 143px;*!*/
+/*  !*left: 659px;*!*/
+/*  !*top: 441px;*!*/
+/*  border: #93A7A6;*/
+/*  background: #93A7A6;*/
+/*  box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);*/
+/*  border-radius: 2.463vw;*/
+/*  font-family: 'Fira Code', cursive;*/
+/*  font-style: normal;*/
+/*  font-weight: normal;*/
+/*  font-size: 4.1vw;*/
+/*  line-height: 10vh;*/
+/*  text-align: center;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*}*/
+
+/*#next:hover {*/
+/*  transform: scale(1.1);*/
+/*  transition: 1s;*/
+/*}*/
 
 body{
   overflow: hidden;
@@ -146,7 +177,7 @@ body{
 .bubble {
   position: absolute;
   left: var(--bubble-left-offset);
-  bottom: -75%;
+  bottom: -20%;
   display: block;
   width: var(--bubble-radius);
   height: var(--bubble-radius);
