@@ -34,6 +34,9 @@ body {
   min-height: 40px;
   min-width: 40px;
   float: right;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 2.9vh 2vw 0 0;
   background-color: #93A7A6;
   color: black;
@@ -47,6 +50,13 @@ body {
   box-shadow: 0 15px 20px rgba(147, 167, 166, 0.4);
   color: black;
   transform: translateY(-5px);
+}
+
+#settings {
+  height: 4.862vh;
+  width: 2.463vw;
+  min-height: 30px;
+  min-width: 30px;
 }
 
 #middle1, #middle2 {
