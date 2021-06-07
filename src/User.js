@@ -4,6 +4,7 @@ export default class User {
     level;
     progressGame1;
 
+    indexAtGame2;
     progressGame2;
 
     indexAtGame3;
@@ -20,6 +21,8 @@ export default class User {
         this.progressGame3 = [""];
         this.progressGame4 = [""];
         this.indexAtGame3 = 0;
+        this.indexAtGame2 = 0;
+
 
     }
 
@@ -50,6 +53,14 @@ export default class User {
 
     setProgressGame2(array){
         this.progressGame2=array;
+    }
+
+    getIndexAtGame2(){
+        return this.indexAtGame2;
+    }
+
+    setIndexAtGame2(number){
+        this.indexAtGame2=number;
     }
 
 
@@ -85,6 +96,7 @@ export default class User {
         newUser.setLevel(temp.level);
         newUser.setProgressGame1(temp.progressGame1);
         newUser.setProgressGame2(temp.progressGame2);
+        newUser.setIndexAtGame2(temp.indexAtGame2);
         newUser.setProgressGame3(temp.progressGame3);
         newUser.setIndexAtGame3(temp.indexAtGame3);
         newUser.setProgressGame4(temp.progressGame4);
@@ -98,6 +110,7 @@ export default class User {
             level:this.level,
             progressGame1:this.progressGame1,
             progressGame2:this.progressGame2,
+            indexAtGame2:this.indexAtGame2,
             progressGame3:this.progressGame3,
             indexAtGame3:this.indexAtGame3,
             progressGame4:this.progressGame4

@@ -109,7 +109,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #DEEFED;
   border-radius: 4.1vw;
   box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
   font-family: 'Play', sans-serif;
@@ -117,10 +116,19 @@ body {
   font-weight: 400;
 }
 
-#button1:hover, #button2:hover, #button3:hover, #button4:hover {
+.button1,.button2,.button3,.button4{
+  background-color: #DEEFED;
+}
+
+.button1:hover, .button2:hover, .button3:hover, .button4:hover {
   background-color: #93A7A6;
   transform: scale(0.9);
   transition: 1s;
+}
+
+.buttonDisable{
+  background-color: #93A7A6;!important;
+  transform: scale(0.8);
 }
 
 #button1, #button2 {
