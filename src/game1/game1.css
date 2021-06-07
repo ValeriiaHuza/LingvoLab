@@ -295,6 +295,7 @@ body {
 
 #newBox {
   margin: 0 auto;
+  margin-top: -50px;
   height: 48.62vh;
   width: 49.261vw;
   min-height: 300px;

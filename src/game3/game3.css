@@ -50,7 +50,7 @@ body {
   display: block; 
   margin: 0 auto;
   position: relative;
-  top: 70px;
+  top: 11.3452vh;
   height: 40.5vh;
   width: 20.52545vw;
   min-height: 250px;
@@ -58,7 +58,8 @@ body {
 }
 
 #group { 
-  position: relative; top: 100px;
+  position: relative;
+  top: 16.2vh;
   margin-bottom: 7.293vh;
 }
 
