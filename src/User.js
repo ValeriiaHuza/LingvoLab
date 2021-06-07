@@ -9,10 +9,15 @@ export default class User {
     progressGame3;
 
     progressGame4;
+
     constructor(name) {
         this.name = name;
         this.level = "";
         this.progressGame1 = [""];
+        this.progressGame2 = [""];
+        this.progressGame3 = [""];
+        this.progressGame4 = [""];
+
     }
 
     getName(){
