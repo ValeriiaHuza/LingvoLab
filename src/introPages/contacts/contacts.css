@@ -94,3 +94,22 @@ body{
     gap: 10px;
 }
 
+#backImage {
+    float: left;
+    margin:  86.7vh 0.821vw 1.2vh 2.29885vw;
+    height: 8.9vh;
+    width: 4.5vw;
+    min-height: 55px;
+    min-width: 55px;
+}
+
+#backImage:hover {
+    -moz-transform: scale(1.2); /* Для Firefox */
+    -ms-transform: scale(1.2); /* Для IE */
+    -webkit-transform: scale(1.2); /* Для Safari, Chrome, iOS */
+    -o-transform: scale(1.2); /* Для Opera */
+    transform: scale(1.2);
+    background: #DEEFED;
+    border-radius: 100px;
+    transition: 1s;
+}

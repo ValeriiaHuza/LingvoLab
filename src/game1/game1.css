@@ -38,18 +38,156 @@ body {
   min-width: 1200px;
 }
 
-#greenRectangle {
+/*
+.wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #d5d5d5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  perspective: 1000px;
+  border: 1px solid #fff;
+}
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  backface-visibility: hidden;
+  background-color: #fff;
+}
+.front img {
+  max-width: 100%;
+  min-width: 100%;
+  height: auto;
+}
+.back {
+  transform: rotateY(180deg);
+}
+.card:hover .front {
+  transform: rotateY(180deg);}
+.card:hover .back {
+  transform: rotateY(360deg);}
+
+*/
+
+.wrapper {
   margin: 0 auto;
-  height: 71.3vh;
-  width: 65.681vw;
-  min-height: 440px;
-  min-width: 800px;
+  height: 48.62vh;
+  width: 49.261vw;
+  min-height: 300px;
+  min-width: 600px;
+  border-radius: 4.1vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.card {
+  height: 48.62vh;
+  width: 49.261vw;
+  min-height: 300px;
+  min-width: 600px;
+  perspective: 49.261vw;
+  border: 1px solid #fff;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  backface-visibility: hidden;
+  background-color: #fff;
+}
+.front {
+  background-color: #DEEFED;
+  border-radius: 4.1vw;
+  box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
+}
+.back {
+  transform: rotateY(180deg);
+}
+.card:hover .front {
+  transform: rotateY(180deg);}
+.card:hover .back {
+  transform: rotateY(360deg);}
+
+
+
+
+
+
+
+
+/*
+.greenRectangle {
+  margin: 0 auto;
+  height: 48.62vh;
+  width: 49.261vw;
+  min-height: 300px;
+  min-width: 600px;
+  display: block;
+  align-content: center;
+  justify-content: center;
   background-color: #DEEFED;
   border-radius: 4.1vw;
   box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
   text-align: center;
   perspective: 500px;
 }
+
+.greenRectangle.v:hover .front, .greenRectangle.v.flip .front{
+  transform: rotateX(180deg);
+}
+.greenRectangle.v:hover .back, .greenRectangle.v.flip .back{
+  transform: rotateX(0deg);
+}
+.greenRectangle.v .back{
+  transform: rotateX(-180deg);
+}
+.greenRectangle.h:hover .front, .greenRectangle.h.flip .front{
+  transform: rotateY(180deg);
+}
+.greenRectangle.h:hover .back, .greenRectangle.h.flip .back{
+  transform: rotateY(0deg);
+}
+.greenRectangle.h .back{
+  transform: rotateY(-180deg);
+}
+.greenRectangle .front, .greenRectangle .back {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  transition: all 0.5s ease-in;
+  padding: 10px;
+  backface-visibility: hidden;
+}
+*/
+
 /*
 #greenRectangle:hover {
   -moz-transform: rotate(180deg); 
@@ -60,56 +198,23 @@ body {
   transition: 1s;
 }
 */
-#audioImage {
-  margin-top: max(3.24vh, 3.24vh);
-  margin-right: max(0vw, 0vw);
-  margin-bottom: max(0vh, 0vh);
-  margin-left: max(58.29vw, 58.29vw);
-  height: 4.862vh;
-  width: 2.463vw;
-  min-height: 30px;
-  min-width: 30px;
-}
 
-#audioImage:hover {
-  -moz-transform: scale(1.2); /* Для Firefox */
-  -ms-transform: scale(1.2); /* Для IE */
-  -webkit-transform: scale(1.2); /* Для Safari, Chrome, iOS */
-  -o-transform: scale(1.2); /* Для Opera */
-  transform: scale(1.2);
-  transition: 0.5s;
-}
 
 #word{
-  margin-top: 16.2vh;
-  display: block;
-  align-content: center;
-  justify-content: center;
   font-family: 'Fira Code', monospace;
   font-size: 40px;
   font-weight: 500;
-}
-
-.news {
-  margin: 16.2vh 0vw 0vh 0vw;
-  font-family: 'Fira Code', monospace;
-  font-size: 40px;
-  font-weight: 500;
-}
-
-.news li {
-  display: none;
-}
-
-.news .current {
-  display: block;
 }
 
 #buttons {
-  margin: 24.31vh 1.642vw 0vh 1.642vw;
-  -moz-column-count: 2; /* Для Firefox */
-  -webkit-column-count: 2; /* Для Safari и Chrome */
-  column-count: 2;
+  margin: /*24.31vh 1.642vw 0vh 1.642vw*/ 8.1vh 24.63vw 8.1vh 24.63vw;
+  display: block;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  -moz-column-count: 3; /* Для Firefox */
+  -webkit-column-count: 3; /* Для Safari и Chrome */
+  column-count: 3;
 }
 
 #button1, #button2 {
@@ -127,6 +232,24 @@ body {
   float: left;
   margin: 0.821vw;
   background-color: #93A7A6;
+}
+
+#audioImage {
+  height: 4.862vh;
+  width: 2.463vw;
+  min-height: 30px;
+  min-width: 30px;
+  margin: 1.62vh 9vw 1.62vh 5.747vw;
+  float: left;
+}
+
+#audioImage:hover {
+  -moz-transform: scale(1.2); /* Для Firefox */
+  -ms-transform: scale(1.2); /* Для IE */
+  -webkit-transform: scale(1.2); /* Для Safari, Chrome, iOS */
+  -o-transform: scale(1.2); /* Для Opera */
+  transform: scale(1.2);
+  transition: 0.5s;
 }
 
 #button2 {
