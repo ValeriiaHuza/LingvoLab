@@ -50,7 +50,20 @@
      firstWord();
 
      function firstWord(){
-         if(currentUser.getProgressGame3()[0].length<1) {
+         if(currentUser.getProgressGame3().length===0){
+             document.getElementById('group').remove();
+             document.getElementById('greenRectangle').remove();
+             document.getElementById('nextImage').remove();
+             document.getElementById('page').remove();
+
+             let newBox = document.createElement("div");
+             newBox.id = "newBox";
+
+             document.getElementById('middle').appendChild(newBox);
+             document.getElementById('newBox').textContent = "Ви молодці! \n Ваш результат : " + (words.length - currentUser.getProgressGame3().length) + "/" + words.length;
+
+         }
+        else if(currentUser.getProgressGame3()[0].length<1) {
              currentUser.setProgressGame3(images);
              console.log("after reload" + currentUser);
              localStorage.setItem(name,currentUser.toString());
@@ -59,7 +72,7 @@
 
 
 
-     const progress = currentUser.getProgressGame3();
+     let progress = currentUser.getProgressGame3();
      //??????
      document.getElementById("appleImage").src=images[currentUser.indexAtGame3];
      document.getElementById("page").textContent = ((currentUser.getIndexAtGame3()+1) + "/" + images.length).toString();
@@ -79,30 +92,53 @@
          console.log("index - " + index);
 
 
-         if(input.toString() == words[index]){
+         if(input.toString() === words[index]){
 
              const getProgressIndex = progress.indexOf(src);
 
-             progress.splice(getProgressIndex,1);
-             document.getElementById("appleImage").src = images[++index];
-             console.log("new index" + index);
-             currentUser.setIndexAtGame3(index);
-             console.log("after splice" + images);
-             console.log("after splice" + progress);
+             let newArray = [];
+             for (let i = 0; i < progress.length; i++) {
+                 if(i!==getProgressIndex){
+                     newArray.push(progress[i]);
+                 }
+             }
+             console.log(newArray);
+             progress = [];
+             console.log(progress)
+             progress = newArray;
 
              currentUser.setProgressGame3(progress);
 
-             localStorage.setItem(name,currentUser.toString());
-             document.getElementById("page").textContent = ((currentUser.getIndexAtGame3()+1) + "/" + images.length).toString();
          }
-         else {
-             document.getElementById("appleImage").src = images[++index];
-             currentUser.setIndexAtGame3(index);
-             localStorage.setItem(name,currentUser.toString());
-             document.getElementById("page").textContent = ((currentUser.getIndexAtGame3()+1)+ "/" + images.length).toString();
+         index++;
+         currentUser.setIndexAtGame3(index);
 
+         if(currentUser.getIndexAtGame3()===words.length){
+             document.getElementById('group').remove();
+             document.getElementById('greenRectangle').remove();
+             document.getElementById('nextImage').remove();
+             document.getElementById('page').remove();
+
+             let newBox = document.createElement("div");
+             newBox.id = "newBox";
+
+             document.getElementById('middle').appendChild(newBox);
+             document.getElementById('newBox').textContent = "Ви молодці! \n Ваш результат : " + (words.length - currentUser.getProgressGame3().length) + "/" + words.length;
+
+             currentUser.setIndexAtGame3(0);
+             if(currentUser.getProgressGame3().length===0){
+                 currentUser.setIndexAtGame3([]);
+             }
+             else {
+                 currentUser.setProgressGame3([""]);
+             }
+             localStorage.setItem(name, currentUser.toString());
          }
-
+        else {
+             document.getElementById("appleImage").src = images[index];
+             localStorage.setItem(name, currentUser.toString());
+             document.getElementById("page").textContent = ((currentUser.getIndexAtGame3() + 1) + "/" + images.length).toString();
+         }
 
      }
 
