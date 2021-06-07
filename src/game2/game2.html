@@ -130,10 +130,20 @@
              document.getElementById('button3').classList.add("button3");
              document.getElementById('button4').classList.add("button4");
 
+             document.getElementById('button1').style.removeProperty("background-color");
+             document.getElementById('button2').style.removeProperty("background-color");
+             document.getElementById('button3').style.removeProperty("background-color");
+             document.getElementById('button4').style.removeProperty("background-color");
+
              document.getElementById('button1').classList.remove("buttonDisable");
              document.getElementById('button2').classList.remove("buttonDisable");
              document.getElementById('button3').classList.remove("buttonDisable");
              document.getElementById('button4').classList.remove("buttonDisable");
+
+             document.getElementById('button1').addEventListener("click",btn1);
+             document.getElementById('button2').addEventListener("click",btn2);
+             document.getElementById('button3').addEventListener("click",btn3);
+             document.getElementById('button4').addEventListener("click",btn4);
 
              document.getElementById('button1').textContent=answers[currentUser.indexAtGame2][0].toString();
              document.getElementById('button2').textContent=answers[currentUser.indexAtGame2][1].toString();
