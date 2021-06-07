@@ -292,3 +292,18 @@ body {
   border-radius: 8.21vw;
   transition: 1s;
 }
+
+#newBox {
+  margin: 0 auto;
+  height: 48.62vh;
+  width: 49.261vw;
+  min-height: 300px;
+  min-width: 600px;
+  background-color: #DEEFED;
+  border-radius: 4.1vw;
+  box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
