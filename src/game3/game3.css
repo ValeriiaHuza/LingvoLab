@@ -87,7 +87,7 @@ body {
 
 #group { 
   position: relative; 
-  margin-bottom: 7.293vh; 
+  margin-bottom: 7.293vh;
 }
 
 input {
@@ -98,6 +98,7 @@ input {
   padding: 1.62vh 0.821vw 1.62vh 1.642vw;
   display: block;
   width: 25.45vw;
+  min-width: 310px;
   border: none;
   border-radius: 4.1vw;
   box-shadow: 0.1642vw 0.1642vw 0.1642vw rgba(0, 0, 0, 0.25);
@@ -139,8 +140,6 @@ input:focus ~ label, input:valid ~ label {
   content: '';
   height: 0.324vh; 
   width: 0;
-  min-height: 2px;
-  min-width: 0;
   bottom: 0.162vh; 
   position: absolute;
   background: #93A7A6; 
