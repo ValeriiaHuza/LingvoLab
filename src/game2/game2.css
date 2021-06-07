@@ -194,9 +194,9 @@ body {
 #newBox {
   margin: 0 auto;
   margin-bottom: 100px;
-  height: 48.62vh;
+  height: 400px;
   width: 49.261vw;
-  min-height: 300px;
+  min-height: 400px;
   min-width: 600px;
   background-color: #DEEFED;
   border-radius: 4.1vw;
