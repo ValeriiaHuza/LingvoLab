@@ -48,7 +48,7 @@
   const words = ["hungry","kitchen","stirs","dishwashing","mountains"];
   const sentences = ["Jack was ______ .","She walked to the _______ .","Maria _____ the eggs.","Max washed the plate with _____ soap.","I live in a house near the -----."]
 
-  const audio = [];
+  const sounds = ["../Music/game4/A1/1.mp3","../Music/game4/A1/2.mp3","../Music/game4/A1/3.mp3","../Music/game4/A1/4.mp3","../Music/game4/A1/5.mp3"];
   const name = localStorage.getItem("last");
 
   const currentUser = User.build(localStorage.getItem(name));
@@ -88,6 +88,19 @@
   //add event listener
   document.getElementById('nextImage').addEventListener("click",check);
 
+  //
+  document.getElementById('audioImage').addEventListener("click",sound);
+
+  function sound() {
+      var audio = new Audio(); // Создаём новый элемент Audio
+      console.log(currentUser);
+      console.log(sounds);
+      console.log(sounds.length);
+      audio.src = sounds[currentUser.getIndexAtGame4()]; // Указываем путь к звуку "клика"
+      audio.play()// Автоматически запускаем
+  }
+
+  ///
   function check(){
   const input = document.getElementById("inputText").value.toLowerCase();
   document.getElementById("inputText").value = "";
