@@ -17,6 +17,7 @@
     <div id="page">1/67</div>
   </div>
 
+  <div id="middle">
   <div id="middle1">
     <div id="greenCircle">
       <img id="audioImage" src="../Images/tools/audio.png"/>
@@ -34,7 +35,7 @@
           <span id="bar"></span>
           <label>...</label>
       </div>
-
+  </div>
   </div>
 
     <div id="bottom">
@@ -66,7 +67,7 @@
   let newBox = document.createElement("div");
   newBox.id = "newBox";
 
-  document.getElementById('middle1').appendChild(newBox);
+  document.getElementById('middle').appendChild(newBox);
   document.getElementById('newBox').textContent = "Ви молодці! \n Ваш результат : " + (words.length - currentUser.getProgressGame3().length) + "/" + words.length;
 
   }

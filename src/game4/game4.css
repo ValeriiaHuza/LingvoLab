@@ -24,6 +24,13 @@ body {
   margin: 1.62vh 0.821vw 1.62vh 77.9967vw;
 }
 
+#middle {
+  height: 64.8vh;
+  width: 98.522vw;
+  min-height: 400px;
+  min-width: 1200px;
+}
+
 #middle1 {
   height: 36.467vh;
   min-height: 225px;
@@ -253,4 +260,21 @@ input:focus ~ #highlight {
   background: #93A7A6;
   border-radius: 8.21vw;
   transition: 1s;
+}
+
+#newBox {
+  margin: 0 auto;
+  margin-bottom: 21vh;
+  height: 48.62vh;
+  width: 49.261vw;
+  min-height: 300px;
+  min-width: 600px;
+  background-color: #DEEFED;
+  border-radius: 4.1vw;
+  box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid white;
 }
