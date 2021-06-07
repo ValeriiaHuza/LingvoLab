@@ -1,0 +1,219 @@
+/* instuctions */
+
+position: relative;
+width: 1440px;
+height: 1024px;
+
+background: #93A7A6;
+
+
+/* Rectangle 2 */
+
+position: absolute;
+width: 1005px;
+height: 216px;
+left: 87px;
+top: 154px;
+
+background: #DEEFED;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+
+
+/* Гра 1 - “Картки” У цій грі тобі потрібно визначити слово за його тлумаченням. Перевірити себе можна натиснув на центр картки. Якщо ти правильно відповів - то варто натиснути кнопку “got it”. Щоб продовжити вчити слово потрібно натиснути “study again”. Гра буде повторюватися, поки ти не натиснеш на всіх словах “got it”. */
+
+position: absolute;
+width: 968px;
+height: 170px;
+left: 124px;
+top: 177px;
+
+font-family: Fira Code;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 29px;
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Rectangle 6 */
+
+position: absolute;
+width: 778px;
+height: 165px;
+left: 600px;
+top: 402px;
+
+background: #DEEFED;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+
+
+/* Гра 2 - “Визначення слова за звуком” Ця гра призначена для розвитку навичок сприйняття мови на слух. У цій грі тобі потрібно прослухати слово та обрати його серед 4 варіантів. */
+
+position: absolute;
+width: 691px;
+height: 103px;
+left: 635px;
+top: 433px;
+
+font-family: Fira Code;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 29px;
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Rectangle 7 */
+
+position: absolute;
+width: 825px;
+height: 178px;
+left: 44px;
+top: 599px;
+
+background: #DEEFED;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+
+
+/* Rectangle 8 */
+
+position: absolute;
+width: 905px;
+height: 158px;
+left: 361px;
+top: 805px;
+
+background: #DEEFED;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 30px;
+
+
+/* Гра 4 - “Доповнення речення словом” У цій грі потрібно прослухати аудіо та написати слово, яке було пропущено в реченні. Гра закінчується, коли всі пропущені слова будуть вказані правильно. */
+
+position: absolute;
+width: 870px;
+height: 137px;
+left: 396px;
+top: 816px;
+
+font-family: Fira Code;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 29px;
+display: flex;
+align-items: center;
+
+color: #000000;
+
+
+
+/* Довідка */
+
+position: absolute;
+width: 189px;
+height: 59px;
+left: 1189px;
+top: 54px;
+
+font-family: Fira Code;
+font-style: normal;
+font-weight: normal;
+font-size: 45px;
+line-height: 59px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+
+/* LINGVOLAB */
+
+position: absolute;
+width: 187px;
+height: 74px;
+left: 44px;
+top: 47px;
+
+font-family: Unica One;
+font-style: normal;
+font-weight: normal;
+font-size: 45px;
+line-height: 120px;
+/* or 267% */
+display: flex;
+align-items: center;
+
+color: rgba(0, 0, 0, 0.7);
+
+
+
+/* Group 3 */
+
+position: absolute;
+width: 75px;
+height: 72px;
+left: 87px;
+top: 900px;
+
+
+
+/* Rectangle 42 */
+
+position: absolute;
+width: 75px;
+height: 72px;
+left: 87px;
+top: 900px;
+
+border: 2.5px solid #000000;
+box-sizing: border-box;
+box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+border-radius: 36px;
+
+
+/* Arrow 1 */
+
+position: absolute;
+width: 43.01px;
+height: 0px;
+left: 147px;
+top: 935px;
+
+border: 3px solid #000000;
+box-sizing: border-box;
+transform: rotate(178.67deg);
+
+
+/* Гра 3 - “Визначення слова за картинкою” Ця гра розвиває навички письма. У цій грі потрібно з’ясувати, що зображено на малюнку, та написати слово в комірці. Гра закінчується, коли всі слова будуть вказані правильно. */
+
+position: absolute;
+width: 751px;
+height: 96px;
+left: 73px;
+top: 640px;
+
+font-family: Fira Code;
+font-style: normal;
+font-weight: normal;
+font-size: 22px;
+line-height: 29px;
+display: flex;
+align-items: center;
+
+color: #000000;
+
