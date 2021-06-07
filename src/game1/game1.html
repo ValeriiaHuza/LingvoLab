@@ -14,7 +14,7 @@
 
  <div id="top">
     <div id="logo">LingvoLab</div>
-    <span id="page">1/49</span>
+    <span id="page"></span>
   </div>
 
   <div id="middle">
@@ -85,7 +85,7 @@
          if(index>-1){
              /*progress.splice(index,1);*/
              let newArray = [];
-             for (let i = 0; i < words.length; i++) {
+             for (let i = 0; i < words.length-1; i++) {
                  if(i!==index){
                      newArray.push(progress[i]);
                  }
@@ -100,6 +100,10 @@
          document.getElementById("page").textContent = ((words.indexOf(document.getElementById("word").textContent.toString())+1) + "/" + words.length).toString();
          currentUser.setProgressGame1(progress);
          localStorage.setItem(name,currentUser.toString());
+
+         if((words.indexOf(document.getElementById("word").textContent)) <= +0) {
+            // document.location.replace("../result/result.html");
+         }
      }
 
 
