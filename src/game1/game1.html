@@ -88,7 +88,7 @@
     document.getElementById('audioImage').addEventListener("click",sound);
 
     function gotIt(){
-        let index = progress.indexOf(document.getElementById("word").textContent.toString());
+        const index = progress.indexOf(document.getElementById("word").textContent.toString());
 
         if(index>-1){
             let newArray = [];
@@ -101,8 +101,8 @@
             progress = newArray;
         }
 
-        document.getElementById("word").textContent = progress[++index];
-        document.getElementById("meaning").textContent = meaning[index];
+        document.getElementById("word").textContent = progress[index];
+        document.getElementById("meaning").textContent = meaning[words.indexOf(document.getElementById("word").textContent.toString())];
         document.getElementById("page").textContent = ((words.indexOf(document.getElementById("word").textContent.toString())+1) + "/" + words.length).toString();
         currentUser.setProgressGame1(progress);
         localStorage.setItem(name,currentUser.toString());
@@ -115,7 +115,7 @@
         let index = progress.indexOf(document.getElementById("word").textContent.toString());
         if(index<progress.length) {
             document.getElementById("word").textContent = progress[++index];
-            document.getElementById("meaning").textContent = meaning[index];
+            document.getElementById("meaning").textContent = meaning[words.indexOf(document.getElementById("word").textContent.toString())];
             document.getElementById("page").textContent = ((words.indexOf(document.getElementById("word").textContent.toString())+1) + "/" + words.length).toString();
 
         }
