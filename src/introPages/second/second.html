@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+ <head>
+  <title>LingvoLab</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="second.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Unica+One&display=swap" rel="stylesheet">
+ </head>
+ 
+ <body>
+
+ <div id="circle"> </div>
+  <div id="main">
+    <div id="logo">LingvoLab</div>
+    <div id="text1">вас вітає!</div>
+    <div id="text2">Для того, щоб пройти невелику<br> реєстрацію, будь ласка,<br> введіть своє ім’я :</div>
+
+    <div id="group">      
+          <input id="nameSecondPage" type="text" required>
+          <span id="highlight"></span>
+          <span id="bar"></span>
+          <label>name</label>
+    </div>
+
+<!--      "../third/third.html"-->
+      <a class="floating-button" id="setNameSecondPage">Далі</a>
+<!--    <div id="button" onclick="document.location='../third/third.html'">Далі</div>-->
+  </div>
+
+ <script type="module">
+
+     import User from '../../User.js';
+
+     const button = document.getElementById("setNameSecondPage").addEventListener("click", createOrCheckNewUser);
+     function createOrCheckNewUser(){
+
+         const name = document.getElementById('nameSecondPage').value;
+
+         if(name.length < 1){
+             alert("Error");
+         }
+         else {
+
+             let newUser = new User(name);
+             localStorage.setItem(name,newUser.toString());
+             localStorage.setItem("last",name);
+
+             console.log(localStorage
+             .getItem(name));
+             console.log(User.build(localStorage
+                 .getItem(name)));
+
+             document.location='../third/third.html';
+         }
+
+
+     }
+
+ </script>
+ </body>
+</html>

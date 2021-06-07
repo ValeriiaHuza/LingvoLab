@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+ <head>
+  <title>LingvoLab</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="fifth.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Unica+One&display=swap" rel="stylesheet">
+ </head>
+ 
+ <body>
+
+  <div id="top">
+    <div id="logo">LingvoLab</div>
+  </div>
+
+  <div id="middle">
+    <span id="name"></span>
+    <div id="sentence">оберіть свій рівень знань англійської мови</div>
+    <div id="button1" class="floating-button" value="A1">A1</div>
+    <div id="button2" class="floating-button" value="A2">A2</div>
+    <div id="button3" class="floating-button" value="B1">B1</div>
+    <div id="button4" class="floating-button" value="B2">B2</div>
+    <div id="button5" class="floating-button" value="C1">C1</div>
+  </div>
+
+  <div id="bottom">
+    <div><img alt="next" id="backImage" onclick="document.location='../third/third.html'" src="../../Images/tools/back.png"/></div>
+  </div>
+
+  <div class="area" >
+      <ul class="circles">
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+      </ul>
+  </div >
+
+ <script type="module">
+     import User from '../../User.js';
+
+     //set name
+     let userName = localStorage.getItem("last");
+     document.getElementById('name').textContent = userName.toString();
+
+     document.getElementById('button1').addEventListener('click',setLevel1);
+
+     function setLevel1(){
+         const level = document.getElementById('button1').textContent;
+
+         console.log(level);
+
+         let newUser = User.build(localStorage.getItem(userName));
+         newUser.setLevel(level);
+
+         localStorage.setItem(userName,newUser.toString());
+
+         document.location='../main page/main.html';
+     }
+
+     document.getElementById('button2').addEventListener('click',setLevel2);
+
+     function setLevel2(){
+         const level = document.getElementById('button2').textContent;
+
+         console.log(level);
+
+         let newUser = User.build(localStorage.getItem(userName));
+         newUser.setLevel(level);
+
+         localStorage.setItem(userName,newUser.toString());
+
+         document.location='../main page/main.html';
+     }
+
+
+     document.getElementById('button3').addEventListener('click',setLevel3);
+
+     function setLevel3(){
+         const level = document.getElementById('button3').textContent;
+
+         console.log(level);
+
+         let newUser = User.build(localStorage.getItem(userName));
+         newUser.setLevel(level);
+
+         localStorage.setItem(userName,newUser.toString());
+
+         document.location='../main page/main.html';
+     }
+
+     document.getElementById('button4').addEventListener('click',setLevel4);
+
+     function setLevel4(){
+         const level = document.getElementById('button4').textContent;
+
+         console.log(level);
+
+         let newUser = User.build(localStorage.getItem(userName));
+         newUser.setLevel(level);
+
+         localStorage.setItem(userName,newUser.toString());
+
+         document.location='../main page/main.html';
+     }
+
+     document.getElementById('button5').addEventListener('click',setLevel5);
+
+     function setLevel5(){
+         const level = document.getElementById('button5').textContent;
+
+         console.log(level);
+
+         let newUser = User.build(localStorage.getItem(userName));
+         newUser.setLevel(level);
+
+         localStorage.setItem(userName,newUser.toString());
+
+         document.location='../main page/main.html';
+     }
+ </script>
+
+ </body>
+</html>

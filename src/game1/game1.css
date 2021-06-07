@@ -80,6 +80,16 @@ body {
   transition: 0.5s;
 }
 
+#word{
+  margin-top: 16.2vh;
+  display: block;
+  align-content: center;
+  justify-content: center;
+  font-family: 'Fira Code', monospace;
+  font-size: 40px;
+  font-weight: 500;
+}
+
 .news {
   margin: 16.2vh 0vw 0vh 0vw;
   font-family: 'Fira Code', monospace;

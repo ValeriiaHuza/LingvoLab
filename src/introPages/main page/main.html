@@ -19,10 +19,10 @@
   </div>
 
   <div id="middle1">
-    <div id="name">Name</div>
+    <span id="name"></span>
   </div>
   <div id="middle2">
-    <div id="level">A1</div>
+    <span id="level"></span>
   </div>
 
   <div id="cardsRow1">
@@ -33,6 +33,21 @@
     <button class="floating-button" id="game3" onclick="document.location='../../game3/game3.html'">game 3</button>
     <button class="floating-button" id="game4" onclick="document.location='../../game4/game4.html'">game 4</button>
   </div>
+
+  <script type="module">
+      import User from '../../User.js';
+
+      //set name
+      let userName = localStorage.getItem("last");
+      document.getElementById('name').textContent = userName.toString();
+      let currentUser = User.build(localStorage.getItem(userName));
+
+      document.getElementById("level").textContent = currentUser.getLevel().toString();
+      console.log(currentUser.toString());
+      console.log(currentUser.getLevel());
+
+  </script>
+
 
  </body>
 </html>
