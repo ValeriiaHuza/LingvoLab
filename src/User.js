@@ -10,6 +10,7 @@ export default class User {
     indexAtGame3;
     progressGame3;
 
+    indexAtGame4;
     progressGame4;
 
 
@@ -20,6 +21,7 @@ export default class User {
         this.progressGame2 = [""];
         this.progressGame3 = [""];
         this.progressGame4 = [""];
+        this.indexAtGame4 = 0;
         this.indexAtGame3 = 0;
         this.indexAtGame2 = 0;
 
@@ -88,6 +90,14 @@ export default class User {
         this.progressGame4=array;
     }
 
+    getIndexAtGame4(){
+        return this.indexAtGame4;
+    }
+
+    setIndexAtGame4(number){
+        this.indexAtGame4=number;
+    }
+
 
     static build(json){
         let temp = JSON.parse(json);
@@ -100,6 +110,7 @@ export default class User {
         newUser.setProgressGame3(temp.progressGame3);
         newUser.setIndexAtGame3(temp.indexAtGame3);
         newUser.setProgressGame4(temp.progressGame4);
+        newUser.setIndexAtGame4(temp.indexAtGame4);
 
         return newUser;
     }
@@ -113,7 +124,9 @@ export default class User {
             indexAtGame2:this.indexAtGame2,
             progressGame3:this.progressGame3,
             indexAtGame3:this.indexAtGame3,
-            progressGame4:this.progressGame4
+            progressGame4:this.progressGame4,
+            indexAtGame4:this.indexAtGame4,
+
         });
     }
 }

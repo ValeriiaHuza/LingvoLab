@@ -29,7 +29,7 @@
         <div id="sentence">I am writing this code too ... long.</div>
     </div>
       <div id="group">
-          <input type="text" required>
+          <input id="inputText" type="text" required>
           <span id="highlight"></span>
           <span id="bar"></span>
           <label>...</label>
@@ -41,6 +41,131 @@
     <div><img id="backImage" title="back to main page" onclick="document.location='../introPages/main page/main.html'" src="../Images/tools/back.png"/></div>
     <div><img id="nextImage" title="go to the next sentence" src="../Images/tools/next.png"/></div>
   </div>
+
+  <script type="module">
+  import User from "../User.js";
+
+  const words = ["hungry","kitchen","stirs","dishwashing","mountains"];
+  const sentences = ["Jack was ______ .","She walked to the _______ .","Maria _____ the eggs.","Max washed the plate with _____ soap.","I live in a house near the -----."]
+
+  const sounds = ["../Music/game4/A1/1.mp3","../Music/game4/A1/2.mp3","../Music/game4/A1/3.mp3","../Music/game4/A1/4.mp3","../Music/game4/A1/5.mp3"];
+  const name = localStorage.getItem("last");
+
+  const currentUser = User.build(localStorage.getItem(name));
+
+  //set first world
+  firstWord();
+
+  function firstWord(){
+  if(currentUser.getProgressGame4().length===0){
+  document.getElementById('middle2').remove();
+  document.getElementById('greenCircle').remove();
+  document.getElementById('nextImage').remove();
+  document.getElementById('page').remove();
+
+  let newBox = document.createElement("div");
+  newBox.id = "newBox";
+
+  document.getElementById('middle1').appendChild(newBox);
+  document.getElementById('newBox').textContent = "Ви молодці! \n Ваш результат : " + (words.length - currentUser.getProgressGame3().length) + "/" + words.length;
+
+  }
+  else if(currentUser.getProgressGame4()[0].length<1) {
+  currentUser.setProgressGame4(sentences);
+  console.log("after reload" + currentUser);
+  localStorage.setItem(name,currentUser.toString());
+  }
+  }
+
+
+
+  let progress = currentUser.getProgressGame4();
+  //??????
+  document.getElementById("sentence").textContent=sentences[currentUser.indexAtGame4];
+  document.getElementById("page").textContent = ((currentUser.getIndexAtGame4()+1) + "/" + sentences.length).toString();
+
+
+  //add event listener
+  document.getElementById('nextImage').addEventListener("click",check);
+
+  //
+  document.getElementById('audioImage').addEventListener("click",sound);
+
+  function sound() {
+      var audio = new Audio(); // Создаём новый элемент Audio
+      console.log(currentUser);
+      console.log(sounds);
+      console.log(sounds.length);
+      audio.src = sounds[currentUser.getIndexAtGame4()]; // Указываем путь к звуку "клика"
+      audio.play()// Автоматически запускаем
+  }
+
+  ///
+  function check(){
+  const input = document.getElementById("inputText").value.toLowerCase();
+  document.getElementById("inputText").value = "";
+  const currentSentence = document.getElementById("sentence").textContent.toString();
+
+  let index = sentences.indexOf(currentSentence);
+
+  console.log("input - " + input);
+  console.log("src - " + currentSentence);
+  console.log("index - " + index);
+
+
+  if(input.toString() === words[index]){
+
+  const getProgressIndex = progress.indexOf(currentSentence);
+
+  let newArray = [];
+  for (let i = 0; i < progress.length; i++) {
+  if(i!==getProgressIndex){
+  newArray.push(progress[i]);
+  }
+  }
+  console.log(newArray);
+  progress = [];
+  console.log(progress)
+  progress = newArray;
+
+  currentUser.setProgressGame4(progress);
+
+  }
+  index++;
+  currentUser.setIndexAtGame4(index);
+
+  if(currentUser.getIndexAtGame4()===words.length){
+      document.getElementById('middle2').remove();
+      document.getElementById('greenCircle').remove();
+      document.getElementById('nextImage').remove();
+      document.getElementById('page').remove();
+
+      let newBox = document.createElement("div");
+      newBox.id = "newBox";
+
+  document.getElementById('middle1').appendChild(newBox);
+  document.getElementById('newBox').textContent = "Ви молодці! \n Ваш результат : " + (words.length - currentUser.getProgressGame4().length) + "/" + words.length;
+
+  currentUser.setIndexAtGame4(0);
+  if(currentUser.getProgressGame4().length===0){
+  currentUser.setIndexAtGame4([]);
+  }
+  else {
+  currentUser.setProgressGame4([""]);
+  }
+  localStorage.setItem(name, currentUser.toString());
+  }
+  else {
+  document.getElementById("sentence").textContent = sentences[index];
+  localStorage.setItem(name, currentUser.toString());
+  document.getElementById("page").textContent = ((currentUser.getIndexAtGame4() + 1) + "/" + sentences.length).toString();
+  }
+
+  }
+
+
+
+  </script>
 
  </body>
 
