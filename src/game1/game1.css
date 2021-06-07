@@ -36,7 +36,7 @@ body {
   width: 98.522vw;
   min-height: 450px;
   min-width: 1200px;
-  border: 1px solid red;
+  border: 1px solid white;
 }
 
 /*
@@ -297,8 +297,8 @@ body {
 #newBox {
   margin: 0 auto;
   /*margin-top: -50px;
-  margin-bottom: -50px;*/
-  border: 1px solid red;
+  margin-bottom: -50px;
+  border: 1px solid #DEEFED;*/
   position: relative;
   top: -80px;
   height: 48.62vh;
