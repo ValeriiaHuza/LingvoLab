@@ -75,7 +75,7 @@ body {
 }
 
 #greenRectangle {
-  margin: 11.3452vh 0vw 7.293vh 16.42vw;
+  margin: 20px 0vw 7.293vh 16.42vw;
   padding: 1.62vh 0.821vw 1.62vh 1.642vw;
   height:  6.482982vh;
   width: 65.68vw;
@@ -101,7 +101,7 @@ body {
 
 input {
   position: relative;
-  left: 41vw;
+  left: 43.5vw;
   font-family: 'Fira Code', monospace;
   font-size: 18px;
   padding: 1.62vh 0.821vw 1.62vh 1.642vw;
@@ -112,6 +112,7 @@ input {
   min-width: 100px;
   border: none;
   border-radius: 4.1vw;
+  background-color: #BEC9CA;
 }
 
 input:focus { 
@@ -125,7 +126,7 @@ label {
   font-weight: 500;
   position: absolute;
   pointer-events: none;
-  left: 42.693vw;
+  left: 45vw;
   top: 0.81vh;
   transition: 0.2s ease all; 
   -moz-transition: 0.2s ease all; 
@@ -138,7 +139,7 @@ input:focus ~ label, input:valid ~ label {
 
 #bar { 
   position: relative;
-  left: 42.693vw;
+  left: 45vw;
   display: block; 
   width: 7.389vw; 
   min-width: 90px; 
@@ -171,13 +172,13 @@ input:focus ~ #bar:before, input:focus ~ #bar:after {
 #highlight {
   position: absolute;
   height: 6.483vh;
-  width: 11.494vw;
+  width: 10.673vw;
   min-height: 40px;
-  min-width: 140px;
+  min-width: 130px;
   border: none;
   border-radius: 4.1vw;
   top: 25%; 
-  left: 42.69vw;
+  left: 45vw;
   margin: -1.62vh -0.821vw -1.62vh -1.642vw;
   pointer-events: none;
   opacity: 0.5;
