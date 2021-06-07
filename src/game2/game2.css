@@ -25,13 +25,6 @@ body {
   margin-left: max(77.9967vw, 77.9967vw);
 }
 
-#middle1 {
-  height: 36.4667747vh;
-  width: 98.522vw;
-  min-height: 225px;
-  min-width: 1200px;
-}
-
 #greenCircle {
   margin: 8.1vh 0px 0px 41vw;
   height: 32.4vh;
@@ -74,6 +67,14 @@ body {
   min-height: 100px;
   min-width: 100px;
 }
+
+#middle {
+  height: 400px;
+  width: 98.522vw;
+  min-height: 400px;
+  min-width: 1200px;
+}
+
 #middle1 {
   height: 36.4667747vh;
   width: 98.522vw;

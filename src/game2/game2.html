@@ -22,7 +22,7 @@
         <img id="audioImage" src="../Images/tools/audio.png"/>
     </div>
 </div>
-
+<div id="middle">
 <div id="middle2">
     <div id="buttonsRow1">
         <div class="button1" id="button1">word1</div>
@@ -34,7 +34,7 @@
         <div class="button4" id="button4">word4</div>
     </div>
 </div>
-
+</div>
 <div id="bottom">
     <div><img id="backImage" title="back to main page" onclick="document.location='../introPages/main page/main.html'" src="../Images/tools/back.png"/></div>
     <div><img id="nextImage" title="go to the next word" src="../Images/tools/next.png"/></div>
@@ -71,7 +71,7 @@
             let newBox = document.createElement("div");
             newBox.id = "newBox";
 
-            document.getElementById('middle1').appendChild(newBox);
+            document.getElementById('middle').appendChild(newBox);
             document.getElementById('newBox').textContent = "Ви молодці! \n Ваш результат : " + (sounds.length - currentUser.getProgressGame2().length) + "/" + sounds.length;
 
         }
