@@ -18,11 +18,11 @@
 
   <div id="middle">
     <div id="greenRectangle">
-      <img id="audioImage" src="../Images/tools/audio.png"/>
-      <img id="appleImage" src="../Images/game3/A1/apple.png"/>
+        <div id="audioImage"></div>
+      <img id="appleImage">
       
       <div id="group">      
-          <input type="text" required>
+          <input id="inputText" type="text" required>
           <span id="highlight"></span>
           <span id="bar"></span>
           <label>It`s a(-n)...</label>
@@ -35,6 +35,81 @@
     <div><img id="backImage" onclick="document.location='../introPages/main page/main.html'" src="../Images/tools/back.png"/></div>
     <div><img id="nextImage" src="../Images/tools/next.png"/></div>
   </div>
+
+ <script type="module">
+
+     import User from "../User.js";
+
+     const words = ["apple","banana","boy","cake","cat"]
+     const images = ["../Images/game3/A1/apple.png","../Images/game3/A1/banana.png","../Images/game3/A1/boy.png","../Images/game3/A1/cake.png","../Images/game3/A1/cat.png"]
+
+     const name = localStorage.getItem("last");
+
+     const currentUser = User.build(localStorage.getItem(name));
+
+     //set first world
+     firstWord();
+
+     function firstWord(){
+         if(currentUser.getProgressGame3()[0].length<1) {
+             currentUser.setProgressGame3(images);
+             console.log("after reload" + currentUser);
+             localStorage.setItem(name,currentUser.toString());
+         }
+     }
+
+
+
+     const progress = currentUser.getProgressGame3();
+     //??????
+     document.getElementById("appleImage").src=images[currentUser.indexAtGame3];
+     document.getElementById("page").textContent = ((currentUser.getIndexAtGame3()+1) + "/" + images.length).toString();
+
+
+     //add event listener
+     document.getElementById('nextImage').addEventListener("click",check);
+
+     function check(){
+         const input = document.getElementById("inputText").value.toLowerCase();
+         document.getElementById("inputText").value = "";
+         const src = document.getElementById("appleImage").getAttribute('src');
+
+         let index = images.indexOf(src);
+         console.log("input - " + input);
+         console.log("src - " + src);
+         console.log("index - " + index);
+
+
+         if(input.toString() == words[index]){
+
+             const getProgressIndex = progress.indexOf(src);
+
+             progress.splice(getProgressIndex,1);
+             document.getElementById("appleImage").src = images[++index];
+             console.log("new index" + index);
+             currentUser.setIndexAtGame3(index);
+             console.log("after splice" + images);
+             console.log("after splice" + progress);
+
+             currentUser.setProgressGame3(progress);
+
+             localStorage.setItem(name,currentUser.toString());
+             document.getElementById("page").textContent = ((currentUser.getIndexAtGame3()+1) + "/" + images.length).toString();
+         }
+         else {
+             document.getElementById("appleImage").src = images[++index];
+             currentUser.setIndexAtGame3(index);
+             localStorage.setItem(name,currentUser.toString());
+             document.getElementById("page").textContent = ((currentUser.getIndexAtGame3()+1)+ "/" + images.length).toString();
+
+         }
+
+
+     }
+
+
+
+ </script>
 
  </body>
 

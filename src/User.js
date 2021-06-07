@@ -6,9 +6,11 @@ export default class User {
 
     progressGame2;
 
+    indexAtGame3;
     progressGame3;
 
     progressGame4;
+
 
     constructor(name) {
         this.name = name;
@@ -17,6 +19,7 @@ export default class User {
         this.progressGame2 = [""];
         this.progressGame3 = [""];
         this.progressGame4 = [""];
+        this.indexAtGame3 = 0;
 
     }
 
@@ -58,6 +61,14 @@ export default class User {
         this.progressGame3=array;
     }
 
+    getIndexAtGame3(){
+        return this.indexAtGame3;
+    }
+
+    setIndexAtGame3(number){
+        this.indexAtGame3=number;
+    }
+
     getProgressGame4(){
         return this.progressGame4;
     }
@@ -65,6 +76,7 @@ export default class User {
     setProgressGame4(array){
         this.progressGame4=array;
     }
+
 
     static build(json){
         let temp = JSON.parse(json);
@@ -74,6 +86,7 @@ export default class User {
         newUser.setProgressGame1(temp.progressGame1);
         newUser.setProgressGame2(temp.progressGame2);
         newUser.setProgressGame3(temp.progressGame3);
+        newUser.setIndexAtGame3(temp.indexAtGame3);
         newUser.setProgressGame4(temp.progressGame4);
 
         return newUser;
@@ -86,6 +99,7 @@ export default class User {
             progressGame1:this.progressGame1,
             progressGame2:this.progressGame2,
             progressGame3:this.progressGame3,
+            indexAtGame3:this.indexAtGame3,
             progressGame4:this.progressGame4
         });
     }

@@ -118,6 +118,7 @@
          if(currentUser.getProgressGame1()[0].length<1) {
              console.log("after reload" + currentUser);
              currentUser.setProgressGame1(words);
+             localStorage.setItem(name,currentUser.toString());
          }
      }
 
@@ -143,6 +144,7 @@
          console.log(progress);
          console.log(currentUser);
          document.getElementById("word").textContent = progress[0];
+         console.log("got it - " + document.getElementById("word").textContent);
          document.getElementById("page").textContent = ((words.indexOf(document.getElementById("word").textContent.toString())+1) + "/" + words.length).toString();
          currentUser.setProgressGame1(progress);
          localStorage.setItem(name,currentUser.toString());
@@ -163,6 +165,7 @@
 
          const currentWord = document.getElementById("word").textContent.toString();
          const index = words.indexOf(currentWord);
+         console.log(words)
          console.log(currentWord);
          console.log(index);
 
