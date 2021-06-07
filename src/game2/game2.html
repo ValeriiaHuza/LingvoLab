@@ -25,13 +25,13 @@
 
   <div id="middle2">
       <div id="buttonsRow1">      
-        <div id="button1">word1</div>
-        <div id="button3">word3</div>
+        <div class="button1" id="button1">word1</div>
+        <div class="button3" id="button3">word3</div>
       </div>
 
       <div id="buttonsRow2">      
-        <div id="button2">word2</div>
-        <div id="button4">word4</div>
+        <div class="button2" id="button2">word2</div>
+        <div class="button4" id="button4">word4</div>
       </div>
   </div>
 
@@ -43,7 +43,189 @@
  <script type="module">
 
      import User from "../User.js";
+     const words = ["дорослий", "відповідь", "м'яч", "ванна", "камера"];
 
+     const answers = [["чоловік","людина","малеча","дорослий"],
+         ["відповідь","запитання","життя","м'яч"],
+         ["гра","м'яч","камера","дорослий"],
+         ["спальня","туалет","ванна","дитина"],
+         ["людина","м'яч","камера","телевізор"]];
+     //array with sounds
+     const sounds = ['../Music/game1/A1/Adult.mp3','../Music/game1/A1/Answer.mp3','../Music/game1/A1/Ball.mp3','../Music/game1/A1/Bathroom.mp3','../Music/game1/A1/Camera.mp3']
+
+     const name = localStorage.getItem("last");
+
+     const currentUser = User.build(localStorage.getItem(name));
+
+     //set first world
+     firstWord();
+
+     function firstWord(){
+         if(currentUser.getProgressGame2()[0].length<1) {
+             currentUser.setProgressGame2(sounds);
+             console.log("after reload" + currentUser);
+             localStorage.setItem(name,currentUser.toString());
+         }
+     }
+
+
+
+     const progress = currentUser.getProgressGame2();
+
+     document.getElementById("page").textContent = ((currentUser.getIndexAtGame2()+1) + "/" + sounds.length).toString();
+
+     //text
+
+     document.getElementById('button1').textContent=answers[currentUser.indexAtGame2][0].toString();
+     document.getElementById('button2').textContent=answers[currentUser.indexAtGame2][1].toString();
+     document.getElementById('button3').textContent=answers[currentUser.indexAtGame2][2].toString();
+     document.getElementById('button4').textContent=answers[currentUser.indexAtGame2][3].toString();
+
+     //add event listener
+     document.getElementById('nextImage').addEventListener("click",change);
+
+     document.getElementById('audioImage').addEventListener("click",sound);
+
+     document.getElementById('button1').addEventListener("click",btn1);
+     document.getElementById('button2').addEventListener("click",btn2);
+     document.getElementById('button3').addEventListener("click",btn3);
+     document.getElementById('button4').addEventListener("click",btn4);
+
+     function sound() {
+         var audio = new Audio(); // Создаём новый элемент Audio
+         console.log(currentUser);
+         console.log(sounds);
+         console.log(sounds.length);
+         audio.src = sounds[currentUser.getIndexAtGame2()]; // Указываем путь к звуку "клика"
+         audio.play()// Автоматически запускаем
+
+
+         console.log("after sounds" + currentUser);
+         console.log("after sounds" +sounds);
+         console.log("after sounds" +sounds.length);
+     }
+
+     let choosenVariant="";
+
+     function change(){
+
+         let index = currentUser.getIndexAtGame2();
+         const src = sounds[index];
+
+
+         if(choosenVariant.length>0){
+
+             if(choosenVariant===words[currentUser.indexAtGame2]){
+                 const getProgressIndex = progress.indexOf(src);
+                 progress.splice(getProgressIndex,1);
+                 currentUser.setProgressGame2(progress);
+                 localStorage.setItem(name,currentUser.toString());
+             }
+
+             index++;
+             currentUser.setIndexAtGame2(index);
+
+             document.getElementById('button1').classList.add("button1");
+             document.getElementById('button2').classList.add("button2");
+             document.getElementById('button3').classList.add("button3");
+             document.getElementById('button4').classList.add("button4");
+
+             document.getElementById('button1').classList.remove("buttonDisable");
+             document.getElementById('button2').classList.remove("buttonDisable");
+             document.getElementById('button3').classList.remove("buttonDisable");
+             document.getElementById('button4').classList.remove("buttonDisable");
+
+             document.getElementById('button1').textContent=answers[currentUser.indexAtGame2][0].toString();
+             document.getElementById('button2').textContent=answers[currentUser.indexAtGame2][1].toString();
+             document.getElementById('button3').textContent=answers[currentUser.indexAtGame2][2].toString();
+             document.getElementById('button4').textContent=answers[currentUser.indexAtGame2][3].toString();
+
+             localStorage.setItem(name,currentUser.toString());
+             document.getElementById("page").textContent = ((currentUser.getIndexAtGame2()+1) + "/" + sounds.length).toString();
+
+         }
+
+     }
+
+
+     function btn1(){
+         choosenVariant = document.getElementById('button1').textContent.toString();
+         console.log(choosenVariant);
+         document.getElementById('button1').classList.remove("button1");
+         document.getElementById('button1').style="background-color: #DEEFED";
+
+         document.getElementById('button2').removeEventListener("click",btn2);
+         document.getElementById('button3').removeEventListener("click",btn3);
+         document.getElementById('button4').removeEventListener("click",btn4);
+
+         document.getElementById('button2').classList.remove("button2");
+         document.getElementById('button3').classList.remove("button3");
+         document.getElementById('button4').classList.remove("button4");
+
+         document.getElementById('button2').classList.add("buttonDisable");
+         document.getElementById('button3').classList.add("buttonDisable");
+         document.getElementById('button4').classList.add("buttonDisable");
+
+
+     }
+
+
+     function btn2(){
+         choosenVariant = document.getElementById('button2').textContent.toString();
+         console.log(choosenVariant);
+         document.getElementById('button2').classList.remove("button2");
+         document.getElementById('button2').style="background-color: #DEEFED";
+
+         document.getElementById('button1').removeEventListener("click",btn1);
+         document.getElementById('button3').removeEventListener("click",btn3);
+         document.getElementById('button4').removeEventListener("click",btn4);
+
+         document.getElementById('button1').classList.remove("button1");
+         document.getElementById('button3').classList.remove("button3");
+         document.getElementById('button4').classList.remove("button4");
+
+         document.getElementById('button1').classList.add("buttonDisable");
+         document.getElementById('button3').classList.add("buttonDisable");
+         document.getElementById('button4').classList.add("buttonDisable");
+     }
+
+     function btn3(){
+         choosenVariant = document.getElementById('button3').textContent.toString();
+         console.log(choosenVariant);
+         document.getElementById('button3').classList.remove("button3");
+         document.getElementById('button3').style="background-color: #DEEFED";
+
+         document.getElementById('button2').removeEventListener("click",btn2);
+         document.getElementById('button1').removeEventListener("click",btn1);
+         document.getElementById('button4').removeEventListener("click",btn4);
+
+         document.getElementById('button2').classList.remove("button2");
+         document.getElementById('button1').classList.remove("button1");
+         document.getElementById('button4').classList.remove("button4");
+
+         document.getElementById('button2').classList.add("buttonDisable");
+         document.getElementById('button1').classList.add("buttonDisable");
+         document.getElementById('button4').classList.add("buttonDisable");
+     }
+
+     function btn4(){
+         choosenVariant = document.getElementById('button4').textContent.toString();
+         console.log(choosenVariant);
+         document.getElementById('button4').classList.remove("button4");
+         document.getElementById('button4').style="background-color: #DEEFED";
+
+         document.getElementById('button2').removeEventListener("click",btn2);
+         document.getElementById('button3').removeEventListener("click",btn3);
+         document.getElementById('button1').removeEventListener("click",btn1);
+
+         document.getElementById('button2').classList.remove("button2");
+         document.getElementById('button3').classList.remove("button3");
+         document.getElementById('button1').classList.remove("button1");
+
+         document.getElementById('button2').classList.add("buttonDisable");
+         document.getElementById('button3').classList.add("buttonDisable");
+         document.getElementById('button1').classList.add("buttonDisable");
+     }
 
 
  </script>
