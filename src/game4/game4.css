@@ -109,7 +109,7 @@ input {
   height: 3.24vh;
   width: 8.21vw;
   min-height: 20px;
-  min-width: 100px;
+  min-width: 300px;
   border: none;
   border-radius: 4.1vw;
   background-color: #BEC9CA;
@@ -142,7 +142,7 @@ input:focus ~ label, input:valid ~ label {
   left: 45vw;
   display: block; 
   width: 7.389vw; 
-  min-width: 90px; 
+  min-width: 290px;
 }
 
 #bar:before, #bar:after {
@@ -174,7 +174,7 @@ input:focus ~ #bar:before, input:focus ~ #bar:after {
   height: 6.483vh;
   width: 10.673vw;
   min-height: 40px;
-  min-width: 130px;
+  min-width: 330px;
   border: none;
   border-radius: 4.1vw;
   top: 25%; 
