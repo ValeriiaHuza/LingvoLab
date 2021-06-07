@@ -196,7 +196,7 @@ body {
   margin-bottom: 100px;
   height: 48.62vh;
   width: 49.261vw;
-  min-height: 400px;
+  min-height: 300px;
   min-width: 600px;
   background-color: #DEEFED;
   border-radius: 4.1vw;
@@ -205,8 +205,5 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-
-#backImage:after {
-  margin-top: 100px;
+  border: 1px solid white;
 }
