@@ -1,136 +1,128 @@
 <!DOCTYPE html>
 <html lang="uk">
 
- <head>
-  <title>Game 1</title>
-  <meta charset="utf-8" />
-  <link rel="stylesheet" href="game1.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Unica+One&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
- </head>
- 
- <body>
+<head>
+    <title>Game 1</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="game1.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Unica+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+</head>
 
- <div id="top">
+<body>
+
+<div id="top">
     <div id="logo">LingvoLab</div>
     <span id="page"></span>
-  </div>
+</div>
 
-  <div id="middle">
-      <div class="wrapper">
-    <div class="card">
+<div id="middle">
+    <div class="wrapper">
+        <div class="card">
 
-      <div class="front">
-          <span id="word"></span>
-      </div>
-        <div class=”back”>
-            Meaning
-        </div>
+            <div class="front">
+                <span id="word"></span>
+            </div>
+            <div class=”back”>
+                Meaning
+            </div>
         </div>
     </div>
-      <div id="buttons">
-          <div class="next1" id="button1">got it</div>
-          <img id="audioImage" src="../Images/tools/audio.png"/>
-          <div class="next2" id="button2">study again</div>
-      </div>
-  </div>
+    <div id="buttons">
+        <div class="next1" id="button1">got it</div>
+        <img id="audioImage" src="../Images/tools/audio.png"/>
+        <div class="next2" id="button2">study again</div>
+    </div>
+</div>
 
-  <div id="bottom">
+<div id="bottom">
     <div><img id="backImage" title="back to main page" onclick="document.location='../introPages/main page/main.html'" src="../Images/tools/back.png"/></div>
-  </div>
+</div>
 
 <!--<script src ="game1.js"></script>-->
 
- <script type="module">
-     import User from '../User.js';
+<script type="module">
+    import User from '../User.js';
 
-     //array with words
-     const words = ["adult", "answer", "ball", "bathroom", "camera"];
-     //array with sounds
-     const sounds = ['../Music/game1/A1/Adult.mp3','../Music/game1/A1/Answer.mp3','../Music/game1/A1/Ball.mp3','../Music/game1/A1/Bathroom.mp3','../Music/game1/A1/Camera.mp3']
+    //array with words
+    const words = ["adult", "answer", "ball", "bathroom", "camera"];
+    //  let count = 5;
+    //array with sounds
+    const sounds = ['../Music/game1/A1/Adult.mp3','../Music/game1/A1/Answer.mp3','../Music/game1/A1/Ball.mp3','../Music/game1/A1/Bathroom.mp3','../Music/game1/A1/Camera.mp3']
 
-     //get name of current user
-     const name = localStorage.getItem("last");
+    //get name of current user
+    const name = localStorage.getItem("last");
 
-     const currentUser = User.build(localStorage.getItem(name));
+    const currentUser = User.build(localStorage.getItem(name));
 
-     //set first world
-     firstWord();
+    //set first world
+    firstWord();
 
-     function firstWord(){
-         if(currentUser.getProgressGame1()[0].length<1) {
-             console.log("after reload" + currentUser);
-             currentUser.setProgressGame1(words);
-             localStorage.setItem(name,currentUser.toString());
-         }
-     }
-
+    function firstWord(){
+        if(currentUser.getProgressGame1()[0].length<1) {
+            currentUser.setProgressGame1(words);
+            localStorage.setItem(name,currentUser.toString());
+        }
+    }
 
 
-     let progress = currentUser.getProgressGame1();
-     document.getElementById("word").textContent = progress[0];
-     document.getElementById("page").textContent = ((words.indexOf(document.getElementById("word").textContent.toString())+1) + "/" + words.length).toString();
 
-     localStorage.setItem(name,currentUser.toString());
+    let progress = currentUser.getProgressGame1();
+    document.getElementById("word").textContent = progress[0];
+    document.getElementById("page").textContent = ((words.indexOf(document.getElementById("word").textContent.toString())+1) + "/" + words.length).toString();
 
-     //add event listener
-     document.getElementById('button1').addEventListener("click",gotIt);
-     document.getElementById('button2').addEventListener("click",studyAgain);
-     document.getElementById('audioImage').addEventListener("click",sound);
+    localStorage.setItem(name,currentUser.toString());
 
-     function gotIt(){
-         const index = progress.indexOf(document.getElementById("word").textContent.toString());
+    //add event listener
+    document.getElementById('button1').addEventListener("click",gotIt);
+    document.getElementById('button2').addEventListener("click",studyAgain);
+    document.getElementById('audioImage').addEventListener("click",sound);
 
-         if(index>-1){
-             /*progress.splice(index,1);*/
-             let newArray = [];
-             for (let i = 0; i < words.length-1; i++) {
-                 if(i!==index){
-                     newArray.push(progress[i]);
-                 }
-             }
+    function gotIt(){
+        const index = progress.indexOf(document.getElementById("word").textContent.toString());
 
+        if(index>-1){
+            let newArray = [];
+            for (let i = 0; i < progress.length; i++) {
+                if(i!==index){
+                    newArray.push(progress[i]);
+                }
+            }
+            progress = [];
             progress = newArray;
-         }
-         console.log(progress);
-         console.log(currentUser);
-         document.getElementById("word").textContent = progress[0];
-         console.log("got it - " + document.getElementById("word").textContent);
-         document.getElementById("page").textContent = ((words.indexOf(document.getElementById("word").textContent.toString())+1) + "/" + words.length).toString();
-         currentUser.setProgressGame1(progress);
-         localStorage.setItem(name,currentUser.toString());
+        }
 
-         if((words.indexOf(document.getElementById("word").textContent)) <= +0) {
+        document.getElementById("word").textContent = progress[0];
+        document.getElementById("page").textContent = ((words.indexOf(document.getElementById("word").textContent.toString())+1) + "/" + words.length).toString();
+        currentUser.setProgressGame1(progress);
+        localStorage.setItem(name,currentUser.toString());
+
+        if((words.indexOf(document.getElementById("word").textContent)) <= +0) {
             // document.location.replace("../result/result.html");
-         }
-     }
+        }
+    }
+    function studyAgain(){
+        let index = progress.indexOf(document.getElementById("word").textContent.toString());
+        if(index<progress.length) {
+            document.getElementById("word").textContent = progress[++index];
+            document.getElementById("page").textContent = ((words.indexOf(document.getElementById("word").textContent.toString())+1) + "/" + words.length).toString();
 
+        }
+    }
+    /* ===*/
+    function sound() {
+        var audio = new Audio(); // Создаём новый элемент Audio
 
-     function studyAgain(){
-         let index = progress.indexOf(document.getElementById("word").textContent.toString());
-         if(index<progress.length) {
-             document.getElementById("word").textContent = progress[++index];
-             document.getElementById("page").textContent = ((words.indexOf(document.getElementById("word").textContent.toString())+1) + "/" + words.length).toString();
+        const currentWord = document.getElementById("word").textContent.toString();
+        const index = words.indexOf(currentWord);
 
-         }
-     }
-/* ===*/
-     function sound() {
-         var audio = new Audio(); // Создаём новый элемент Audio
+        audio.src = sounds[index]; // Указываем путь к звуку "клика"
+        audio.autoplay = true; // Автоматически запускаем
+    }
 
-         const currentWord = document.getElementById("word").textContent.toString();
-         const index = words.indexOf(currentWord);
-         console.log(words)
-         console.log(currentWord);
-         console.log(index);
+</script>
 
-         audio.src = sounds[index]; // Указываем путь к звуку "клика"
-         audio.autoplay = true; // Автоматически запускаем
-     }
-
- </script>
-
- </body>
+</body>
 
 </html>
