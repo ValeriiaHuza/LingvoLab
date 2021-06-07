@@ -68,7 +68,7 @@
 
 
 
-     const progress = currentUser.getProgressGame1();
+     let progress = currentUser.getProgressGame1();
      document.getElementById("word").textContent = progress[0];
      document.getElementById("page").textContent = ((words.indexOf(document.getElementById("word").textContent.toString())+1) + "/" + words.length).toString();
 
@@ -83,7 +83,15 @@
          const index = progress.indexOf(document.getElementById("word").textContent.toString());
 
          if(index>-1){
-             progress.splice(index,1);
+             /*progress.splice(index,1);*/
+             let newArray = [];
+             for (let i = 0; i < words.length; i++) {
+                 if(i!==index){
+                     newArray.push(progress[i]);
+                 }
+             }
+
+            progress = newArray;
          }
          console.log(progress);
          console.log(currentUser);
