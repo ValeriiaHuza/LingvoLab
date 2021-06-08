@@ -66,15 +66,62 @@ export const sounds_g1_test_c1 = ['../Music/game1/C1/Accessory.mp3','../Music/ga
 
 //arrays for testing
 //a1
-export const words_g2_tests_a1 = ["дорослий", "відповідь", "м'яч", "ванна", "камера"];
+export const words_g2_tests_a1 = ["зоопарк", "кухня", "сторінка", "радіо", "музей"];
 
-export const answers_g2_tests_a1 = [["чоловік","людина","малеча","дорослий"],
-    ["відповідь","запитання","життя","м'яч"],
-    ["гра","м'яч","камера","дорослий"],
-    ["спальня","туалет","ванна","дитина"],
-    ["людина","м'яч","камера","телевізор"]];
+export const answers_g2_tests_a1 = [["зоопарк","сторінка","лист","ветеринар"],
+    ["кухня","ліжко","спальня","їжа"],
+    ["сторінка","вузький","дивний","сміятись"],
+    ["радіо","кит","робот","ніж"],
+    ["музей","людина","чашка","диван"]];
 
-export const sounds_g2_test_a1 = ['../Music/game1/A1/Adult.mp3','../Music/game1/A1/Answer.mp3','../Music/game1/A1/Ball.mp3','../Music/game1/A1/Bathroom.mp3','../Music/game1/A1/Camera.mp3']
+export const sounds_g2_test_a1 = ['../Music/game2/A1/1.mp3','../Music/game2/A1/2.mp3','../Music/game2/A1/3.mp3','../Music/game2/A1/4.mp3','../Music/game1/A1/5.mp3']
+
+//a2
+export const words_g2_tests_a2 = ["килим", "стеля", "страшний", "щасливий", "прикраси"];
+
+export const answers_g2_tests_a2 = [["килим","дивний","червоний","кіт"],
+    ["стеля","дитина","ковдра","ніч"],
+    ["страшний","веселий","дзвінкий","модерн"],
+    ["собака","щасливий","ложка","сильний"],
+    ["прикраси","капелюх","тарілка","дизайн"]];
+
+export const sounds_g2_test_a2 = ['../Music/game2/A2/1.mp3','../Music/game2/A2/2.mp3','../Music/game2/A2/3.mp3','../Music/game2/A2/4.mp3','../Music/game1/A2/5.mp3']
+
+//b1
+export const words_g2_tests_b1 = ["діаграма", "теля", "освіта", "фінальний", "іміграція"];
+
+export const answers_g2_tests_b1 = [["діаграма","чорний","гранж","світло"],
+    ["теля","нога","курка","сова"],
+    ["освіта","дорога","кінь","кнопка"],
+    ["вода","фінальний","порядний","відповідальний"],
+    ["іміграція","тарілка","каблучка","вода"]];
+
+export const sounds_g2_test_b1 = ['../Music/game2/B1/1.mp3','../Music/game2/B1/2.mp3','../Music/game2/B1/3.mp3','../Music/game2/B1/4.mp3','../Music/game1/B1/5.mp3']
+
+//b2
+export const words_g2_tests_b2 = ["закинутий", "точний", "переваги", "жувати", "кохана"];
+
+export const answers_g2_tests_b2 = [["закинутий", "нажаханий", "товстий", "чарівний"],
+    ["точний","справедливий","засмічений","спростований"],
+    ["переваги","можливості","практика","міцний"],
+    ["варити","жувати","кусати","різати"],
+    ["кохана","принцеса","поважна","горда"]];
+
+export const sounds_g2_test_b2 = ['../Music/game2/B2/1.mp3','../Music/game2/B2/2.mp3','../Music/game2/B2/3.mp3','../Music/game2/B2/4.mp3','../Music/game1/B2/5.mp3']
+
+//c1
+export const words_g2_tests_с1 = ["вживати", "здатність", "вирішальний", "найняти", "справедливість"];
+
+export const answers_g2_tests_с1 = [["вживати","переважати","світити","писати"],
+    ["здатність","безпорадність","міцність","вогкість"],
+    ["вирішальний","переконаний","відповідний","розбитий"],
+    ["звільнити","найняти","відпрацювати","перервати"],
+    ["справедливість","розбещеність","підступність","слабкість"]];
+
+export const sounds_g2_test_с1 = ['../Music/game2/C1/1.mp3','../Music/game2/C1/2.mp3','../Music/game2/C1/3.mp3','../Music/game2/C1/4.mp3','../Music/game1/C1/5.mp3']
+
+
+
 
 
 ///////GAME3
@@ -84,6 +131,12 @@ export const sounds_g2_test_a1 = ['../Music/game1/A1/Adult.mp3','../Music/game1/
 //a1
 export const words_g3_tests_a1 = ["apple","banana","boy","cake","cat"]
 export const images_g3_test_a1 = ["../Images/game3/A1/apple.png","../Images/game3/A1/banana.png","../Images/game3/A1/boy.png","../Images/game3/A1/cake.png","../Images/game3/A1/cat.png"]
+
+
+
+
+
+
 
 ///////GAME4
 
