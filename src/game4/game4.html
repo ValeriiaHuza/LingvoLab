@@ -101,14 +101,14 @@
       audio.src = sounds[currentUser.getIndexAtGame4()]; // Указываем путь к звуку "клика"
       audio.play();// Автоматически запускаем
 
-      while (audio.currentTime != audio.duration) {
+      if (audio.currentTime === audio.duration) {
           document.getElementById('greenCircle').removeEventListener("click", sound);
           document.getElementById('greenCircle').classList.remove("greenCircle");
           document.getElementById('greenCircle').classList.add("buttonDisable");
       }
   }
 
-  
+
 /*
       let audio = document.getElementsByTagName('audio');
 
