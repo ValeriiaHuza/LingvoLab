@@ -99,9 +99,17 @@
       console.log(sounds);
       console.log(sounds.length);
       audio.src = sounds[currentUser.getIndexAtGame4()]; // Указываем путь к звуку "клика"
-      audio.play()// Автоматически запускаем
+      audio.play();// Автоматически запускаем
 
+      while (audio.currentTime != audio.duration) {
+          document.getElementById('greenCircle').removeEventListener("click", sound);
+          document.getElementById('greenCircle').classList.remove("greenCircle");
+          document.getElementById('greenCircle').classList.add("buttonDisable");
+      }
+  }
 
+  
+/*
       let audio = document.getElementsByTagName('audio');
 
       audio.forEach(t => {
@@ -114,8 +122,8 @@
                       subT.play()
               })
           })
-      });
-  }
+      });*/
+
 
  /* let arVideos = document.getElementsByTagName('audio');
   for (let i = 0; i < arVideos.length; i++) {
