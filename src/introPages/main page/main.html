@@ -46,6 +46,56 @@
       console.log(currentUser.toString());
       console.log(currentUser.getLevel());
 
+      checkLevel();
+
+      function checkLevel(){
+
+          if (currentUser.getProgressGame1().length===0 && currentUser.getProgressGame2().length===0 &&
+              currentUser.getProgressGame3().length===0 && currentUser.getProgressGame4().length===0 ){
+
+              currentUser.setIndexAtGame2(0);
+              currentUser.setIndexAtGame3(0);
+              currentUser.setIndexAtGame4(0);
+
+              currentUser.setProgressGame1([""]);
+              currentUser.setProgressGame2([""]);
+              currentUser.setProgressGame3([""]);
+              currentUser.setProgressGame4([""]);
+
+              if(currentUser.getLevel()==="A1"){
+                  currentUser.setLevel("A2");
+                  document.getElementById("level").textContent = "Ваш рівень знань англійської мови підвисився! Тепер у вас " + currentUser.getLevel() + " . Вітаємо!";
+
+              }
+              else if(currentUser.getLevel()==="A2"){
+                  currentUser.setLevel("B1");
+                  document.getElementById("level").textContent = "Ваш рівень знань англійської мови підвисився! Тепер у вас " + currentUser.getLevel() + " . Вітаємо!";
+
+              }
+              else if(currentUser.getLevel()==="B1"){
+                  currentUser.setLevel("B2");
+                  document.getElementById("level").textContent = "Ваш рівень знань англійської мови підвисився! Тепер у вас " + currentUser.getLevel() + " . Вітаємо!";
+
+              }
+              else if(currentUser.getLevel()==="B2"){
+                  currentUser.setLevel("C1");
+                  document.getElementById("level").textContent = "Ваш рівень знань англійської мови підвисився! Тепер у вас " + currentUser.getLevel() + " . Вітаємо!";
+
+              }
+
+              else {
+
+                  document.getElementById("level").textContent = "Ви дійшли до максимального рівня! Вітаємо :) ";
+
+              }
+
+              localStorage.setItem(userName,currentUser.toString());
+
+          }
+
+
+      }
+
   </script>
 
 
