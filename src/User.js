@@ -2,6 +2,10 @@ export default class User {
 
     name;
     level;
+
+    indexAtTest;
+    countRes;
+
     progressGame1;
 
     indexAtGame2;
@@ -24,7 +28,8 @@ export default class User {
         this.indexAtGame4 = 0;
         this.indexAtGame3 = 0;
         this.indexAtGame2 = 0;
-
+        this.countRes = 0;
+        this.indexAtTest = 0;
 
     }
 
@@ -38,6 +43,14 @@ export default class User {
 
     setLevel(lev){
         this.level = lev;
+    }
+
+    addCountRes(){
+        this.countRes++;
+    }
+
+    setIndexAtTest(number){
+        this.indexAtTest = number;
     }
 
     getProgressGame1(){
@@ -103,12 +116,19 @@ export default class User {
         let temp = JSON.parse(json);
 
         let newUser = new User(temp.name);
+
+        newUser.setIndexAtTest(temp.indexAtTest);
+        newUser.countRes = temp.countRes;
+
         newUser.setLevel(temp.level);
         newUser.setProgressGame1(temp.progressGame1);
+
         newUser.setProgressGame2(temp.progressGame2);
         newUser.setIndexAtGame2(temp.indexAtGame2);
+
         newUser.setProgressGame3(temp.progressGame3);
         newUser.setIndexAtGame3(temp.indexAtGame3);
+
         newUser.setProgressGame4(temp.progressGame4);
         newUser.setIndexAtGame4(temp.indexAtGame4);
 
@@ -119,6 +139,8 @@ export default class User {
         return JSON.stringify({
             name:this.name,
             level:this.level,
+            indexAtTest:this.indexAtTest,
+            countRes:this.countRes,
             progressGame1:this.progressGame1,
             progressGame2:this.progressGame2,
             indexAtGame2:this.indexAtGame2,

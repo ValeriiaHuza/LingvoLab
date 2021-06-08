@@ -1,0 +1,207 @@
+body {
+    font-family: 'Unica One', cursive;
+    font-size: 30px;
+}
+
+#top {
+    height: 11.3452vh;
+    width: 98.522vw;
+    -moz-column-count: 2; /* Для Firefox */
+    -webkit-column-count: 2; /* Для Safari и Chrome */
+    column-count: 2;
+}
+
+#logo {
+    float: left;
+    margin: max(0.821vw, 0.821vw);
+    color: #000000B2;
+}
+
+#page {
+    float: right;
+    margin-top: max(1.62vh, 1.62vh);
+    margin-right: max(0.821vw, 0.821vw);
+    margin-bottom: max(1.62vh, 1.62vh);
+    margin-left: max(77.9967vw, 77.9967vw);
+}
+
+#greenCircle {
+    margin: 8.1vh 0px 0px 41vw;
+    height: 32.4vh;
+    width: 16.42vw;
+    min-height: 200px;
+    min-width: 200px;
+}
+
+#greenCircle:hover {
+    -moz-transform: scale(0.8); /* Для Firefox */
+    -ms-transform: scale(0.8); /* Для IE */
+    -webkit-transform: scale(0.8); /* Для Safari, Chrome, iOS */
+    -o-transform: scale(0.8); /* Для Opera */
+    transform: scale(0.8);
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #f2a579);
+    background-size: 300% 300%;
+    animation: gradient 5s ease infinite;
+    transition: 1s;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#audioImage {
+    margin: 8.1vh 0vw 0vh 4.1vw;
+    height: 16.2vh;
+    width: 8.21vw;
+    min-height: 100px;
+    min-width: 100px;
+}
+
+#middle {
+    height: 64.8vh;
+    width: 98.522vw;
+    min-height: 400px;
+    min-width: 1200px;
+}
+
+#middle1 {
+    height: 36.4667747vh;
+    width: 98.522vw;
+    min-height: 225px;
+    min-width: 1200px;
+}
+
+#middle2 {
+    height: 28.363vh;
+    width: 98.522vw;
+    min-height: 175px;
+    min-width: 1200px;
+}
+
+#buttonsRow1, #buttonsRow2 {
+    display: block;
+    margin: 0 auto;
+    width: 53.366vw;
+    min-width: 650px;
+    position: relative;
+    top: 1.62vh;
+    -moz-column-count: 2; /* Для Firefox */
+    -webkit-column-count: 2; /* Для Safari и Chrome */
+    column-count: 2;
+}
+
+#button1, #button2, #button3, #button4 {
+    height: 6.482982vh;
+    width: 24.63vw;
+    min-height: 40px;
+    min-width: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4.1vw;
+    box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
+    font-family: 'Play', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.button1,.button2,.button3,.button4{
+    background-color: #DEEFED;
+}
+
+.button1:hover, .button2:hover, .button3:hover, .button4:hover {
+    background-color: #93A7A6;
+    transform: scale(0.9);
+    transition: 1s;
+}
+
+.buttonDisable{
+    background-color: #93A7A6;!important;
+    transform: scale(0.8);
+}
+
+#button1, #button2 {
+    float: left;
+    margin: 1.62vh 0.821vw 1.62vh 0.821vw;
+}
+
+#button3, #button4 {
+    float: right;
+    margin: 1.62vh 0.821vw 1.62vh 4.1vw;
+}
+
+#bottom {
+    height: 11.3452vh;
+    width: 98.522vw;
+    min-height: 70px;
+    min-width: 1200px;
+    -moz-column-count: 2; /* Для Firefox */
+    -webkit-column-count: 2; /* Для Safari и Chrome */
+    column-count: 2;
+}
+
+#backImage {
+    float: left;
+    margin: 1.2vh 0.821vw 1.2vh 1.642vw;
+    height: 8.9vh;
+    width: 4.5vw;
+    min-height: 55px;
+    min-width: 55px;
+}
+
+#backImage:hover {
+    -moz-transform: scale(1.2); /* Для Firefox */
+    -ms-transform: scale(1.2); /* Для IE */
+    -webkit-transform: scale(1.2); /* Для Safari, Chrome, iOS */
+    -o-transform: scale(1.2); /* Для Opera */
+    transform: scale(1.2);
+    background: #93A7A6;
+    border-radius: 8.21vw;
+    transition: 1s;
+}
+
+#nextImage {
+    float: right;
+    margin: 7.5px 20px 7.5px 950px;
+    height: 8.9vh;
+    width: 4.5vw;
+    min-height: 55px;
+    min-width: 55px;
+}
+
+#nextImage:hover {
+    -moz-transform: scale(1.2); /* Для Firefox */
+    -ms-transform: scale(1.2); /* Для IE */
+    -webkit-transform: scale(1.2); /* Для Safari, Chrome, iOS */
+    -o-transform: scale(1.2); /* Для Opera */
+    transform: scale(1.2);
+    background: #93A7A6;
+    border-radius: 8.21vw;
+    transition: 1s;
+}
+
+#newBox {
+    margin: 0 auto;
+    margin-bottom: 21vh;
+    height: 48.62vh;
+    width: 49.261vw;
+    min-height: 300px;
+    min-width: 600px;
+    background-color: #DEEFED;
+    border-radius: 4.1vw;
+    box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 1px solid white;
+}

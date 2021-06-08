@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <title>Test</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="checkLevel.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Unica+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div id="top">
+    <div id="logo">LingvoLab</div>
+    <div id="page"></div>
+</div>
+
+<div id="middle">
+    <div id="middle1">
+        <div id="greenCircle">
+
+        </div>
+    </div>
+    <div id="middle2">
+        <div id="buttonsRow1">
+            <div class="button1" id="button1">word1</div>
+            <div class="button3" id="button3">word3</div>
+        </div>
+
+        <div id="buttonsRow2">
+            <div class="button2" id="button2">word2</div>
+            <div class="button4" id="button4">word4</div>
+        </div>
+    </div>
+</div>
+<div id="bottom">
+    <div><img id="nextImage" title="go to the next word" src="../../Images/tools/next.png"/></div>
+</div>
+
+<script type="module">
+
+    import User from "../../User.js";
+    const words = ["зоопарк", "кухня", "has", "сторінка", "open"];
+
+    const answers = [["зоопарк","сторінка","лист","ветеринар"],
+        ["ліжко","кухня","кіт","спати"],
+        ["has","have","is having","having"],
+        ["вузький","дивний","сторінка","сміятися"],
+        ["open","opens","is opening","are opening"]];
+    //array with sounds
+    const sentences = ['a place where wild animals are kept so that people can go and look at them',
+        'a room where food is kept, prepared and cooked and where the dishes are washed',
+        'She ---- two brothers.',
+        'a piece of paper in a book, magazine, etc., or one side of a piece of paper',
+        'The museum ----- at 10 o\'clock']
+
+    const name = localStorage.getItem("last");
+
+    const currentUser = User.build(localStorage.getItem(name));
+  console.log(currentUser);
+
+    document.getElementById("page").textContent = ((currentUser.indexAtTest+1) + "/" + sentences.length).toString();
+
+    //text
+    document.getElementById('greenCircle').textContent=sentences[currentUser.indexAtTest];
+
+    document.getElementById('button1').textContent=answers[currentUser.indexAtTest][0].toString();
+    document.getElementById('button2').textContent=answers[currentUser.indexAtTest][1].toString();
+    document.getElementById('button3').textContent=answers[currentUser.indexAtTest][2].toString();
+    document.getElementById('button4').textContent=answers[currentUser.indexAtTest][3].toString();
+
+    //add event listener
+    document.getElementById('nextImage').addEventListener("click",change);
+
+    document.getElementById('greenCircle').addEventListener("click",sound);
+
+    document.getElementById('button1').addEventListener("click",btn1);
+    document.getElementById('button2').addEventListener("click",btn2);
+    document.getElementById('button3').addEventListener("click",btn3);
+    document.getElementById('button4').addEventListener("click",btn4);
+
+    function sound() {
+        var audio = new Audio(); // Создаём новый элемент Audio
+
+        audio.src = sentences[currentUser.indexAtTest]; // Указываем путь к звуку "клика"
+        audio.play()// Автоматически запускаем
+
+    }
+
+    let choosenVariant="";
+
+    function change(){
+
+        let index = currentUser.indexAtTest;
+        const src = sentences[index];
+
+
+        if(choosenVariant.length>0){
+
+            if(choosenVariant===words[currentUser.indexAtTest]){
+                currentUser.addCountRes();
+            }
+
+            index++;
+
+            currentUser.setIndexAtTest(index);
+            //check if end
+
+            if(currentUser.indexAtTest===sentences.length){
+                document.getElementById('greenCircle').remove();
+                document.getElementById('middle2').remove();
+                document.getElementById('nextImage').remove();
+                document.getElementById('page').remove();
+
+                let newBox = document.createElement("div");
+                newBox.id = "newBox";
+
+                document.getElementById('middle1').appendChild(newBox);
+
+                const userResults = currentUser.countRes;
+
+                if(userResults===sentences.length){
+                    currentUser.setLevel("C1");
+                }
+                else if(userResults===4){
+                    currentUser.setLevel("B2");
+                }
+                else if(userResults===3){
+                    currentUser.setLevel("B1");
+                } else if(userResults===2){
+                    currentUser.setLevel("A2");
+                } else {
+                    currentUser.setLevel("A1");
+                }
+
+                document.getElementById('newBox').textContent = "Ви молодець! \n Ваш результат : " + userResults+ "/" + sentences.length
+                 + "Це означає, що ваш рівень - " + currentUser.getLevel();
+
+                localStorage.setItem(name, currentUser.toString());
+            }
+            else {
+                setButtons();
+                document.getElementById('greenCircle').textContent=sentences[currentUser.indexAtTest];
+                localStorage.setItem(name, currentUser.toString());
+                document.getElementById("page").textContent = ((currentUser.indexAtTest + 1) + "/" + sentences.length).toString();
+            }
+        }
+        else {
+            alert("Будь-ласка, виберіть переклад прослуханого слова! ")
+        }
+
+    }
+
+
+    function btn1(){
+        choosenVariant = document.getElementById('button1').textContent.toString();
+        console.log(choosenVariant);
+        document.getElementById('button1').classList.remove("button1");
+        document.getElementById('button1').style="background-color: #DEEFED";
+
+        document.getElementById('button2').removeEventListener("click",btn2);
+        document.getElementById('button3').removeEventListener("click",btn3);
+        document.getElementById('button4').removeEventListener("click",btn4);
+
+        document.getElementById('button2').classList.remove("button2");
+        document.getElementById('button3').classList.remove("button3");
+        document.getElementById('button4').classList.remove("button4");
+
+        document.getElementById('button2').classList.add("buttonDisable");
+        document.getElementById('button3').classList.add("buttonDisable");
+        document.getElementById('button4').classList.add("buttonDisable");
+
+
+    }
+
+
+    function btn2(){
+        choosenVariant = document.getElementById('button2').textContent.toString();
+        console.log(choosenVariant);
+        document.getElementById('button2').classList.remove("button2");
+        document.getElementById('button2').style="background-color: #DEEFED";
+
+        document.getElementById('button1').removeEventListener("click",btn1);
+        document.getElementById('button3').removeEventListener("click",btn3);
+        document.getElementById('button4').removeEventListener("click",btn4);
+
+        document.getElementById('button1').classList.remove("button1");
+        document.getElementById('button3').classList.remove("button3");
+        document.getElementById('button4').classList.remove("button4");
+
+        document.getElementById('button1').classList.add("buttonDisable");
+        document.getElementById('button3').classList.add("buttonDisable");
+        document.getElementById('button4').classList.add("buttonDisable");
+    }
+
+    function btn3(){
+        choosenVariant = document.getElementById('button3').textContent.toString();
+        console.log(choosenVariant);
+        document.getElementById('button3').classList.remove("button3");
+        document.getElementById('button3').style="background-color: #DEEFED";
+
+        document.getElementById('button2').removeEventListener("click",btn2);
+        document.getElementById('button1').removeEventListener("click",btn1);
+        document.getElementById('button4').removeEventListener("click",btn4);
+
+        document.getElementById('button2').classList.remove("button2");
+        document.getElementById('button1').classList.remove("button1");
+        document.getElementById('button4').classList.remove("button4");
+
+        document.getElementById('button2').classList.add("buttonDisable");
+        document.getElementById('button1').classList.add("buttonDisable");
+        document.getElementById('button4').classList.add("buttonDisable");
+    }
+
+    function btn4(){
+        choosenVariant = document.getElementById('button4').textContent.toString();
+        console.log(choosenVariant);
+        document.getElementById('button4').classList.remove("button4");
+        document.getElementById('button4').style="background-color: #DEEFED";
+
+        document.getElementById('button2').removeEventListener("click",btn2);
+        document.getElementById('button3').removeEventListener("click",btn3);
+        document.getElementById('button1').removeEventListener("click",btn1);
+
+        document.getElementById('button2').classList.remove("button2");
+        document.getElementById('button3').classList.remove("button3");
+        document.getElementById('button1').classList.remove("button1");
+
+        document.getElementById('button2').classList.add("buttonDisable");
+        document.getElementById('button3').classList.add("buttonDisable");
+        document.getElementById('button1').classList.add("buttonDisable");
+    }
+
+    function setButtons(){
+        document.getElementById('button1').classList.add("button1");
+        document.getElementById('button2').classList.add("button2");
+        document.getElementById('button3').classList.add("button3");
+        document.getElementById('button4').classList.add("button4");
+
+        document.getElementById('button1').style.removeProperty("background-color");
+        document.getElementById('button2').style.removeProperty("background-color");
+        document.getElementById('button3').style.removeProperty("background-color");
+        document.getElementById('button4').style.removeProperty("background-color");
+
+        document.getElementById('button1').classList.remove("buttonDisable");
+        document.getElementById('button2').classList.remove("buttonDisable");
+        document.getElementById('button3').classList.remove("buttonDisable");
+        document.getElementById('button4').classList.remove("buttonDisable");
+
+        document.getElementById('button1').addEventListener("click",btn1);
+        document.getElementById('button2').addEventListener("click",btn2);
+        document.getElementById('button3').addEventListener("click",btn3);
+        document.getElementById('button4').addEventListener("click",btn4);
+
+        document.getElementById('button1').textContent=answers[currentUser.indexAtTest][0].toString();
+        document.getElementById('button2').textContent=answers[currentUser.indexAtTest][1].toString();
+        document.getElementById('button3').textContent=answers[currentUser.indexAtTest][2].toString();
+        document.getElementById('button4').textContent=answers[currentUser.indexAtTest][3].toString();
+    }
+
+
+</script>
+
+</body>
+
+</html>
