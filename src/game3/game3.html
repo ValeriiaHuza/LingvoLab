@@ -104,17 +104,7 @@ A file of a page with game3
 
      function firstWord(){
          if(currentUser.getProgressGame3().length===0){
-             document.getElementById('group').remove();
-             document.getElementById('greenRectangle').remove();
-             document.getElementById('nextImage').remove();
-             document.getElementById('page').remove();
-
-             let newBox = document.createElement("div");
-             newBox.id = "newBox";
-
-             document.getElementById('middle').appendChild(newBox);
-             document.getElementById('newBox').textContent = "Ви молодець! Ви повністю пройшли гру, спробуйте себе в інших тренувальних іграх :) ";
-
+             document.location = "result.html";
          }
         else if(currentUser.getProgressGame3()[0].length<1) {
              currentUser.setProgressGame3(images);
@@ -179,9 +169,17 @@ A file of a page with game3
              document.getElementById('middle').appendChild(newBox);
              document.getElementById('newBox').textContent = "Ви молодці! \n Ваш результат : " + (words.length - currentUser.getProgressGame3().length) + "/" + words.length;
 
+             if(currentUser.game3===true){
+                 currentUser.setProgressGame3([]);
+             }
+
+             if(progress.length===0) {
+                 currentUser.game3 = true;
+             }
+
              currentUser.setIndexAtGame3(0);
              if(currentUser.getProgressGame3().length===0){
-                 currentUser.setIndexAtGame3([]);
+                 currentUser.setIndexAtGame3(0);
              }
              else {
                  currentUser.setProgressGame3([""]);
