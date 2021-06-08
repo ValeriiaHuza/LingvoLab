@@ -196,6 +196,8 @@ A file of a page with a test to determine the level of knowledge of English
                 localStorage.setItem(name, currentUser.toString());
                 document.getElementById("page").textContent = ((currentUser.indexAtTest + 1) + "/" + sentences.length).toString();
             }
+            choosenVariant="";
+
         }
         else {
             alert("Будь-ласка, дайте відповідь! ")
