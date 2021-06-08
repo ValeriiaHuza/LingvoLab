@@ -34,6 +34,7 @@ body {
     width: 16.42vw;
     min-height: 200px;
     min-width: 200px;
+    text-align: center;
 }
 
 #greenCircle:hover {
@@ -146,7 +147,10 @@ body {
     height: 11.3452vh;
     width: 98.522vw;
     min-height: 70px;
-    min-width: 1200px;
+    min-width: 1200px;display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     -moz-column-count: 2; /* Для Firefox */
     -webkit-column-count: 2; /* Для Safari и Chrome */
     column-count: 2;
