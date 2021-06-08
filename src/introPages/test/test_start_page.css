@@ -50,11 +50,7 @@ body {
 
 #middle {
     border: 1px solid transparent;
-    /*height: 72.93vh;*/
-    /*width: 98.522vw;*/
-    /*min-height: 450px;*/
-    /*min-width: 1200px;*/
-    height: 73.93vh;
+    height: 72.93vh;
     width: 98.522vw;
     min-height: 450px;
     min-width: 1200px;
@@ -104,7 +100,7 @@ body {
 
 #backImage {
     float: left;
-    margin: 0 0.821vw 1.2vh 2.29885vw;
+    margin: 0px 0.821vw 1.2vh 2.29885vw;
     height: 8.9vh;
     width: 4.5vw;
     min-height: 55px;
@@ -124,7 +120,7 @@ body {
 
 #nextImage {
     float: right;
-    margin-top: 0;
+    margin-top: 0px;
     position: relative;
     left: 48.19376vw;
     height: 8.9vh;
