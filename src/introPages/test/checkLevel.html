@@ -77,6 +77,12 @@
             document.getElementById('middle1').appendChild(newBox);
             document.getElementById('newBox').textContent = "Ваш рівень - " + currentUser.getLevel() + " . Вам не потрібно більше проходити тест :)";
 
+            let newButton = document.createElement("img");
+            newButton.id = "newButton";
+
+            document.getElementById('middle2').appendChild(newButton);
+            document.getElementById('newButton').src = "../../Images/tools/back.png";
+            document.getElementById('newButton').onclick = document.location='../main page/main.html';
         }
     }
 
