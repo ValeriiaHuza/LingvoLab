@@ -74,7 +74,7 @@ export const answers_g2_tests_a1 = [["зоопарк","сторінка","лис
     ["радіо","кит","робот","ніж"],
     ["музей","людина","чашка","диван"]];
 
-export const sounds_g2_test_a1 = ['../Music/game2/A1/1.mp3','../Music/game2/A1/2.mp3','../Music/game2/A1/3.mp3','../Music/game2/A1/4.mp3','../Music/game1/A1/5.mp3']
+export const sounds_g2_test_a1 = ['../Music/game2/A1/1.mp3','../Music/game2/A1/2.mp3','../Music/game2/A1/3.mp3','../Music/game2/A1/4.mp3','../Music/game2/A1/5.mp3']
 
 //a2
 export const words_g2_tests_a2 = ["килим", "стеля", "страшний", "щасливий", "прикраси"];
