@@ -229,9 +229,9 @@ A file of a page with second game -
                 document.getElementById('middle1').appendChild(newBox);
                 document.getElementById('newBox').textContent = "Ви молодці! \n Ваш результат : " + (sounds.length - currentUser.getProgressGame2().length) + "/" + sounds.length;
 
-                currentUser.setIndexAtGame2(0);
+                currentUser.setIndexAtGame2(+0);
                 if(currentUser.getProgressGame2().length===0){
-                    currentUser.setIndexAtGame2([]);
+                    currentUser.setProgressGame2([]);
                 }
                 else {
                     currentUser.setProgressGame2([""]);

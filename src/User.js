@@ -142,10 +142,13 @@ export default class User {
             indexAtTest:this.indexAtTest,
             countRes:this.countRes,
             progressGame1:this.progressGame1,
+
             progressGame2:this.progressGame2,
             indexAtGame2:this.indexAtGame2,
+
             progressGame3:this.progressGame3,
             indexAtGame3:this.indexAtGame3,
+
             progressGame4:this.progressGame4,
             indexAtGame4:this.indexAtGame4,
 
