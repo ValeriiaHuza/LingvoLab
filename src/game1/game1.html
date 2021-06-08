@@ -1,3 +1,9 @@
+<!--
+@file: game1.html
+@authors: Huza Mariia-Valeriia, Andriienko Yelyzaveta, Shevchenko Daria
+
+A file of a page with first game - Quizlet cards
+-->
 <!DOCTYPE html>
 <html lang="uk">
 
@@ -176,9 +182,8 @@
 
     }
     /* ===*/
+    let audio = new Audio(); // Создаём новый элемент Audio
     function sound() {
-        var audio = new Audio(); // Создаём новый элемент Audio
-
         const currentWord = document.getElementById("word").textContent.toString();
         const index = words.indexOf(currentWord);
 
