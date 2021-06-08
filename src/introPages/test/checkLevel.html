@@ -146,14 +146,16 @@ A file of a page with a test to determine the level of knowledge of English
                 newBox.id = "newBox";
                 document.getElementById('middle1').appendChild(newBox);
 
-                let newButton = document.createElement("a");
-                newButton.id = "mainPage";
-                newButton.href="../main page/main.html";
+                let newButton = document.createElement("img");
+                newButton.id = "newButton";
+                newButton.src="../../Images/tools/next.png";
+                newButton.title="go to the main page";
 
-                let newArrow = document.createElement("img");
-                newArrow.src="../../Images/tools/next.png";
-                newArrow.title="go to the main page";
-                newButton.appendChild(newArrow);
+                let newLink = document.createElement("a");
+                newLink.id = "newLink";
+                newLink.href="../main page/main.html";
+
+                newButton.appendChild(newLink);
                 document.getElementById('bottom').appendChild(newButton);
 
 
@@ -186,7 +188,7 @@ A file of a page with a test to determine the level of knowledge of English
             }
         }
         else {
-            alert("Будь-ласка, виберіть переклад прослуханого слова! ")
+            alert("Будь-ласка, дайте відповідь! ")
         }
 
     }
