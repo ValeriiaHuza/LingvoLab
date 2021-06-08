@@ -29,7 +29,7 @@ body {
     font-family: 'Fira Code', monospace;
     font-size: 25px;
     font-weight: 300;
-    margin: 8.1vh 0px 0px 41vw;
+    margin: 0 auto;
     height: 32.4vh;
     width: 600px;
     min-height: 200px;
@@ -160,23 +160,4 @@ body {
     align-items: center;
     text-align: center;
     border: 1px solid white;
-}
-
-#newButton {
-    margin: 0 auto;
-    height: 8.9vh;
-    width: 4.5vw;
-    min-height: 55px;
-    min-width: 55px;
-}
-
-#newButton:hover {
-    -moz-transform: scale(1.2); /* Для Firefox */
-    -ms-transform: scale(1.2); /* Для IE */
-    -webkit-transform: scale(1.2); /* Для Safari, Chrome, iOS */
-    -o-transform: scale(1.2); /* Для Opera */
-    transform: scale(1.2);
-    background: #93A7A6;
-    border-radius: 8.21vw;
-    transition: 1s;
 }
