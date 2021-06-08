@@ -58,3 +58,38 @@ export const meaning_g1_tests_c1 = ["something extra which is not necessary but 
     "a position or job"];
 
 export const sounds_g1_test_c1 = ['../Music/game1/C1/Accessory.mp3','../Music/game1/C1/Apply.mp3','../Music/game1/C1/Bankrupt.mp3','../Music/game1/C1/Burden.mp3','../Music/game1/C1/Capacity.mp3']
+
+
+
+///////GAME2
+
+
+//arrays for testing
+//a1
+export const words_g2_tests_a1 = ["дорослий", "відповідь", "м'яч", "ванна", "камера"];
+
+export const answers_g2_tests_a1 = [["чоловік","людина","малеча","дорослий"],
+    ["відповідь","запитання","життя","м'яч"],
+    ["гра","м'яч","камера","дорослий"],
+    ["спальня","туалет","ванна","дитина"],
+    ["людина","м'яч","камера","телевізор"]];
+
+export const sounds_g2_test_a1 = ['../Music/game1/A1/Adult.mp3','../Music/game1/A1/Answer.mp3','../Music/game1/A1/Ball.mp3','../Music/game1/A1/Bathroom.mp3','../Music/game1/A1/Camera.mp3']
+
+
+///////GAME3
+
+
+//arrays for testing
+//a1
+export const words_g3_tests_a1 = ["apple","banana","boy","cake","cat"]
+export const images_g3_test_a1 = ["../Images/game3/A1/apple.png","../Images/game3/A1/banana.png","../Images/game3/A1/boy.png","../Images/game3/A1/cake.png","../Images/game3/A1/cat.png"]
+
+///////GAME4
+
+
+//arrays for testing
+//a1
+export const words_g4_tests_a1 = ["hungry","kitchen","stirs","dishwashing","mountains"];
+export const sentences_g4_tests_a1 = ["Jack was ______ .","She walked to the _______ .","Maria _____ the eggs.","Max washed the plate with _____ soap.","I live in a house near the -----."]
+export const sounds_g4_test_a1 = ["../Music/game4/A1/1.mp3","../Music/game4/A1/2.mp3","../Music/game4/A1/3.mp3","../Music/game4/A1/4.mp3","../Music/game4/A1/5.mp3"];

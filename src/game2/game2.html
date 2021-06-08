@@ -49,19 +49,81 @@ A file of a page with second game -
 <script type="module">
 
     import User from "../User.js";
-    const words = ["дорослий", "відповідь", "м'яч", "ванна", "камера"];
 
-    const answers = [["чоловік","людина","малеча","дорослий"],
-        ["відповідь","запитання","життя","м'яч"],
-        ["гра","м'яч","камера","дорослий"],
-        ["спальня","туалет","ванна","дитина"],
-        ["людина","м'яч","камера","телевізор"]];
+    import {words_g2_tests_a1, answers_g2_tests_a1, sounds_g2_test_a1} from "../DATABASE_FOR_ALL_GAMES.js";
+    // import {words_g2_tests_a2, answers_g2_tests_a2, sounds_g2_test_a2} from "../DATABASE_FOR_ALL_GAMES.js";
+    // import {words_g2_tests_b1, answers_g2_tests_b1, sounds_g2_test_b1} from "../DATABASE_FOR_ALL_GAMES.js";
+    // import {words_g2_tests_b2, answers_g2_tests_b2, sounds_g2_test_b2} from "../DATABASE_FOR_ALL_GAMES.js";
+    // import {words_g2_tests_c1, answers_g2_tests_c1, sounds_g2_test_c1} from "../DATABASE_FOR_ALL_GAMES.js";
+
+
+    let words = [];
+
+    let answers = [];
+
     //array with sounds
-    const sounds = ['../Music/game1/A1/Adult.mp3','../Music/game1/A1/Answer.mp3','../Music/game1/A1/Ball.mp3','../Music/game1/A1/Bathroom.mp3','../Music/game1/A1/Camera.mp3']
+    let sounds = []
 
     const name = localStorage.getItem("last");
 
     const currentUser = User.build(localStorage.getItem(name));
+
+
+    //setArrays
+    setArrays();
+
+    function setArrays(){
+        if (currentUser.getLevel()==="A1"){
+            words = [];
+            words = words_g2_tests_a1;
+
+            answers=[];
+            answers = answers_g2_tests_a1;
+
+            sounds = [];
+            sounds =sounds_g2_test_a1;
+        }
+        // else if(currentUser.getLevel()==="A2"){
+        //     words = [];
+        //     words = words_g2_tests_a2;
+        //
+        //     answers=[];
+        //     answers = answers_g2_tests_a2;
+        //
+        //     sounds = [];
+        //     sounds =sounds_g2_test_a2;
+        // }
+        // else if(currentUser.getLevel()==="B1"){
+        //     words = [];
+        //     words = words_g2_tests_b1;
+        //
+        //     answers=[];
+        //     answers = answers_g2_tests_b1;
+        //
+        //     sounds = [];
+        //     sounds =sounds_g2_test_b1;
+        // }
+        // else if(currentUser.getLevel()==="B2"){
+        //     words = [];
+        //     words = words_g2_tests_b2;
+        //
+        //     answers=[];
+        //     answers = answers_g2_tests_b2;
+        //
+        //     sounds = [];
+        //     sounds =sounds_g2_test_b2;
+        // }
+        // else if(currentUser.getLevel()==="C1"){
+        //     words = [];
+        //     words = words_g2_tests_c1;
+        //
+        //     answers=[];
+        //     answers = answers_g2_tests_c1;
+        //
+        //     sounds = [];
+        //     sounds =sounds_g2_test_c1;
+        // }
+    }
 
     //set first world
     firstWord();

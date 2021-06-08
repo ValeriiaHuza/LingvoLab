@@ -13,7 +13,6 @@ A file of a page with instructions for the user
   <link rel="stylesheet" href="game4.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Unica+One&display=swap" rel="stylesheet">
-  <script src="game4.js"></script>
  </head>
  
  <body>
@@ -51,14 +50,76 @@ A file of a page with instructions for the user
 
   <script type="module">
   import User from "../User.js";
+  import {words_g4_tests_a1, sentences_g4_tests_a1, sounds_g4_test_a1} from "../DATABASE_FOR_ALL_GAMES.js";
+  // import {words_g4_tests_a2, sentences_g4_tests_a2, sounds_g4_test_a2} from "../DATABASE_FOR_ALL_GAMES.js";
+  // import {words_g4_tests_b1, sentences_g4_tests_b1, sounds_g4_test_b1} from "../DATABASE_FOR_ALL_GAMES.js";
+  // import {words_g4_tests_b2, sentences_g4_tests_b2, sounds_g4_test_b2} from "../DATABASE_FOR_ALL_GAMES.js";
+  // import {words_g4_tests_c1, sentences_g4_tests_c1, sounds_g4_test_c1} from "../DATABASE_FOR_ALL_GAMES.js";
 
-  const words = ["hungry","kitchen","stirs","dishwashing","mountains"];
-  const sentences = ["Jack was ______ .","She walked to the _______ .","Maria _____ the eggs.","Max washed the plate with _____ soap.","I live in a house near the -----."]
+  let words = [];
+  let sentences = []
+  let sounds = [];
 
-  const sounds = ["../Music/game4/A1/1.mp3","../Music/game4/A1/2.mp3","../Music/game4/A1/3.mp3","../Music/game4/A1/4.mp3","../Music/game4/A1/5.mp3"];
   const name = localStorage.getItem("last");
 
   const currentUser = User.build(localStorage.getItem(name));
+
+  //setArrays
+  setArrays();
+
+  function setArrays(){
+      if (currentUser.getLevel()==="A1"){
+          words = [];
+          words = words_g4_tests_a1;
+
+          sentences=[];
+          sentences = sentences_g4_tests_a1;
+
+          sounds = [];
+          sounds =sounds_g4_test_a1;
+      }
+      // else if(currentUser.getLevel()==="A2"){
+      //     words = [];
+      //     words = words_g4_tests_a2;
+      //
+      //     sentences=[];
+      //     sentences = sentences_g4_tests_a2;
+      //
+      //     sounds = [];
+      //     sounds =sounds_g4_test_a2;
+      // }
+      // else if(currentUser.getLevel()==="B1"){
+      //     words = [];
+      //     words = words_g4_tests_b1;
+      //
+      //     sentences=[];
+      //     sentences = sentences_g4_tests_b1;
+      //
+      //     sounds = [];
+      //     sounds =sounds_g4_test_b1;
+      // }
+      // else if(currentUser.getLevel()==="B2"){
+      //     words = [];
+      //     words = words_g4_tests_b2;
+      //
+      //     sentences=[];
+      //     sentences = sentences_g4_tests_b2;
+      //
+      //     sounds = [];
+      //     sounds =sounds_g4_test_b2;
+      // }
+      // else if(currentUser.getLevel()==="C1"){
+      //     words = [];
+      //     words = words_g4_tests_c1;
+      //
+      //     sentences=[];
+      //     sentences = sentences_g4_tests_c1;
+      //
+      //     sounds = [];
+      //     sounds =sounds_g4_test_c1;
+      // }
+  }
+
 
   //set first world
   firstWord();
