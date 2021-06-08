@@ -45,23 +45,81 @@
 <script type="module">
     import User from '../User.js';
 
+    import {words_g1_tests_a1, meaning_g1_tests_a1, sounds_g1_test_a1} from "../DATABASE_FOR_ALL_GAMES.js";
+    import {words_g1_tests_a2, meaning_g1_tests_a2, sounds_g1_test_a2} from "../DATABASE_FOR_ALL_GAMES.js";
+    import {words_g1_tests_b1, meaning_g1_tests_b1, sounds_g1_test_b1} from "../DATABASE_FOR_ALL_GAMES.js";
+    import {words_g1_tests_b2, meaning_g1_tests_b2, sounds_g1_test_b2} from "../DATABASE_FOR_ALL_GAMES.js";
+    import {words_g1_tests_c1, meaning_g1_tests_c1, sounds_g1_test_c1} from "../DATABASE_FOR_ALL_GAMES.js";
+
+
     //array with words
-    const words = ["adult", "answer", "ball", "bathroom", "camera"];
+    let words = [];
 
-    const meaning = ["a person or animal that has grown to full size and strength",
-        "what you say or write back to someone who has asked you a question or spoken to you",
-        "a round object that you throw, kick, or hit in a game, or something with this shape",
-        "a room with a bath and/or shower and often a toilet",
-        "a device for taking photographs or making films or television programmes"];
-
+    let meaning = [];
 
     //array with sounds
-    const sounds = ['../Music/game1/A1/Adult.mp3','../Music/game1/A1/Answer.mp3','../Music/game1/A1/Ball.mp3','../Music/game1/A1/Bathroom.mp3','../Music/game1/A1/Camera.mp3']
+    let sounds = []
 
     //get name of current user
     const name = localStorage.getItem("last");
 
     const currentUser = User.build(localStorage.getItem(name));
+
+    //setArrays
+    setArrays();
+
+    function setArrays(){
+        if (currentUser.getLevel()==="A1"){
+            words = [];
+            words = words_g1_tests_a1;
+
+            meaning=[];
+            meaning = meaning_g1_tests_a1;
+
+            sounds = [];
+            sounds =sounds_g1_test_a1;
+        }
+        else if(currentUser.getLevel()==="A2"){
+            words = [];
+            words = words_g1_tests_a2;
+
+            meaning=[];
+            meaning = meaning_g1_tests_a2;
+
+            sounds = [];
+            sounds =sounds_g1_test_a2;
+        }
+        else if(currentUser.getLevel()==="B1"){
+            words = [];
+            words = words_g1_tests_b1;
+
+            meaning=[];
+            meaning = meaning_g1_tests_b1;
+
+            sounds = [];
+            sounds =sounds_g1_test_b1;
+        }
+        else if(currentUser.getLevel()==="B2"){
+            words = [];
+            words = words_g1_tests_b2;
+
+            meaning=[];
+            meaning = meaning_g1_tests_b2;
+
+            sounds = [];
+            sounds =sounds_g1_test_b2;
+        }
+        else if(currentUser.getLevel()==="C1"){
+            words = [];
+            words = words_g1_tests_c1;
+
+            meaning=[];
+            meaning = meaning_g1_tests_c1;
+
+            sounds = [];
+            sounds =sounds_g1_test_c1;
+        }
+    }
 
     //set first world
     firstWord();
