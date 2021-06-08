@@ -86,9 +86,15 @@ A file of a page with a test to determine the level of knowledge of English
             newButton.id = "mainPage";
             newButton.href="../main page/main.html";
 
+            newButton.style = " float: right;\n" +
+                "    margin: 7.5px 0px 7.5px 0px;\n" +
+                "    min-height: 55px;\n" +
+                "    min-width: 55px;";
             let newArrow = document.createElement("img");
             newArrow.src="../../Images/tools/next.png";
             newArrow.title="go to the main page";
+            newArrow.style = "    height: 8.9vh;\n" +
+                "    width: 4.5vw;\n" ;
             newButton.appendChild(newArrow);
             document.getElementById('bottom').appendChild(newButton);
 
@@ -146,17 +152,18 @@ A file of a page with a test to determine the level of knowledge of English
                 newBox.id = "newBox";
                 document.getElementById('middle1').appendChild(newBox);
 
+                let newLink = document.createElement("a");
+                newLink.id = "newLink";
+                newLink.href="../main page/main.html";
+
                 let newButton = document.createElement("img");
                 newButton.id = "newButton";
                 newButton.src="../../Images/tools/next.png";
                 newButton.title="go to the main page";
 
-                let newLink = document.createElement("a");
-                newLink.id = "newLink";
-                newLink.href="../main page/main.html";
 
-                newButton.appendChild(newLink);
-                document.getElementById('bottom').appendChild(newButton);
+                newLink.appendChild(newButton);
+                document.getElementById('bottom').appendChild(newLink);
 
 
                 const userResults = currentUser.countRes;
