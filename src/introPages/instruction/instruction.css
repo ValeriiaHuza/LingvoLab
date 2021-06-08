@@ -70,16 +70,16 @@ body {
   box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
 }
 
-#game1:hover, #game2:hover, #game3:hover, #game4:hover {
-  -moz-transform: scale(1.1); /* Для Firefox */
-  -ms-transform: scale(1.1); /* Для IE */
-  -webkit-transform: scale(1.1); /* Для Safari, Chrome, iOS */
-  -o-transform: scale(1.1); /* Для Opera */
-  transform: scale(1.1);
-  background: #BEC9CA;
-  border-radius: 1.231vw;
-  transition: 1s;
-}
+/*#game1:hover, #game2:hover, #game3:hover, #game4:hover {*/
+/*  -moz-transform: scale(1.1); !* Для Firefox *!*/
+/*  -ms-transform: scale(1.1); !* Для IE *!*/
+/*  -webkit-transform: scale(1.1); !* Для Safari, Chrome, iOS *!*/
+/*  -o-transform: scale(1.1); !* Для Opera *!*/
+/*  transform: scale(1.1);*/
+/*  background: #BEC9CA;*/
+/*  border-radius: 1.231vw;*/
+/*  transition: 1s;*/
+/*}*/
 
 #game1, #game3 {
   margin-top: 3.24vh;
