@@ -115,12 +115,6 @@
                       subT.play()
               })
           })
-          t.addEventListener('ended', ()=> {
-              t.currentTime = 0;
-              index !== audio.length - 1 ?
-                  audio[index + 1].play() :
-                  null
-          })
       });
   }
 
