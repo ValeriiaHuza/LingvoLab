@@ -132,17 +132,7 @@ A file of a page with first game - Quizlet cards
 
     function firstWord(){
         if(currentUser.getProgressGame1().length===0){
-            document.getElementById('wrapperID').remove();
-            document.getElementById('audioImage').remove();
-            document.getElementById('button1').remove();
-            document.getElementById('button2').remove();
-            document.getElementById('page').remove();
-
-            let newBox = document.createElement("div");
-            newBox.id = "newBox";
-
-            document.getElementById('middle').appendChild(newBox);
-            document.getElementById('newBox').textContent = "Ви молодець! \n Ви вивчили всі слова!";
+            document.location = "result.html";
 
         }
         else if(currentUser.getProgressGame1()[0].length<1) {
@@ -195,6 +185,11 @@ A file of a page with first game - Quizlet cards
 
             currentUser.setProgressGame1(progress);
 
+            if(currentUser.game1===true){
+                currentUser.setProgressGame1([]);
+            }
+
+            currentUser.game1=true;
 
             localStorage.setItem(name, currentUser.toString());
 
@@ -226,6 +221,9 @@ A file of a page with first game - Quizlet cards
 
             currentUser.setProgressGame1(progress);
 
+            if(currentUser.game1===true){
+                currentUser.setProgressGame1([]);
+            }
 
             localStorage.setItem(name, currentUser.toString());
 

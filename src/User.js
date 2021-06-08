@@ -6,6 +6,11 @@ export default class User {
     indexAtTest;
     countRes;
 
+    game1;
+    game2;
+    game3;
+    game4;
+
     progressGame1;
 
     indexAtGame2;
@@ -30,6 +35,10 @@ export default class User {
         this.indexAtGame2 = 0;
         this.countRes = 0;
         this.indexAtTest = 0;
+        this.game1 = false;
+        this.game2 = false;
+        this.game3 = false;
+        this.game4 = false;
 
     }
 
@@ -132,6 +141,11 @@ export default class User {
         newUser.setProgressGame4(temp.progressGame4);
         newUser.setIndexAtGame4(temp.indexAtGame4);
 
+        newUser.game1 = temp.game1;
+        newUser.game2 = temp.game2;
+        newUser.game3 = temp.game3;
+        newUser.game4 = temp.game4;
+
         return newUser;
     }
 
@@ -151,6 +165,11 @@ export default class User {
 
             progressGame4:this.progressGame4,
             indexAtGame4:this.indexAtGame4,
+
+            game1:this.game1,
+            game2:this.game2,
+            game3:this.game3,
+            game4:this.game4
 
         });
     }

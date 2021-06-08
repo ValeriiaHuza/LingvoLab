@@ -1,0 +1,71 @@
+body {
+  font-family: 'Unica One', cursive;
+  font-size: 30px;
+}
+
+#top {
+  height: 11.3452vh;
+  width: 98.522vw;
+  min-height: 70px;
+  min-width: 1200px;
+  -moz-column-count: 2; /* Для Firefox */
+  -webkit-column-count: 2; /* Для Safari и Chrome */
+  column-count: 2;
+}
+
+#logo {
+  float: left;
+  margin: 0.821vw;
+  color: #000000B2;
+}
+
+#greenRectangle {
+  border: 1px solid #DEEFED;
+  margin: 0 auto;
+  height: 71.3vh;
+  width: 65.681vw;
+  min-height: 440px;
+  min-width: 800px;
+  text-align: center;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  background-color: #DEEFED;
+  border-radius: 4.1vw;
+  box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
+}
+
+#result {
+  height: 16.2vh;
+  min-height: 100px;
+  margin-top: 16.2vh;
+  font-family: 'Fira Code', monospace;
+  font-size: 25px;
+}
+
+#button1, #button2 {
+  display: block;
+  margin: 0 auto;
+  height: 5.6726vh;
+  width: 14.778vw;
+  min-height: 35px;
+  min-width: 360px;
+  font-family: 'Play', sans-serif;
+  font-size: 28px;
+  border-radius: 4.1vw;
+  box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
+  background-color: white;
+}
+
+#button1 {
+  background-color: #93A7A6;
+}
+
+#button2 {
+  margin-top: 3.24vh;
+}
+
+#button1:hover, #button2:hover {
+  transform: scale(0.9);
+  transition: 1s;
+}

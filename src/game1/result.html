@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+ <head>
+  <title>Result</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="result.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&family=Unica+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Play&display=swap" rel="stylesheet">
+ </head>
+ 
+ <body>
+
+ <div id="top">
+    <div id="logo">LingvoLab</div>
+  </div>
+
+  <div id="greenRectangle">
+     <div id="result">Well done!<br>Ви змогли вивчити всі слова!</div>
+     <div id="button1">Повторити!</div>
+     <div id="button2">До головного меню</div>
+  </div>
+
+ <script type="module">
+
+     import User from "../User.js";
+
+     //get name of current user
+     const name = localStorage.getItem("last");
+
+     const currentUser = User.build(localStorage.getItem(name));
+
+
+     document.getElementById('button1').addEventListener("click",tryAgain);
+     document.getElementById('button2').addEventListener("click",goBack);
+
+     function tryAgain(){
+
+         currentUser.setProgressGame1([""]);
+         currentUser.game1=true;
+
+         localStorage.setItem(name,currentUser.toString());
+
+         document.location = "game1.html";
+     }
+
+     function goBack(){
+
+         currentUser.setProgressGame1([]);
+         currentUser.game1=true;
+
+         localStorage.setItem(name,currentUser.toString());
+
+         document.location = "../introPages/main page/main.html";
+     }
+
+
+ </script>
+
+ </body>
+
+</html>
