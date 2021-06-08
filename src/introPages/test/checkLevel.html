@@ -1,3 +1,9 @@
+<!--
+@file: checkLevel.html
+@authors: Huza Mariia-Valeriia, Andriienko Yelyzaveta, Shevchenko Daria
+
+A file of a page with a test to determine the level of knowledge of English
+-->
 <!DOCTYPE html>
 <html lang="uk">
 
@@ -154,8 +160,8 @@
                     currentUser.setLevel("A1");
                 }
 
-                document.getElementById('newBox').textContent = "Ви молодець! \n Ваш результат : " + userResults+ "/" + sentences.length
-                 + "Це означає, що ваш рівень - " + currentUser.getLevel();
+                document.getElementById('newBox').textContent = "Результат : " + userResults+ "/" + sentences.length
+                 + ". Ваш рівень - " + currentUser.getLevel();
 
                 localStorage.setItem(name, currentUser.toString());
             }

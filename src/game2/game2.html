@@ -1,3 +1,9 @@
+<!--
+@file: game2.html
+@authors: Huza Mariia-Valeriia, Andriienko Yelyzaveta, Shevchenko Daria
+
+A file of a page with second game -
+-->
 <!DOCTYPE html>
 <html lang="uk">
 
@@ -82,8 +88,6 @@
         }
     }
 
-
-
     let progress = currentUser.getProgressGame2();
 
     document.getElementById("page").textContent = ((currentUser.getIndexAtGame2()+1) + "/" + sounds.length).toString();
@@ -105,8 +109,8 @@
     document.getElementById('button3').addEventListener("click",btn3);
     document.getElementById('button4').addEventListener("click",btn4);
 
+    let audio = new Audio(); // Создаём новый элемент Audio
     function sound() {
-        var audio = new Audio(); // Создаём новый элемент Audio
         console.log(currentUser);
         console.log(sounds);
         console.log(sounds.length);

@@ -49,6 +49,7 @@ body {
 }
 
 #middle {
+    border: 1px solid transparent;
     /*height: 72.93vh;*/
     /*width: 98.522vw;*/
     /*min-height: 450px;*/

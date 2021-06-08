@@ -234,9 +234,8 @@
 
     }
     /* ===*/
+    let audio = new Audio(); // Создаём новый элемент Audio
     function sound() {
-        var audio = new Audio(); // Создаём новый элемент Audio
-
         const currentWord = document.getElementById("word").textContent.toString();
         const index = words.indexOf(currentWord);
 
