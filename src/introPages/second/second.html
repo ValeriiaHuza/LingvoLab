@@ -38,8 +38,8 @@
 
          const name = document.getElementById('nameSecondPage').value;
 
-         if(name.length < 1){
-             alert("Error");
+         if(name.length < 1 || name == "" || name == null || name.indexOf(' ') >= 0 ){
+             alert("Введіть свлє ім'я ще раз");
          }
          else {
 
