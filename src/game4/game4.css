@@ -278,7 +278,3 @@ input:focus ~ #highlight {
   text-align: center;
   border: 1px solid white;
 }
-.buttonDisable{
-  background-color: #DEEFED;
-  background-image: url("../Images/tools/audio.png");
-}

@@ -91,8 +91,7 @@
 
   //
   document.getElementById('greenCircle').addEventListener("click",sound);
- // let playing;
- // let arVideos = [];
+
   let audio = new Audio();;
   function sound() {
       console.log(currentUser);
@@ -100,58 +99,8 @@
       console.log(sounds.length);
       audio.src = sounds[currentUser.getIndexAtGame4()]; // Указываем путь к звуку "клика"
       audio.play();// Автоматически запускаем
-/*
-      if (audio.currentTime === audio.duration) {
-          document.getElementById('greenCircle').removeEventListener("click", sound);
-          document.getElementById('greenCircle').classList.remove("greenCircle");
-          document.getElementById('greenCircle').classList.add("buttonDisable");
-      }*/
   }
 
-
-/*
-      let audio = document.getElementsByTagName('audio');
-
-      audio.forEach(t => {
-          let index = audio.indexOf(t);
-
-          t.addEventListener('play', ()=> {
-              audio.forEach(subT => {
-                  subT !== audio[index] ?
-                      (subT.pause(), subT.currentTime = 0) :
-                      subT.play()
-              })
-          })
-      });*/
-
-
- /* let arVideos = document.getElementsByTagName('audio');
-  for (let i = 0; i < arVideos.length; i++) {
-      var elmVideo = arVideos[i];
-      elmVideo.autoplay = false;
-  }
-*/
-
-/*
-  const audios = Array.from(document.querySelectorAll('audio'));
-  let playing = true;
-
-  audios.forEach(audio => {
-      audio.addEventListener('play', function() {
-          if (playing) {
-              audios.forEach(el => {
-                  el.pause();
-              });
-          }
-          if (this.paused) {
-              playing = false;
-              this.play();
-          } else {
-              playing = true;
-          }
-      });
-  });
-*/
   ///
   function check(){
   const input = document.getElementById("inputText").value.toLowerCase();
