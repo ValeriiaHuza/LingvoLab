@@ -131,6 +131,10 @@ body {
 .back {
   transform: rotateY(180deg);
 }
+
+#meaning{
+  font-family: 'Play', sans-serif;
+}
 .card:hover .front {
   transform: rotateY(180deg);}
 .card:hover .back {
