@@ -36,8 +36,6 @@ A file of a main page of a user
     <button class="floating-button" id="game2" onclick="document.location='../../game2/game2.html'">game 2</button>
   </div>
 
-  <div id="middle"></div>
-
   <div id="cardsRow2">
     <button class="floating-button" id="game3" onclick="document.location='../../game3/game3.html'">game 3</button>
     <button class="floating-button" id="game4" onclick="document.location='../../game4/game4.html'">game 4</button>
@@ -57,6 +55,7 @@ A file of a main page of a user
 
       checkLevel();
 
+
       function checkLevel(){
 
           if (currentUser.getProgressGame1().length===0 && currentUser.getProgressGame2().length===0 &&
@@ -73,32 +72,27 @@ A file of a main page of a user
 
               if(currentUser.getLevel()==="A1"){
                   currentUser.setLevel("A2");
-                  document.getElementById("level").textContent = currentUser.getLevel();
                   showMassage();
 
               }
               else if(currentUser.getLevel()==="A2"){
                   currentUser.setLevel("B1");
-                  document.getElementById("level").textContent = "Ваш рівень знань англійської мови підвисився! Тепер у вас " + currentUser.getLevel() + " . Вітаємо!";
                   showMassage();
 
               }
               else if(currentUser.getLevel()==="B1"){
                   currentUser.setLevel("B2");
-                  document.getElementById("level").textContent = "Ваш рівень знань англійської мови підвисився! Тепер у вас " + currentUser.getLevel() + " . Вітаємо!";
                   showMassage();
 
               }
               else if(currentUser.getLevel()==="B2"){
                   currentUser.setLevel("C1");
-                  document.getElementById("level").textContent = "Ваш рівень знань англійської мови підвисився! Тепер у вас " + currentUser.getLevel() + " . Вітаємо!";
-                  showMassage();
+                   showMassage();
 
               }
 
               else {
-
-                  document.getElementById("level").textContent = "Ви дійшли до максимального рівня! Вітаємо :) ";
+                  alert("Ви дійшли до максимального рівня! Вітаємо :)");
 
               }
 
@@ -110,54 +104,11 @@ A file of a main page of a user
       }
 
       function showMassage(){
-
-          document.getElementById("game1").remove();
-          document.getElementById("game2").remove();
-          document.getElementById("game3").remove();
-          document.getElementById("game4").remove();
-
-          let newBox = document.createElement("div");
-          newBox.id = "newBox";
-
-          let newText = document.createElement("p");
-          newText.id = "newText";
-          newText.textContent = "Ваш рівень знань англійської мови підвисився! Тепер у вас " + currentUser.getLevel() + " . Вітаємо!";
-
-          newBox.appendChild(newText);
-
-          let newButton = document.createElement("div");
-          newButton.addEventListener("click",window.location.reload())
-          newButton.onClick = "window.location.reload()";
-          newButton.id = "mainPage";
-          newButton.style =
-              "    margin: 7.5px 0px 7.5px 0px;\n" +
-              "z-index: 5;\n" +
-              "    min-height: 55px;\n" +
-              "    min-width: 55px;";
-          newButton.href = "main.html";
-          let newArrow = document.createElement("img");
-          newArrow.src="../../Images/tools/next.png";
-          newArrow.title="go to the main page";
-          newArrow.style = "    height: 8.9vh;\n" +
-              "z-index: 5;\n" +
-              "    width: 4.5vw;\n" ;
-          newButton.appendChild(newArrow);
-
-          newBox.appendChild(newButton);
-
-          document.getElementById("middle").appendChild(newBox);
+          document.getElementById("level").textContent = currentUser.getLevel();
+        alert("Ваш рівень знань англійської мови підвисився! Тепер у вас " + currentUser.getLevel() + " . Вітаємо! Продовжуйте грати :)");
 
       }
 
-      function returnEverything(){
-          document.getElementById("newBox").remove();
-
-          document.getElementById("game1").show();
-          document.getElementById("game2").show();
-          document.getElementById("game3").show();
-          document.getElementById("game4").show();
-
-      }
 
   </script>
 

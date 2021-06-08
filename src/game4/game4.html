@@ -172,7 +172,9 @@ A file of a page with game 4
   function check(){
   const input = document.getElementById("inputText").value.toLowerCase();
   document.getElementById("inputText").value = "";
-  const currentSentence = document.getElementById("sentence").textContent.toString();
+      document.getElementById("inputText").autofocus = true;
+
+      const currentSentence = document.getElementById("sentence").textContent.toString();
 
   let index = sentences.indexOf(currentSentence);
 

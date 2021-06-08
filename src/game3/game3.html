@@ -137,6 +137,7 @@ A file of a page with game3
      function check(){
          const input = document.getElementById("inputText").value.toLowerCase();
          document.getElementById("inputText").value = "";
+         document.getElementById("inputText").autofocus = true;
          const src = document.getElementById("appleImage").getAttribute('src');
 
          let index = images.indexOf(src);

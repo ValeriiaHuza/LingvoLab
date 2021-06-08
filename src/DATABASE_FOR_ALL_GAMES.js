@@ -3,71 +3,16 @@
 
 //arrays for testing
 //a1
-export const words_g1_tests_a1 = ["adult", "answer", "ball", "bathroom", "camera", "chair", "dance", "eat", "enjoy", "face", "fat", "glass", "grass", "home","horse", "interesting", "juice", "kitchen", "know", "language", "listen", "meet", "museum", "near", "newspaper", "often", "orange", "page", "pen", "quarter", "question", "radio", "remember", "sad", "short", "talk","tennis", "university", "until", "visit", "village"
-    "waitress", "want", "watch", "weather", "year", "you", "young", "zoo"];
+export const words_g1_tests_a1 = ["adult", "answer", "ball", "bathroom", "camera"];
 
 export const meaning_g1_tests_a1 = ["a person or animal that has grown to full size and strength",
     "what you say or write back to someone who has asked you a question or spoken to you",
     "a round object that you throw, kick, or hit in a game, or something with this shape",
     "a room with a bath and/or shower and often a toilet",
-    "a device for taking photographs or making films or television programmes",
-    "a seat for one person, which has a back, usually four legs, and sometimes two arms", "a device for taking photographs or making films or television programmes",
-    "to move your feet and body to the rhythm of music",
-    "to put food into your mouth and then swallow it",
-    "to get pleasure from something",
-    "the front part of the head, where the eyes, nose and mouth are, or the expression on this part",
-    "someone who is fat weighs too much",
-    "a hard transparent substance that objects such as windows and bottles are made of",
-    "a common plant with narrow green leaves that grows close to the ground
-    "the place where you live or feel you belong",
-    "a large animal with four legs, which people ride on or use for carrying or pulling vehicles",
-    "someone or some--thing that is interesting keeps your attention because they are unusual, exciting, or have a lot of ideas",
-    "the liquid that comes from fruit or vegetables",
-    "a room where food is kept, prepared and cooked and where the dishes are washed",
-    "to have knowledge or information about something in your mind",
-    "a type of communication used by the people of a particular country",
-    "to give attention to someone or something in order to hear them",
-    "to see and speak to someone for the first time",
-    "a building where you can look at important objects connected with art, history, or science",
-    "close in distance",
-    "large, folded sheets of paper which are printed with the news and sold every day or every week",
-    "many times or regularly",
-    "being a colour that is a mixture of red and yellow",
-    "a piece of paper in a book, magazine, etc., or one side of a piece of paper",
-    "a long, thin object that you use to write or draw in ink",
-    "a period of 15 minutes before or after the hour",
-    "a sentence or phrase used to find out information",
-    "a piece of equipment used for listening to radio broadcasts",
-    "if you remember a fact or something from the past, you keep it in your mind, or bring it back into your mind",
-    "unhappy or making you feel unhappy",
-    "small in length, distance or height",
-    "to say things to someone",
-    "a sport in which two or four people hit a small ball to each other over a net",
-    "a place where students study at a high level to get a degree",
-    "continuing to happen before a particular time or event and then stopping",
-    "to go to someone's home and spend time with them",
-    "a place where people live in the countryside that includes buildings such as shops but is smaller than a town",
-    "a woman who works in a restaurant, bringing food to customers",
-    "to hope to have or do something, or to wish for something",
-    "to look at something for a period of time",
-    "the conditions in the air above the Earth such as wind, rain or temperature, especially at a particular time over a particular area",
-    "a period of twelve months, especially from January 1st to December 31st",
-    "used to refer to the person or people you are talking to",
-    "having lived or existed for only a short time and not old",
-    "a place where wild animals are kept so that people can go and look at them"
+    "a device for taking photographs or making films or television programmes"
 ];
 
-export const sounds_g1_test_a1 = ['../Music/game1/A1/Adult.mp3','../Music/game1/A1/Answer.mp3','../Music/game1/A1/Ball.mp3','../Music/game1/A1/Bathroom.mp3','../Music/game1/A1/Camera.mp3',
-    '../Music/game1/A1/chair.mp3','../Music/game1/A1/dance.mp3','../Music/game1/A1/eat.mp3','../Music/game1/A1/enjoy.mp3','../Music/game1/A1/face.mp3',
-    '../Music/game1/A1/fat.mp3','../Music/game1/A1/glass.mp3','../Music/game1/A1/grass.mp3','../Music/game1/A1/home.mp3','../Music/game1/A1/horse.mp3',
-    '../Music/game1/A1/interesting.mp3','../Music/game1/A1/juice.mp3','../Music/game1/A1/kitchen.mp3','../Music/game1/A1/know.mp3','../Music/game1/A1/language.mp3',
-    '../Music/game1/A1/listen.mp3','../Music/game1/A1/meet.mp3','../Music/game1/A1/museum.mp3','../Music/game1/A1/near.mp3','../Music/game1/A1/newspaper.mp3',
-    '../Music/game1/A1/often.mp3','../Music/game1/A1/orange.mp3','../Music/game1/A1/page.mp3','../Music/game1/A1/pen.mp3','../Music/game1/A1/quarter.mp3',
-    '../Music/game1/A1/question.mp3','../Music/game1/A1/radio.mp3','../Music/game1/A1/remember.mp3','../Music/game1/A1/sad.mp3','../Music/game1/A1/short.mp3',
-    '../Music/game1/A1/talk.mp3','../Music/game1/A1/tennis.mp3','../Music/game1/A1/university.mp3','../Music/game1/A1/until.mp3','../Music/game1/A1/visit.mp3',
-    '../Music/game1/A1/village.mp3','../Music/game1/A1/waitress.mp3','../Music/game1/A1/want.mp3','../Music/game1/A1/watch.mp3','../Music/game1/A1/weather.mp3',
-    '../Music/game1/A1/year.mp3','../Music/game1/A1/you.mp3','../Music/game1/A1/young.mp3','../Music/game1/A1/zoo.mp3'
-]
+export const sounds_g1_test_a1 = ['../Music/game1/A1/Adult.mp3','../Music/game1/A1/Answer.mp3','../Music/game1/A1/Ball.mp3','../Music/game1/A1/Bathroom.mp3','../Music/game1/A1/Camera.mp3']
 
 //a2
 export const words_g1_tests_a2 = ["accident", "across", "bad", "before", "blood"];
@@ -133,7 +78,7 @@ export const answers_g2_tests_a1 = [["зоопарк","сторінка","лис
 export const sounds_g2_test_a1 = ['../Music/game2/A1/1.mp3','../Music/game2/A1/2.mp3','../Music/game2/A1/3.mp3','../Music/game2/A1/4.mp3','../Music/game2/A1/5.mp3']
 
 //a2
-export const words_g2_tests_a2 = ["килим", "стеля", "страшний", "щасливий", "прикраси"];
+export const words_g2_tests_a2 = ["килим", "стеля", "небезпека", "щасливий", "прикраси"];
 
 export const answers_g2_tests_a2 = [["килим","дивний","червоний","кіт"],
     ["стеля","дитина","ковдра","ніч"],
@@ -185,15 +130,8 @@ export const sounds_g2_test_с1 = ['../Music/game2/C1/1.mp3','../Music/game2/C1/
 
 //arrays for testing
 //a1
-export const words_g3_tests_a1 = ["apple","banana","boy","cake","cat",
-    "cheese","dog","egg","fish","girl",
-    "heart","ice cream","lemon","lion","orange",
-    "pizza","rain","snake","sun","tree"]
-export const images_g3_test_a1 = ["../Images/game3/A1/apple.png","../Images/game3/A1/banana.png","../Images/game3/A1/boy.png","../Images/game3/A1/cake.png","../Images/game3/A1/cat.png",
-    "../Images/game3/A1/cheese.png","../Images/game3/A1/dog.png","../Images/game3/A1/egg.png","../Images/game3/A1/fish.png","../Images/game3/A1/girl.png",
-    "../Images/game3/A1/heart.png","../Images/game3/A1/ice cream.png","../Images/game3/A1/lemon.png","../Images/game3/A1/lion.png","../Images/game3/A1/orange.png",
-    "../Images/game3/A1/pizza.png","../Images/game3/A1/rain.png","../Images/game3/A1/snake.png","../Images/game3/A1/sun.png","../Images/game3/A1/tree.png",
-]
+export const words_g3_tests_a1 = ["apple","banana","boy","cake","cat"]
+export const images_g3_test_a1 = ["../Images/game3/A1/apple.png","../Images/game3/A1/banana.png","../Images/game3/A1/boy.png","../Images/game3/A1/cake.png","../Images/game3/A1/cat.png"]
 
 //a2
 export const words_g3_tests_a2 = ["chair","cherry","coconut","crab","doctor"]
