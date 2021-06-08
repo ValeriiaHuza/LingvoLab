@@ -17,7 +17,6 @@ body {
 }
 
 #top {
-    border: 1px solid blueviolet;
     height: 11.3452vh;
     width: 98.522vw;
     min-height: 70px;
@@ -50,7 +49,7 @@ body {
 }
 
 #middle {
-    border: 1px solid yellow;
+    border: 1px solid #93A7A6;
     /*height: 72.93vh;*/
     /*width: 98.522vw;*/
     /*min-height: 450px;*/
@@ -79,7 +78,6 @@ body {
 
 
 #game1 {
-    border: 1px solid blue;
     /*margin-top: 3.24vh;*/
     /*margin-right: 1.642vw;*/
     /*margin-bottom: 3.24vh;*/
@@ -102,11 +100,9 @@ body {
     -moz-column-count: 2; /* Для Firefox */
     -webkit-column-count: 2; /* Для Safari и Chrome */
     column-count: 2;
-    border: 1px solid red;
 }
 
 #backImage {
-    border: 1px solid green;
     float: left;
     margin: -0.7vh 0.821vw 1.2vh 2.29885vw;
     height: 8.9vh;
