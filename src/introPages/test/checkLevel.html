@@ -81,7 +81,20 @@ A file of a page with a test to determine the level of knowledge of English
             newBox.id = "newBox";
 
             document.getElementById('middle1').appendChild(newBox);
+
+            let newButton = document.createElement("a");
+            newButton.id = "mainPage";
+            newButton.href="../main page/main.html";
+
+            let newArrow = document.createElement("img");
+            newArrow.src="../../Images/tools/next.png";
+            newArrow.title="go to the main page";
+            newButton.appendChild(newArrow);
+            document.getElementById('bottom').appendChild(newButton);
+
+
             document.getElementById('newBox').textContent = "Ваш рівень - " + currentUser.getLevel() + " . Вам не потрібно більше проходити тест :)";
+
 
         }
     }
@@ -99,20 +112,10 @@ A file of a page with a test to determine the level of knowledge of English
     //add event listener
     document.getElementById('nextImage').addEventListener("click",change);
 
-    document.getElementById('greenCircle').addEventListener("click",sound);
-
     document.getElementById('button1').addEventListener("click",btn1);
     document.getElementById('button2').addEventListener("click",btn2);
     document.getElementById('button3').addEventListener("click",btn3);
     document.getElementById('button4').addEventListener("click",btn4);
-
-    function sound() {
-        var audio = new Audio(); // Создаём новый элемент Audio
-
-        audio.src = sentences[currentUser.indexAtTest]; // Указываем путь к звуку "клика"
-        audio.play()// Автоматически запускаем
-
-    }
 
     let choosenVariant="";
 
@@ -141,8 +144,15 @@ A file of a page with a test to determine the level of knowledge of English
 
                 let newBox = document.createElement("div");
                 newBox.id = "newBox";
-
                 document.getElementById('middle1').appendChild(newBox);
+
+                let newButton = document.createElement("img");
+                newButton.id = "mainPage";
+                newButton.src="../../Images/tools/next.png";
+                newButton.title="go to the main page";
+                newButton.onclick="document.location='../main page/main.html'";
+                document.getElementById('bottom').appendChild(newButton);
+
 
                 const userResults = currentUser.countRes;
 

@@ -91,5 +91,46 @@ export const images_g3_test_a1 = ["../Images/game3/A1/apple.png","../Images/game
 //arrays for testing
 //a1
 export const words_g4_tests_a1 = ["hungry","kitchen","stirs","dishwashing","mountains"];
-export const sentences_g4_tests_a1 = ["Jack was ______ .","She walked to the _______ .","Maria _____ the eggs.","Max washed the plate with _____ soap.","I live in a house near the -----."]
+export const sentences_g4_tests_a1 = ["Jack was ______ .","She walked to the _______ .","Maria _____ the eggs.","Max washed the plate with _____ soap.","I live in a house near the ______."]
 export const sounds_g4_test_a1 = ["../Music/game4/A1/1.mp3","../Music/game4/A1/2.mp3","../Music/game4/A1/3.mp3","../Music/game4/A1/4.mp3","../Music/game4/A1/5.mp3"];
+
+
+//a2
+export const words_g4_tests_a2 = ["tourist","delicious","balcony","strawberries","illness"];
+export const sentences_g4_tests_a2 = ["We visited many famous ______ places.",
+    "The French food we ate was ______.",
+    "We had a ______ with a wonderful view.",
+    "Martha sees apples, bananas, cherries, grapes, and ______.",
+    "I hope that you can treat my ______."]
+export const sounds_g4_test_a2 = ["../Music/game4/A2/1.mp3","../Music/game4/A2/2.mp3","../Music/game4/A2/3.mp3","../Music/game4/A2/4.mp3","../Music/game4/A2/5.mp3"];
+
+
+//b1
+export const words_g4_tests_b1 = ["spectacular","landmarks","exploring","underneath","enforcement"];
+export const sentences_g4_tests_b1 = ["He take a tour of this ______ stadium.",
+    "It is one of the few remaining ______. ",
+    "Keith spent a lot of time ______ the city.",
+    "Gifts are placed ______ a Christmas tree.",
+    "Police officers are law ______ professionals."]
+export const sounds_g4_test_b1 = ["../Music/game4/B1/1.mp3","../Music/game4/B1/2.mp3","../Music/game4/B1/3.mp3","../Music/game4/B1/4.mp3","../Music/game4/B1/5.mp3"];
+
+
+//b2
+export const words_g4_tests_b2 = ["anxiety","significantly","attractions","breeding","meteorites"];
+export const sentences_g4_tests_b2 = ["These people are more at risk from ______.",
+"The celebrities were ______ more narcissistic.",
+"Zoos are hugely popular ______.",
+"______ programmes provide a safeguard.",
+"Small ______ collide with Earth."]
+export const sounds_g4_test_b2 = ["../Music/game4/B2/1.mp3","../Music/game4/B2/2.mp3","../Music/game4/B2/3.mp3","../Music/game4/B2/4.mp3","../Music/game4/B2/5.mp3"];
+
+
+//c1
+export const words_g4_tests_c1 = ["devalued","mutation","capability","subtle","desperation"];
+export const sentences_g4_tests_c1 = ["The positives feedback can become ______ and ignored. ",
+"Researchers have found a gene ______.",
+"Our ______ for complex language.",
+"We can express complex thoughts and convey ______ emotions. ",
+"Protagonists were in ______."]
+export const sounds_g4_test_c1 = ["../Music/game4/C1/1.mp3","../Music/game4/C1/2.mp3","../Music/game4/C1/3.mp3","../Music/game4/C1/4.mp3","../Music/game4/C1/5.mp3"];
+
