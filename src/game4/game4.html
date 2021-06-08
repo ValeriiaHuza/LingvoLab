@@ -101,6 +101,25 @@
       audio.play()// Автоматически запускаем
   }
 
+  const audios = Array.from(document.querySelectorAll('audio'));
+  let playing = true;
+
+  audios.forEach(audio => {
+      audio.addEventListener('play', function() {
+          if (playing) {
+              audios.forEach(el => {
+                  el.pause();
+              });
+          }
+          if (this.paused) {
+              playing = false;
+              this.play();
+          } else {
+              playing = true;
+          }
+      });
+  });
+
   ///
   function check(){
   const input = document.getElementById("inputText").value.toLowerCase();
