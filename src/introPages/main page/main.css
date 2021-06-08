@@ -13,7 +13,26 @@ body {
   height: 100%;
   text-align: center;
   background: #DEEFED;
+  overflow: hidden;
 }
+
+#newBox{
+  background-color: #fbfcfd;
+  border-radius: 4.1vw;
+  box-shadow: 0.3284vw 0.3284vw 0.3284vw rgba(0, 0, 0, 0.25);
+
+  margin-left: 22vh;
+  align-content: center;
+  margin-top: -30vh;
+  height: 20vh;
+  width: 30vw;
+  min-height: 450px;
+  min-width: 1200px;
+
+  padding-top: 5vh;
+}
+
+
 
 #top {
   height: 10vh;
@@ -85,6 +104,7 @@ body {
 #cardsRow1, #cardsRow2 {
   height: 27.5527vh;
   width: 100%;
+  z-index: 1;
   min-height: 7.5527vh;
   -moz-column-count: 2; /* Для Firefox */
   -webkit-column-count: 2; /* Для Safari и Chrome */
