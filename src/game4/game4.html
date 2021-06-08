@@ -93,10 +93,8 @@
   document.getElementById('greenCircle').addEventListener("click",sound);
  // let playing;
  // let arVideos = [];
-  let audio;
+  let audio = new Audio();;
   function sound() {
-      audio.src = "";
-      audio = new Audio(); // Создаём новый элемент Audio
       console.log(currentUser);
       console.log(sounds);
       console.log(sounds.length);
