@@ -132,6 +132,21 @@ export const sounds_g2_test_с1 = ['../Music/game2/C1/1.mp3','../Music/game2/C1/
 export const words_g3_tests_a1 = ["apple","banana","boy","cake","cat"]
 export const images_g3_test_a1 = ["../Images/game3/A1/apple.png","../Images/game3/A1/banana.png","../Images/game3/A1/boy.png","../Images/game3/A1/cake.png","../Images/game3/A1/cat.png"]
 
+//a2
+export const words_g3_tests_a2 = ["chair","cherry","coconut","crab","doctor"]
+export const images_g3_test_a2 = ["../Images/game3/A2/chair.png","../Images/game3/A2/cherry.png","../Images/game3/A2/coconut.png","../Images/game3/A2/crab.png","../Images/game3/A2/doctor.png"]
+
+//b1
+export const words_g3_tests_b1 = ["baloon","beer","bread","coctail","cup"]
+export const images_g3_test_b1 = ["../Images/game3/B1/baloon.png","../Images/game3/B1/beer.png","../Images/game3/B1/bread.png","../Images/game3/B1/coctail.png","../Images/game3/B1/cup.png"]
+
+//b2
+export const words_g3_tests_b2 = ["bus","candy","cap","cookie","corn"]
+export const images_g3_test_b2 = ["../Images/game3/B2/bus.png","../Images/game3/B2/candy.png","../Images/game3/B2/cap.png","../Images/game3/B2/cookie.png","../Images/game3/B2/corn.png"]
+
+//c1
+export const words_g3_tests_c1 = ["ambulance","armchair","avocado","bee","butter"]
+export const images_g3_test_c1 = ["../Images/game3/C1/ambulance.png","../Images/game3/C1/armchair.png","../Images/game3/C1/avocado.png","../Images/game3/C1/bee.png","../Images/game3/C1/butter.png"]
 
 
 
