@@ -85,7 +85,7 @@ export const answers_g2_tests_a2 = [["килим","дивний","червони
     ["собака","щасливий","ложка","сильний"],
     ["прикраси","капелюх","тарілка","дизайн"]];
 
-export const sounds_g2_test_a2 = ['../Music/game2/A2/1.mp3','../Music/game2/A2/2.mp3','../Music/game2/A2/3.mp3','../Music/game2/A2/4.mp3','../Music/game1/A2/5.mp3']
+export const sounds_g2_test_a2 = ['../Music/game2/A2/1.mp3','../Music/game2/A2/2.mp3','../Music/game2/A2/3.mp3','../Music/game2/A2/4.mp3','../Music/game2/A2/5.mp3']
 
 //b1
 export const words_g2_tests_b1 = ["діаграма", "теля", "освіта", "фінальний", "іміграція"];
@@ -96,7 +96,7 @@ export const answers_g2_tests_b1 = [["діаграма","чорний","гран
     ["вода","фінальний","порядний","відповідальний"],
     ["іміграція","тарілка","каблучка","вода"]];
 
-export const sounds_g2_test_b1 = ['../Music/game2/B1/1.mp3','../Music/game2/B1/2.mp3','../Music/game2/B1/3.mp3','../Music/game2/B1/4.mp3','../Music/game1/B1/5.mp3']
+export const sounds_g2_test_b1 = ['../Music/game2/B1/1.mp3','../Music/game2/B1/2.mp3','../Music/game2/B1/3.mp3','../Music/game2/B1/4.mp3','../Music/game2/B1/5.mp3']
 
 //b2
 export const words_g2_tests_b2 = ["закинутий", "точний", "переваги", "жувати", "кохана"];
@@ -107,7 +107,7 @@ export const answers_g2_tests_b2 = [["закинутий", "нажаханий",
     ["варити","жувати","кусати","різати"],
     ["кохана","принцеса","поважна","горда"]];
 
-export const sounds_g2_test_b2 = ['../Music/game2/B2/1.mp3','../Music/game2/B2/2.mp3','../Music/game2/B2/3.mp3','../Music/game2/B2/4.mp3','../Music/game1/B2/5.mp3']
+export const sounds_g2_test_b2 = ['../Music/game2/B2/1.mp3','../Music/game2/B2/2.mp3','../Music/game2/B2/3.mp3','../Music/game2/B2/4.mp3','../Music/game2/B2/5.mp3']
 
 //c1
 export const words_g2_tests_с1 = ["вживати", "здатність", "вирішальний", "найняти", "справедливість"];
@@ -118,7 +118,7 @@ export const answers_g2_tests_с1 = [["вживати","переважати","�
     ["звільнити","найняти","відпрацювати","перервати"],
     ["справедливість","розбещеність","підступність","слабкість"]];
 
-export const sounds_g2_test_с1 = ['../Music/game2/C1/1.mp3','../Music/game2/C1/2.mp3','../Music/game2/C1/3.mp3','../Music/game2/C1/4.mp3','../Music/game1/C1/5.mp3']
+export const sounds_g2_test_с1 = ['../Music/game2/C1/1.mp3','../Music/game2/C1/2.mp3','../Music/game2/C1/3.mp3','../Music/game2/C1/4.mp3','../Music/game2/C1/5.mp3']
 
 
 
