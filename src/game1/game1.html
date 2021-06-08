@@ -115,7 +115,7 @@
                 progress = newArray;
             }
 
-        if(document.getElementById("word").textContent.toString()===words[words.length-1]){
+        if(document.getElementById("word").textContent.toString()===words[words.length-1] || progress.length===0){
 
             document.getElementById('wrapperID').remove();
             document.getElementById('audioImage').remove();
