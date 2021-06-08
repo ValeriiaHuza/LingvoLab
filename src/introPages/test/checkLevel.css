@@ -31,11 +31,10 @@ body {
     font-weight: 300;
     margin: 0 auto;
     height: 32.4vh;
-    width: 600px;
+    width: 49.261vw;
     min-height: 200px;
     min-width: 600px;
     text-align: center;
-    border: 1px solid red ;
 }
 
 #middle {
