@@ -104,7 +104,7 @@ body {
 
 #backImage {
     float: left;
-    margin: -0.7vh 0.821vw 1.2vh 2.29885vw;
+    margin: 100px 0.821vw 1.2vh 2.29885vw;
     height: 8.9vh;
     width: 4.5vw;
     min-height: 55px;
@@ -124,7 +124,7 @@ body {
 
 #nextImage {
     float: right;
-    margin-top: -0.7vh;
+    margin-top: 100px;
     position: relative;
     left: 48.19376vw;
     height: 8.9vh;
