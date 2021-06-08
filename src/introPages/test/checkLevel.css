@@ -26,6 +26,9 @@ body {
 }
 
 #greenCircle {
+    font-family: 'Fira Code', monospace;
+    font-size: 25px;
+    font-weight: 300;
     margin: 8.1vh 0px 0px 41vw;
     height: 32.4vh;
     width: 16.42vw;

@@ -154,8 +154,8 @@
                     currentUser.setLevel("A1");
                 }
 
-                document.getElementById('newBox').textContent = "Ви молодець! \n Ваш результат : " + userResults+ "/" + sentences.length
-                 + "Це означає, що ваш рівень - " + currentUser.getLevel();
+                document.getElementById('newBox').textContent = "Результат : " + userResults+ "/" + sentences.length
+                 + ". Ваш рівень - " + currentUser.getLevel();
 
                 localStorage.setItem(name, currentUser.toString());
             }
