@@ -205,7 +205,7 @@ A file of a page with first game - Quizlet cards
     }
     function studyAgain(){
         let index = progress.indexOf(document.getElementById("word").textContent.toString());
-        if(document.getElementById("word").textContent.toString()===words[words.length-1]){
+        if(document.getElementById("word").textContent.toString()===words[words.length-1] || (progress.length -1)===index) {
 
             document.getElementById('wrapperID').remove();
             document.getElementById('audioImage').remove();

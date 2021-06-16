@@ -3,7 +3,7 @@
 
 //arrays for testing
 //a1
-export const words_g1_tests_a1 = ["adult", "answer", "ball", "bathroom", "camera", "chair", "dance", "eat", "enjoy", "face", "fat", "glass", "grass", "home","horse", "interesting", "juice", "kitchen", "know", "language", "listen", "meet", "museum", "near", "newspaper", "often", "orange", "page", "pen", "quarter", "question", "radio", "remember", "sad", "short", "talk","tennis", "university", "until", "visit", "village"
+export const words_g1_tests_a1 = ["adult", "answer", "ball", "bathroom", "camera", "chair", "dance", "eat", "enjoy", "face", "fat", "glass", "grass", "home","horse", "interesting", "juice", "kitchen", "know", "language", "listen", "meet", "museum", "near", "newspaper", "often", "orange", "page", "pen", "quarter", "question", "radio", "remember", "sad", "short", "talk","tennis", "university", "until", "visit", "village",
     "waitress", "want", "watch", "weather", "year", "you", "young", "zoo"];
 
 export const meaning_g1_tests_a1 = ["a person or animal that has grown to full size and strength",
@@ -18,7 +18,7 @@ export const meaning_g1_tests_a1 = ["a person or animal that has grown to full s
     "the front part of the head, where the eyes, nose and mouth are, or the expression on this part",
     "someone who is fat weighs too much",
     "a hard transparent substance that objects such as windows and bottles are made of",
-    "a common plant with narrow green leaves that grows close to the ground
+    "a common plant with narrow green leaves that grows close to the ground",
     "the place where you live or feel you belong",
     "a large animal with four legs, which people ride on or use for carrying or pulling vehicles",
     "someone or some--thing that is interesting keeps your attention because they are unusual, exciting, or have a lot of ideas",
